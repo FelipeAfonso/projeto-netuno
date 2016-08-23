@@ -1,0 +1,94 @@
+﻿<Window x:Class="View.PontoVendaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:behaviors="clr-namespace:WPFTextBoxAutoComplete;assembly=WPFTextBoxAutoComplete"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PontoVendaWindow" Height="600" Width="800" MinWidth="800" MinHeight="600" WindowState="Maximized">
+    <DockPanel x:Name="PVDock" Margin="15">
+        <DockPanel x:Name="dockTop" DockPanel.Dock="Top" MaxHeight="150" Margin="-15,-15,-15,15" MinHeight="100">
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFE9F3FF"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </DockPanel.Background>
+            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/View;component/Resources/Logo.png"/>
+            <Grid HorizontalAlignment="Right" Height="150" DockPanel.Dock="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Operador: " HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <Label Content="23/08/2016" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,26,0,0" Grid.Column="1" HorizontalContentAlignment="Center"/>
+                <Label Content="09:31 AM" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Center"/>
+                <Label x:Name="labelName" Content="Teste da Silva Souza" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            </Grid>
+            <Grid DockPanel.Dock="Top">
+                <TextBlock TextWrapping="Wrap" Text="Ponto de Venda" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </DockPanel>
+        <DockPanel x:Name="gridBottom" DockPanel.Dock="Bottom" MaxHeight="100" MinHeight="100" VerticalAlignment="Bottom">
+            <Grid HorizontalAlignment="Right" UseLayoutRounding="True" Background="{DynamicResource NetuneDefaultBackground}" DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Forma de Pagamento" HorizontalAlignment="Center"/>
+                <RadioButton Content="Dinheiro" Margin="5,5,0,5" Grid.Row="1" GroupName="FormaPagamento"/>
+                <RadioButton Content="Cartão" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Grid.Row="2" Margin="5,5,0,5" GroupName="FormaPagamento"/>
+                <RadioButton x:Name="RB" Content="Cheque" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Grid.Row="3" Margin="5,5,0,5" GroupName="FormaPagamento"/>
+            </Grid>
+            <Grid Height="100"/>
+        </DockPanel>
+        <Grid x:Name="gridDados" DockPanel.Dock="Right" Margin="10,0,0,0" Width="176" MinWidth="200" MaxWidth="350">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Itens" HorizontalAlignment="Right" VerticalAlignment="Top" Height="26" Width="35"/>
+            <Label Content="Volumes" VerticalAlignment="Top" Margin="0" Grid.Column="2" HorizontalAlignment="Right" Height="26" IsHitTestVisible="True"/>
+            <Label x:Name="labelItens" Content="0" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Grid.Column="1" Foreground="{DynamicResource NetunoDefaultBorderBrush}" Height="26" Width="16"/>
+            <Label x:Name="labelVolumes" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" Foreground="{DynamicResource NetunoDefaultBorderBrush}" Height="26" Width="16"/>
+            <Grid Grid.ColumnSpan="4" Grid.Row="1" Margin="0,5">
+                <Rectangle Fill="#FFE9F3FF" Stroke="{DynamicResource NetunoDefaultBorderBrush}" Margin="0" RadiusX="5" RadiusY="5"/>
+                <TextBlock Margin="5" TextWrapping="Wrap" Text="Valor Total" VerticalAlignment="Center" HorizontalAlignment="Left" MaxWidth="100" FontFamily="Segoe UI Semibold" FontSize="20"/>
+                <TextBlock x:Name="textBlockValorTotal" Margin="5" TextWrapping="Wrap" Text="R$ 0,00" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="20" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.ColumnSpan="4" Grid.Row="2" Margin="0,5">
+                <Rectangle Fill="{DynamicResource NetuneDefaultBackground}" Stroke="{DynamicResource NetunoDefaultBorderBrush}" Margin="0" RadiusX="5" RadiusY="5"/>
+                <TextBlock Margin="5" TextWrapping="Wrap" Text="Parcelas" VerticalAlignment="Center" HorizontalAlignment="Left" MaxWidth="100" FontFamily="Segoe UI Semibold" FontSize="16"/>
+                <TextBlock x:Name="textBlockParcelas" Margin="5" TextWrapping="Wrap" Text="1x" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="16" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.ColumnSpan="4" Grid.Row="3" Margin="0,5">
+                <Rectangle Fill="{DynamicResource NetuneDefaultBackground}" Stroke="{DynamicResource NetunoDefaultBorderBrush}" Margin="0" RadiusX="5" RadiusY="5"/>
+                <TextBlock Margin="5" TextWrapping="Wrap" Text="Valor da Parcela" VerticalAlignment="Center" HorizontalAlignment="Left" MaxWidth="100" FontFamily="Segoe UI Semibold" FontSize="16"/>
+                <TextBlock x:Name="textBlockValorParcela" Margin="5" TextWrapping="Wrap" Text="R$ 0,00" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="16" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.ColumnSpan="4" Grid.Row="4" Margin="0,5">
+                <Rectangle Fill="{DynamicResource NetuneDefaultBackground}" Stroke="{DynamicResource NetunoDefaultBorderBrush}" Margin="0" RadiusX="5" RadiusY="5"/>
+                <TextBlock Margin="5" TextWrapping="Wrap" Text="Desconto" VerticalAlignment="Center" HorizontalAlignment="Left" MaxWidth="100" FontFamily="Segoe UI Semibold" FontSize="16"/>
+                <TextBlock x:Name="textBlockValorTotal3" Margin="5" TextWrapping="Wrap" Text="R$ 0,00" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="16" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <DataGrid x:Name="dataGridProdutos" Margin="0,0,0,5" Padding="0"/>
+
+    </DockPanel>
+</Window>

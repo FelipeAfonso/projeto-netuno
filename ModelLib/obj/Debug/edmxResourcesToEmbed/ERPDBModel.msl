@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ERPDBModelStoreContainer" CdmEntityContainer="ERPDBModelContainer">
+    <EntitySetMapping Name="ProdutoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Produto)">
+        <MappingFragment StoreEntitySet="ProdutoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="PrecoCusto" ColumnName="PrecoCusto" />
+          <ScalarProperty Name="PrecoVista" ColumnName="PrecoVista" />
+          <ScalarProperty Name="PrecoPrazo" ColumnName="PrecoPrazo" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="DisponivelLojaVirtual" ColumnName="DisponivelLojaVirtual" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="UnidadeMedida" ColumnName="UnidadeMedida" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoriaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Categoria)">
+        <MappingFragment StoreEntitySet="CategoriaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.SubCategoria)">
+        <MappingFragment StoreEntitySet="CategoriaSet_SubCategoria">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="SubNome" ColumnName="SubNome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstoqueSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Estoque)">
+        <MappingFragment StoreEntitySet="EstoqueSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Custo" ColumnName="Custo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FornecedorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Fornecedor)">
+        <MappingFragment StoreEntitySet="FornecedorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LojaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Loja)">
+        <MappingFragment StoreEntitySet="LojaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VendaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Venda)">
+        <MappingFragment StoreEntitySet="VendaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Orcamento)">
+        <MappingFragment StoreEntitySet="VendaSet_Orcamento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Expiracao" ColumnName="Expiracao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaixaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Caixa)">
+        <MappingFragment StoreEntitySet="CaixaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermissaoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Permissao)">
+        <MappingFragment StoreEntitySet="PermissaoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Usuario)">
+        <MappingFragment StoreEntitySet="UsuarioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cpf" ColumnName="Cpf" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nascimento" ColumnName="Nascimento" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Rg" ColumnName="Rg" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Cliente)">
+        <MappingFragment StoreEntitySet="UsuarioSet_Cliente">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Funcionario)">
+        <MappingFragment StoreEntitySet="UsuarioSet_Funcionario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Administrador)">
+        <MappingFragment StoreEntitySet="UsuarioSet_Administrador">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnderecoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Endereco)">
+        <MappingFragment StoreEntitySet="EnderecoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProdutoCategoria" TypeName="ERPDBModel.ProdutoCategoria" StoreEntitySet="ProdutoSet">
+      <EndProperty Name="Categoria">
+        <ScalarProperty Name="Id" ColumnName="Categoria_Id" />
+      </EndProperty>
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Categoria_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EstoqueProduto" TypeName="ERPDBModel.EstoqueProduto" StoreEntitySet="ProdutoSet">
+      <EndProperty Name="Estoque">
+        <ScalarProperty Name="Id" ColumnName="Estoque_Id" />
+      </EndProperty>
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Estoque_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FornecedorProduto" TypeName="ERPDBModel.FornecedorProduto" StoreEntitySet="ProdutoSet">
+      <EndProperty Name="Fornecedor">
+        <ScalarProperty Name="Id" ColumnName="Fornecedor_Id" />
+      </EndProperty>
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Fornecedor_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LojaFornecedor" TypeName="ERPDBModel.LojaFornecedor" StoreEntitySet="FornecedorSet">
+      <EndProperty Name="Loja">
+        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
+      </EndProperty>
+      <EndProperty Name="Fornecedor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Loja_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LojaCaixa" TypeName="ERPDBModel.LojaCaixa" StoreEntitySet="CaixaSet">
+      <EndProperty Name="Loja">
+        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
+      </EndProperty>
+      <EndProperty Name="Caixa">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LojaEstoque" TypeName="ERPDBModel.LojaEstoque" StoreEntitySet="LojaSet">
+      <EndProperty Name="Estoque">
+        <ScalarProperty Name="Id" ColumnName="Estoque_Id" />
+      </EndProperty>
+      <EndProperty Name="Loja">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LojaVenda" TypeName="ERPDBModel.LojaVenda" StoreEntitySet="VendaSet">
+      <EndProperty Name="Loja">
+        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
+      </EndProperty>
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VendaProduto" TypeName="ERPDBModel.VendaProduto" StoreEntitySet="ProdutoSet">
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
+      </EndProperty>
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Venda_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClienteVenda" TypeName="ERPDBModel.ClienteVenda" StoreEntitySet="VendaSet">
+      <EndProperty Name="Cliente">
+        <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
+      </EndProperty>
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UsuarioEndereco" TypeName="ERPDBModel.UsuarioEndereco" StoreEntitySet="UsuarioSet">
+      <EndProperty Name="Endereco">
+        <ScalarProperty Name="Id" ColumnName="Endereco_Id" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EnderecoLoja" TypeName="ERPDBModel.EnderecoLoja" StoreEntitySet="EnderecoSet">
+      <EndProperty Name="Loja">
+        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
+      </EndProperty>
+      <EndProperty Name="Endereco">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionarioPermissao" TypeName="ERPDBModel.FuncionarioPermissao" StoreEntitySet="FuncionarioPermissao">
+      <EndProperty Name="Funcionario">
+        <ScalarProperty Name="Id" ColumnName="Funcionario_Id" />
+      </EndProperty>
+      <EndProperty Name="Permissao">
+        <ScalarProperty Name="Id" ColumnName="Permissao_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionarioVenda" TypeName="ERPDBModel.FuncionarioVenda" StoreEntitySet="VendaSet">
+      <EndProperty Name="Funcionario">
+        <ScalarProperty Name="Id" ColumnName="Funcionario_Id" />
+      </EndProperty>
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FuncionarioLoja" TypeName="ERPDBModel.FuncionarioLoja" StoreEntitySet="UsuarioSet_Funcionario">
+      <EndProperty Name="Loja">
+        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
+      </EndProperty>
+      <EndProperty Name="Funcionario">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

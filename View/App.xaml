@@ -1,0 +1,14 @@
+﻿<Application x:Class="View.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="NetuneDefaultBackground" Color="#FFEFF6FF"/>
+        <SolidColorBrush x:Key="NetunoDefaultButtonBackground" Color="#80D3EAE9"/>
+        <SolidColorBrush x:Key="NetunoSubBackground" Color="#FFF9FBFF"/>
+        <SolidColorBrush x:Key="NetunoDefaultBorderBrush" Color="#FF626E8D"/>
+
+    </Application.Resources>
+</Application>

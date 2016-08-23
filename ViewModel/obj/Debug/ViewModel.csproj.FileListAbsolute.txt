@@ -1,0 +1,14 @@
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ViewModel.dll
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ViewModel.pdb
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ModelLib.dll
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ModelLib.pdb
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\obj\Debug\ViewModel.dll
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ViewModel\obj\Debug\ViewModel.pdb
+J:\Projeto Netuno\Projeto\NTN\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+J:\Projeto Netuno\Projeto\NTN\ViewModel\obj\Debug\ViewModel.dll
+J:\Projeto Netuno\Projeto\NTN\ViewModel\obj\Debug\ViewModel.pdb
+J:\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ViewModel.dll
+J:\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ViewModel.pdb
+J:\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ModelLib.dll
+J:\Projeto Netuno\Projeto\NTN\ViewModel\bin\Debug\ModelLib.pdb

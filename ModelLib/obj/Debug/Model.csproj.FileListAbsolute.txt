@@ -1,0 +1,66 @@
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.pdb
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.dll
+C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.pdb
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.pdb
+J:\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\Model.csprojResolveAssemblyReference.cache
+J:\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.dll
+J:\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.pdb
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll.config
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.dll
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.SqlServer.dll
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\MySql.Data.Entity.EF5.dll
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\MySql.Data.Entity.EF6.dll
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.xml
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.SqlServer.xml
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Context.cs
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.cs
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Designer.cs
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Context.tt
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.edmx.diagram
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.tt
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Context.cs
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.cs
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Designer.cs
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Context.tt
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.edmx.diagram
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.tt
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll.config
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.pdb
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.dll
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.SqlServer.dll
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.xml
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.SqlServer.xml
+G:\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\Model.csprojResolveAssemblyReference.cache
+G:\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.dll
+G:\Projeto Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.pdb
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDB.mdf
+J:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDB_log.ldf
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDB.mdf
+G:\Projeto Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDB_log.ldf
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDB.mdf
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDB_log.ldf
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Context.cs
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.cs
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Designer.cs
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.Context.tt
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.edmx.diagram
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ERPDBModel.tt
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll.config
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\ModelLib.pdb
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\MySql.Data.Entity.EF5.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\MySql.Data.Entity.EF6.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.xml
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\obj\Debug\Model.csprojResolveAssemblyReference.cache
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.pdb
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+F:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\WPFToolkit.dll

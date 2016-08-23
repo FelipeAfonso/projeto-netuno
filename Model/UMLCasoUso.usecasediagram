@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4dc7209a-2939-47af-95f3-1ba741ce02c6" name="UMLCasoUso" linkedPackageId="97c38610-460c-4dc7-989a-0196bbdfc2cf" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="a61d3817-7e08-4b56-8e79-723a0cd665cf" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="ea6aeac0-086d-4343-8f1c-ac3f0865d57f" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="7cd1cd10-0099-4477-9f5f-b94d04f8dfac">
+          <propertyInstance Id="7722f268-39c9-4d2f-9278-8ef5b97e0533" name="BaseName">
+            <elementDefinition Id="76d5841a-e5df-4d06-91f1-feec41d28825" />
+          </propertyInstance>
+          <elementDefinition Id="5ab8996c-c98a-4f40-82c3-28cb94b08f9d" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5fe00881-4245-49fd-9dc9-265fadf94e8f">
+          <propertyInstance Id="893224aa-6cfb-432e-b8ae-4508f6bd45c5" name="ClrAttributes">
+            <elementDefinition Id="dd2669ac-23d1-45f2-bab7-9cd331150583" />
+          </propertyInstance>
+          <elementDefinition Id="23c924ff-9fd6-4bbf-a964-f4a36955ca43" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="62c8a2ca-5167-4b64-9346-161c7a71116d">
+          <propertyInstance Id="ed92b740-566f-4f55-94ee-70dbf24da576" name="Usings">
+            <elementDefinition Id="6650d1fc-d309-490f-8a9e-982d2e853397" />
+          </propertyInstance>
+          <elementDefinition Id="c0c11536-4343-4874-b55d-d7469076678a" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="ca97843f-3120-44a6-a61a-c999f4a2f5eb" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="d291f662-14c1-4233-874a-d826531bb949" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c6816e5a-1acc-4dca-8dfa-0cead9d7ade7">
+          <propertyInstance Id="85f7ddfa-dd5e-45b8-aa5e-d3771952bb46" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="2e0876f7-3d3f-4cc7-9e01-4de8017675a7" />
+          </propertyInstance>
+          <elementDefinition Id="ae7bd38a-d2b5-4d8d-a7b3-e6249eadafc2" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="ae29a6b1-0999-48ec-81cd-0cdc1013b7d5">
+          <propertyInstance Id="e0234fc1-2ec2-4ec9-b724-03d46a805c61" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="35c15fae-3b7e-4649-8a5c-f4f2d37703c3" />
+          </propertyInstance>
+          <elementDefinition Id="4f474173-2941-40cc-b152-bbe1809a15d9" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="fcf9bf94-b1b0-42f6-b836-50709bcf29e8">
+          <propertyInstance Id="f044dd94-ffc9-45f5-95d9-d3e63b635a83" name="ProjectPath" value="ClassTemplate=..\ModelLib\ModelLib.csproj|EnumTemplate=..\ModelLib\ModelLib.csproj|InterfaceTemplate=..\ModelLib\ModelLib.csproj|StructTemplate=..\ModelLib\ModelLib.csproj">
+            <elementDefinition Id="c197adee-829f-4285-a477-efb269a1692f" />
+          </propertyInstance>
+          <elementDefinition Id="264fc971-1c21-4e5b-90a8-086311a001f5" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d03cdfa7-3742-48c7-9f89-e9f127df4fa0">
+          <propertyInstance Id="e16e6534-4db0-407c-8712-0b2afada17ab" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="fbdb3d88-2447-4292-abd6-427ef620527b" />
+          </propertyInstance>
+          <elementDefinition Id="3bde7cfb-b886-4182-b8d6-180d3359a3a8" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="476fbaa3-e527-4f22-9f85-f0d30f31d2f1">
+          <propertyInstance Id="803093ee-f0bd-45d7-aa59-93ccf6b5d54b" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="b99bead0-0618-4032-ae20-07d6a9b342ed" />
+          </propertyInstance>
+          <elementDefinition Id="820999f3-b018-4da6-8f30-dc3af1c3d186" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f8fe19fd-e1c7-443f-8582-e6dbea47fbfc">
+          <propertyInstance Id="81b8b42a-444e-4355-9ecc-b59a17dec459" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="efec1c36-7fc7-409d-9e8f-8c8bf809d7d7" />
+          </propertyInstance>
+          <elementDefinition Id="d7a38014-53a4-4d2c-ba6d-bd99fef0ae46" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="d6b24f00-0947-4fae-a009-2956a47e583b">
+          <propertyInstance Id="0a61518c-d60c-4801-8685-2f125447f03a" name="Parameters">
+            <elementDefinition Id="4ca33efc-e22a-440c-ae0e-65476b6bfc55" />
+          </propertyInstance>
+          <elementDefinition Id="0fe0bdb4-003a-4b86-82a9-d0887fbd7ba5" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="b120d6e0-40fe-4613-a442-b15ac5b886df" name="Administrador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b9c9c6f6-e274-40c8-aa2b-631f6fb4921a" />
+        <generalsInternal>
+          <generalization Id="bedb3f6c-89f8-4680-b335-2162a09bda1b" isSubstitutable="false">
+            <actorMoniker Id="5f3243ad-536e-4b4f-9cbc-40658ced1ea6" LastKnownName="Funcionário" />
+            <elementDefinition Id="4a3a263a-00d6-41b8-a5a5-12b61e13e5fe" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="6a27a1fb-8bb6-43d7-8187-98823402e2d8" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Cadastrar Funcionários" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0bfd5d80-78e8-4dc3-b911-3885f8f0dd7e" LastKnownName="Cadastrar Funcionários" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a6c8f259-1284-420c-8abe-6580f6bcc5d5" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="73b35e71-3bd0-45ea-9f71-2dd6a513d151" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a37971af-0937-4244-85cf-3704d95740bc" name="Cadastrar Funcionários" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aff165c1-ab73-4ffe-9e62-77c702ea673f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a3fb532-0e4d-4095-b67e-1bd76e00f1dc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="5f3243ad-536e-4b4f-9cbc-40658ced1ea6" name="Funcionário" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3304a621-7d55-4ce9-98f1-a641d7705113" />
+        <generalsInternal>
+          <generalization Id="f7123cde-3397-4047-b2e5-7499e056d0f4" isSubstitutable="false">
+            <actorMoniker Id="4b7b5f62-dc9a-45db-9850-e5628cd2ab17" LastKnownName="Usuário" />
+            <elementDefinition Id="56dd4dba-89a0-4e3a-9804-ff9b3ba3b9de" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="b89e27a6-c51a-43a0-a6da-3b33d0c3ca44" isDerived="false" sourceEndRoleName="Funcionário" targetEndRoleName="Realizar Venda" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f33afc8d-b4c5-49a7-9e5e-0abbe3c77ff0" LastKnownName="Realizar Venda" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a888e139-04f7-49e2-b070-445c5145951e" name="Funcionário" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4eb4a94e-33da-4d06-a77a-def0e2ac7635" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b019fe8-26ed-4a60-89e3-dd25a0a73206" name="Realizar Venda" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="de66d9e9-68c5-46e5-a106-64d4ac53b9cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ac5001f8-16e0-4e67-86be-55cea9c81245" />
+          </association>
+          <association Id="0c2221f0-dfa0-42ce-af84-a3560c9ce607" isDerived="false" sourceEndRoleName="Funcionário" targetEndRoleName="Gerenciar Produtos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="69c67bd5-0bb7-4fca-8e04-021148ddef2d" LastKnownName="Gerenciar Produtos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d7d940b4-a46c-4829-aac0-4b153e62442b" name="Funcionário" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c50ce248-9cf1-4903-8dfd-645515515d0a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="329f6fdb-dbd3-4dd0-ad35-f0403d8d440e" name="Gerenciar Produtos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0a1b8d17-37d5-4e9d-ae1b-4586d13c1f93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a710095b-9db3-4d94-a53a-6f64ca66b17a" />
+          </association>
+          <association Id="4e7f7493-cc0d-4425-a249-1244db077204" isDerived="false" sourceEndRoleName="Funcionário" targetEndRoleName="Gerenciar Fornecedores" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d46c3bec-2e18-4cce-956f-76cbb9323ada" LastKnownName="Gerenciar Fornecedores" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a80368e6-0f3d-4adf-830b-fe7d6921c8b1" name="Funcionário" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="27e5935b-0ada-4569-b45b-f365effeee96" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44211f89-5e51-46ab-a7ed-717c39f63f57" name="Gerenciar Fornecedores" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6514d03b-16d4-43c2-af47-c3907d61b203" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="63d6790f-4970-4322-b599-0b6666398550" />
+          </association>
+          <association Id="ccd6602a-eadf-49f9-90af-5d5724ebe629" isDerived="false" sourceEndRoleName="Funcionário" targetEndRoleName="Gerar Relatórios" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="af628da9-aea0-4efc-b051-5cd6423ecee9" LastKnownName="Gerar Relatórios" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1c407b5-9b66-475d-ae88-657208e76970" name="Funcionário" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5fbe7504-3017-4f71-92ff-5d5983d5deb4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9c21a747-2cd5-4a7b-9e6b-0b393335ac30" name="Gerar Relatórios" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d950964-4927-4bdf-9c26-c800962dd66a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1f22ae23-2ec2-4c7f-b924-660accbd015a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="580a0227-0c16-447e-8317-b1fbb2b8a2e4" name="Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="220e54e5-4152-4665-ac82-95a15e3334ef" />
+        <generalsInternal>
+          <generalization Id="e13af8b3-3a80-4b99-9b51-cd2c332e98cc" isSubstitutable="false">
+            <actorMoniker Id="4b7b5f62-dc9a-45db-9850-e5628cd2ab17" LastKnownName="Usuário" />
+            <elementDefinition Id="ab5a6838-5447-4d47-82b8-3c24abf9e7c9" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="55cc9d5c-849a-455d-b152-e544e39a67a5" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Buscar Produtos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0849e5b2-e9d7-428a-9258-8663237d4301" LastKnownName="Buscar Produtos" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a589b212-1f9f-4152-ad14-3cc0b79027d7" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="52b93b6b-ac39-47c1-a43c-50bfbf2a4023" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="995715ed-95ad-470a-9afb-a5ca1cb308fb" name="Buscar Produtos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6a11e56a-c59a-40ef-9146-12824e1c934c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2bb76632-847f-471e-abd9-2b6fd2c55f09" />
+          </association>
+          <association Id="7784fa99-a3f4-4f08-b593-3720a8277c66" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Adicionar ao Carrinho" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9bacd27a-b612-4c56-b6ac-15731178f65e" LastKnownName="Adicionar ao Carrinho" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d185dad9-a6b6-414b-8748-4599df44ee9c" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4f8f68cd-7c3d-4340-93cb-2aebef1135e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13b1ea98-15a0-4264-9bf8-c254461e54c7" name="Adicionar ao Carrinho" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b32c6a6-9ec2-433a-bbe3-43c4d6530699" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2dbfe2e8-03ea-4605-b6b8-e54f43443806" />
+          </association>
+          <association Id="5b43e3b3-1077-46d2-ad21-83f3a58a9534" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Fechar Carrinho" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="126ff9ef-5973-4042-8692-1bb696f6b95d" LastKnownName="Fechar Carrinho" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f007a384-15ed-4aac-997b-c9be8c125713" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8d1a31ba-9bf6-4e8e-a6ce-2d912a9ece6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44cd495d-bfc2-4917-8b87-489e1746b96c" name="Fechar Carrinho" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4f87b906-3773-46da-9832-3b0563929946" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1e8efc47-6761-4309-a497-29d72f579b56" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="4b7b5f62-dc9a-45db-9850-e5628cd2ab17" name="Usuário" isAbstract="true" isLeaf="false">
+        <elementDefinition Id="ea0f1795-4109-4c3b-ac33-2f97ce040cce" />
+        <targetEnds>
+          <association Id="57ed6759-7297-46b7-a8a7-0fee03cc342c" isDerived="false" sourceEndRoleName="Usuário" targetEndRoleName="Fazer Orçamento" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fe267787-0240-4681-b54d-9e6867c238c4" LastKnownName="Fazer Orçamento" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0acbaca3-aa50-4146-93f2-6747d8b37b88" name="Usuário" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3140243c-de29-4910-85b8-64c58f524dcb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0cca58ea-e6d8-4ae8-8883-0612cd878346" name="Fazer Orçamento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d15282f3-20b0-4a4f-9706-545a717dc09a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a0275019-a827-432f-8630-8172d5866fb4" />
+          </association>
+          <association Id="c0abda02-c73f-49d5-a218-e90dcf62607a" isDerived="false" sourceEndRoleName="Usuário" targetEndRoleName="Cadastrar Cliente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bdcaa734-1bd8-46c7-bc59-3e59a4aa9eac" LastKnownName="Cadastrar Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c3741fb-4c38-4ecf-99d0-6180062225c7" name="Usuário" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="12ae6a35-3f4e-4dd7-9eda-2ee937227053" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f9ae3cb-7dbd-4e1b-a112-50c17251ed69" name="Cadastrar Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fccb335b-b741-414e-ab09-54afb8d74bcb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bdf40e26-5f3a-4b9e-90cf-c9f7e5158f22" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f33afc8d-b4c5-49a7-9e5e-0abbe3c77ff0" name="Realizar Venda" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6645d518-8bc8-40aa-ae2d-4f5543720994" />
+        <extendedCases>
+          <extend Id="f6ebcdde-1d18-4c7d-8868-2d8bd577064b">
+            <useCaseMoniker Id="b8869504-8188-4078-b0de-7340c2e00ce8" LastKnownName="Venda para Cliente Cadastrado" />
+            <elementDefinition Id="e5c7ab3b-a993-48b3-9218-dea503a4507a" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="033f7fce-9a2c-44bf-845d-81ac4b1e2d4c" LastKnownName="Principais Funções / Protótipo 1" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bdcaa734-1bd8-46c7-bc59-3e59a4aa9eac" name="Cadastrar Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bfde799a-23da-4466-b516-e5832a57ceca" />
+        <targetEnds>
+          <association Id="6666bcfc-6719-48ad-aed8-d635e75d4f26" isDerived="false" sourceEndRoleName="Cadastrar Cliente" targetEndRoleName="Cliente" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="580a0227-0c16-447e-8317-b1fbb2b8a2e4" LastKnownName="Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a62a706e-b0d6-49da-aca5-2ce610f40d54" name="Cadastrar Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0431d5b8-357f-493e-9c6c-69d7b5c05d79" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="24bf645a-366b-4d2b-b740-1c6ec3fa69f3" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e2220e60-8a03-4e97-8d6f-f81351d498ee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f78bb961-63e4-4800-9a31-7c41b89e71b8" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6d82a036-b5ab-42e4-9ef1-c1e2c8f1f322" LastKnownName="Junção Sistema Web e Desktop Protótipo 2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fe267787-0240-4681-b54d-9e6867c238c4" name="Fazer Orçamento" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4341efe6-8ed7-484c-9584-cdaf8eeca216" />
+        <subjects>
+          <subsystemMoniker Id="6d82a036-b5ab-42e4-9ef1-c1e2c8f1f322" LastKnownName="Junção Sistema Web e Desktop Protótipo 2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0849e5b2-e9d7-428a-9258-8663237d4301" name="Buscar Produtos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8bc6775e-7a17-44fb-a825-a911ff69e912" />
+        <subjects>
+          <subsystemMoniker Id="6137104a-b342-413c-b31d-a32907cb8e52" LastKnownName="Sistema Web - Loja Virtual" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="6137104a-b342-413c-b31d-a32907cb8e52" name="Sistema Web - Loja Virtual" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d3a42b6d-e11f-4250-b5e0-abb6b49e0779" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="9bacd27a-b612-4c56-b6ac-15731178f65e" name="Adicionar ao Carrinho" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a1925fcc-de08-4389-bc02-7a953ecde187" />
+        <subjects>
+          <subsystemMoniker Id="6137104a-b342-413c-b31d-a32907cb8e52" LastKnownName="Sistema Web - Loja Virtual" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="126ff9ef-5973-4042-8692-1bb696f6b95d" name="Fechar Carrinho" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6ec54b34-d795-44f5-ac03-e1f087caa598" />
+        <subjects>
+          <subsystemMoniker Id="6137104a-b342-413c-b31d-a32907cb8e52" LastKnownName="Sistema Web - Loja Virtual" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b8869504-8188-4078-b0de-7340c2e00ce8" name="Venda para Cliente Cadastrado" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3e465836-e641-4ddf-a4c5-b9a4e1ecc354" />
+        <targetEnds>
+          <association Id="783f7afb-df39-4ccf-8095-6bfb3a6bab3b" isDerived="false" sourceEndRoleName="Venda para Cliente Cadastrado" targetEndRoleName="Cliente" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="580a0227-0c16-447e-8317-b1fbb2b8a2e4" LastKnownName="Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d49961de-7d02-4cb9-a4da-e107a97a6018" name="Venda para Cliente Cadastrado" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="81593c6e-678c-4118-b1fc-66364a23db12" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25df9d51-6a4d-45a6-a679-7b01fc680f31" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94e90952-e0cd-47f2-be6e-19eeb0b55137" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9e0bd4d5-b195-43b8-9819-7d522f9fdaa9" />
+          </association>
+        </targetEnds>
+        <subjects>
+          <subsystemMoniker Id="6d82a036-b5ab-42e4-9ef1-c1e2c8f1f322" LastKnownName="Junção Sistema Web e Desktop Protótipo 2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="033f7fce-9a2c-44bf-845d-81ac4b1e2d4c" name="Principais Funções / Protótipo 1" isAbstract="false" isLeaf="false" isActiveClass="false" isIndirectlyInstantiated="false">
+        <elementDefinition Id="4eaad7f7-a7d1-4a03-821c-51f374033794" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="69c67bd5-0bb7-4fca-8e04-021148ddef2d" name="Gerenciar Produtos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d55faf69-370e-4afc-8434-dabb21f68f97" />
+        <subjects>
+          <subsystemMoniker Id="033f7fce-9a2c-44bf-845d-81ac4b1e2d4c" LastKnownName="Principais Funções / Protótipo 1" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d46c3bec-2e18-4cce-956f-76cbb9323ada" name="Gerenciar Fornecedores" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f74d7dc-3c4e-44f3-9de5-5fa054db2b65" />
+        <subjects>
+          <subsystemMoniker Id="033f7fce-9a2c-44bf-845d-81ac4b1e2d4c" LastKnownName="Principais Funções / Protótipo 1" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0bfd5d80-78e8-4dc3-b911-3885f8f0dd7e" name="Cadastrar Funcionários" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eab31de4-b9bb-44f3-98b8-dec3a46b3b9f" />
+        <subjects>
+          <subsystemMoniker Id="033f7fce-9a2c-44bf-845d-81ac4b1e2d4c" LastKnownName="Principais Funções / Protótipo 1" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="af628da9-aea0-4efc-b051-5cd6423ecee9" name="Gerar Relatórios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="64db4f49-a280-40d4-b287-2a3c5085b678" />
+        <subjects>
+          <subsystemMoniker Id="033f7fce-9a2c-44bf-845d-81ac4b1e2d4c" LastKnownName="Principais Funções / Protótipo 1" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="6d82a036-b5ab-42e4-9ef1-c1e2c8f1f322" name="Junção Sistema Web e Desktop Protótipo 2" isAbstract="false" isLeaf="false" isActiveClass="false" isIndirectlyInstantiated="false">
+        <elementDefinition Id="cbdfa85d-1ac8-4ab6-9b86-fd330cc98eaf" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="97c38610-460c-4dc7-989a-0196bbdfc2cf" name="Model">
+    <elementDefinition Id="fa075e3e-789f-43e1-bd61-e47bca9270ce" />
+    <profileInstances>
+      <packageHasProfileInstances Id="22961792-9cb9-4b89-adc2-20cc41989d50">
+        <profileInstance Id="ff16f848-8a2a-40a5-97f9-17e9b7a0d6da" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cd01cd8b-5487-444c-94d9-1d5bc3ea697b">
+        <profileInstance Id="d1204416-8742-4b29-9122-2f700eb38a80" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ea09f9d2-e2d3-4f5b-9077-afd6227e7007">
+        <profileInstance Id="d3f618bd-f715-4ecc-a828-3651a5d468be" name="CSharpProfile">
+          <elementDefinition Id="8177939e-385a-4f11-8673-fba44685935c" />
+        </profileInstance>
+        <elementDefinition Id="2f0d06f3-72c2-4f49-ab39-5a6d21ebbb38" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="83b1d641-4295-4f48-a22b-0682dc6f0aee">
+        <profileInstance Id="4b8b2eaf-129a-4b67-a690-7f24131e89d2" name="TextTemplateBindings">
+          <elementDefinition Id="3e98cb7d-cab6-43e5-81e4-9c704ac3cbca" />
+        </profileInstance>
+        <elementDefinition Id="8b582112-0054-447c-b274-3ec63ae2e642" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

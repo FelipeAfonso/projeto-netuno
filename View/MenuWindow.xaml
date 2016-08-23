@@ -1,0 +1,38 @@
+﻿<Window x:Name="MenuViewWindow" x:Class="View.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        
+        Title="Undertow" Height="600" Width="800" Background="{DynamicResource NetuneDefaultBackground}" Foreground="#FF00011B" WindowState="Maximized" MinWidth="800" MinHeight="600" SizeChanged="MenuViewWindow_SizeChanged">
+    <DockPanel Margin="7,0,7,7" Background="White">
+        <Grid x:Name="UpperGrid" Height="65" VerticalAlignment="Top" DockPanel.Dock="Top" Background="{DynamicResource NetuneDefaultBackground}" MinHeight="100" MaxHeight="150">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid MaxHeight="150" Margin="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="778" HorizontalAlignment="Left" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition Width="155"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="VendasButton" Content="Vendas" Margin="5,7,7,7" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="VendasButtonClick"/>
+                <Button x:Name="ProdutosButton" Content="Produtos" Margin="7" Grid.Column="1" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="ProdutosButtonClick"/>
+                <Button x:Name="UsuariosButton" Content="Usuários" Margin="7" Grid.Column="2" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="UsuariosButtonClick"/>
+                <Button x:Name="FornecedoresButton" Content="Fornecedores" Margin="7" Grid.Column="3" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="FornecedoresButtonClick"/>
+                <Button x:Name="CaixasButton" Content="Caixas" Margin="7" Grid.Column="4" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="CaixasButtonClick"/>
+
+            </Grid>
+            <Menu x:Name="Menu" Margin="-7,0" Height="25">
+                <MenuItem Name="Teste" Header="Teste"/>
+            </Menu>
+        </Grid>
+        <Grid x:Name="ControlGrid"/>
+    </DockPanel>
+</Window>

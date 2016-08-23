@@ -1,0 +1,25 @@
+﻿<UserControl x:Name="ProdutoListItemControl" x:Class="View.CustomControls.ProdutoListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:View.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="150" Height="200" Initialized="ProdutoListItemControl_Initialized">
+    <Grid x:Name="ProdutoGrid" Background="{DynamicResource NetuneDefaultBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Margin="5,5,5,0" Source="/View;component/Resources/NoImage.png" Grid.ColumnSpan="3"/>
+        <Label x:Name="labelQuantidade" Background="{x:Null}" Grid.Row="1" Content="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="20"/>
+        <TextBlock x:Name="textBlockPreco" TextWrapping="Wrap" Text="R$ 0,00" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlockNome" TextWrapping="Wrap" Text="Nome do Produto" Margin="0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+
+    </Grid>
+</UserControl>

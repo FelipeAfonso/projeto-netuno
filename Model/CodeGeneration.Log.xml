@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2016-07-23T22:21:17" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="ProjectPath = ..\ModelLib\ModelLib.csproj" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2016-07-23T22:21:18" Importance="Medium" Text="Model's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'Model::Administrador' -  (Class), 'Model::Usuario' -  (Class), 'Model::Funcionario' -  (Class), 'Model::Permissao' -  (Class), 'Model::Endereco' -  (Class), 'Model::Venda' -  (Class), 'Model::Loja' -  (Class), 'Model::Caixa' -  (Class), 'Model::Categoria' -  (Class), 'Model::Estoque' -  (Class), 'Model::SubCategoria' -  (Class), 'Model::Produto' -  (Class), 'Model::Fornecedor' -  (Class) " />
+  <Message Timestamp="2016-07-23T22:22:38" Importance="Medium" Text="Project Added: C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\ModelLib.csproj" />
+  <Message Timestamp="2016-07-23T22:22:38" Importance="Medium" Text="'Model::Administrador' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Administrador.cs" />
+  <Message Timestamp="2016-07-23T22:22:39" Importance="Medium" Text="'Model::Usuario' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Usuario.cs" />
+  <Message Timestamp="2016-07-23T22:22:40" Importance="Medium" Text="'Model::Funcionario' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Funcionario.cs" />
+  <Message Timestamp="2016-07-23T22:22:40" Importance="Medium" Text="'Model::Permissao' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Permissao.cs" />
+  <Message Timestamp="2016-07-23T22:22:40" Importance="Medium" Text="'Model::Endereco' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Endereco.cs" />
+  <Message Timestamp="2016-07-23T22:22:41" Importance="Medium" Text="'Model::Venda' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Venda.cs" />
+  <Message Timestamp="2016-07-23T22:22:41" Importance="Medium" Text="'Model::Loja' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Loja.cs" />
+  <Message Timestamp="2016-07-23T22:22:42" Importance="Medium" Text="'Model::Caixa' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Caixa.cs" />
+  <Message Timestamp="2016-07-23T22:22:42" Importance="Medium" Text="'Model::Categoria' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Categoria.cs" />
+  <Message Timestamp="2016-07-23T22:22:42" Importance="Medium" Text="'Model::Estoque' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Estoque.cs" />
+  <Message Timestamp="2016-07-23T22:22:43" Importance="Medium" Text="'Model::SubCategoria' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\SubCategoria.cs" />
+  <Message Timestamp="2016-07-23T22:22:43" Importance="Medium" Text="'Model::Produto' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Produto.cs" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Medium" Text="'Model::Fornecedor' -  (Class) : success (file created) - C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\ModelLib\GeneratedCode\Fornecedor.cs" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="ProjectPath = ..\ModelLib\ModelLib.csproj" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Medium" Text="Model's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'Model::Administrador' -  (Class), 'Model::Usuario' -  (Class), 'Model::Funcionario' -  (Class), 'Model::Permissao' -  (Class), 'Model::Endereco' -  (Class), 'Model::Venda' -  (Class), 'Model::Loja' -  (Class), 'Model::Caixa' -  (Class), 'Model::Categoria' -  (Class), 'Model::Estoque' -  (Class), 'Model::SubCategoria' -  (Class), 'Model::Produto' -  (Class), 'Model::Fornecedor' -  (Class) " />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Administrador' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Usuario' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Funcionario' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Permissao' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Endereco' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Venda' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Loja' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Caixa' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:44" Importance="Diagnostic" Text="'Model::Categoria' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::Estoque' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::SubCategoria' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::Produto' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::Fornecedor' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="The selection included 17 elements which were not bound to a template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'2033070c-297d-478c-933e-61b81ab5d314' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'7cae0d9f-ddd7-4035-a6ee-17c65718dce0' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'798f7eec-b71c-44cc-a920-eff8abfba8e9' -  (Generalization): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="Diagnostic" Text="'Model::' -  (Association): no bound template." />
+  <Message Timestamp="2016-07-23T22:22:45" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>
