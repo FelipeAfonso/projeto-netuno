@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="75"/>
                 <ColumnDefinition Width="75"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="PontoVendaButton" Content="Ponto de&#xa;  Venda" Margin="2" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick"/>
+            <Button x:Name="PontoVendaButton" Content="Ponto de&#xa;  Venda" Margin="5,2,2,2" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick"/>
         </Grid>
     </Grid>
 </UserControl>

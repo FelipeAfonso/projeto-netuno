@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\
+G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\
 View
 none
 false
 DEBUG;TRACE
-F:\Projetos\Netuno\Projeto\NTN\View\App.xaml
+G:\Projetos\Netuno\Projeto\NTN\View\App.xaml
 9474051729
 
-17-1148544056
-27-393275684
+17-474541251
+28-916102774
 CustomControls\ProdutoListItem.xaml;MainWindow.xaml;MenuWindow.xaml;SubWindows\PontoVendaWindow.xaml;SubControls\CaixasView.xaml;SubControls\FornecedoresView.xaml;SubControls\ProdutosView.xaml;SubControls\UsuarioView.xaml;SubControls\VendaView.xaml;
 
-False
+True
 

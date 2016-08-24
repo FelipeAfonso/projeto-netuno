@@ -22,11 +22,11 @@
                     <ColumnDefinition Width="155"/>
                     <ColumnDefinition Width="155"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="VendasButton" Content="Vendas" Margin="5,7,7,7" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="VendasButtonClick"/>
-                <Button x:Name="ProdutosButton" Content="Produtos" Margin="7" Grid.Column="1" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="ProdutosButtonClick"/>
-                <Button x:Name="UsuariosButton" Content="Usuários" Margin="7" Grid.Column="2" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="UsuariosButtonClick"/>
-                <Button x:Name="FornecedoresButton" Content="Fornecedores" Margin="7" Grid.Column="3" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="FornecedoresButtonClick"/>
-                <Button x:Name="CaixasButton" Content="Caixas" Margin="7" Grid.Column="4" MinHeight="66" FontSize="16" FontFamily="Arial" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="CaixasButtonClick"/>
+                <Button x:Name="VendasButton" Content="Vendas" Margin="5,7,7,7" MinHeight="66" FontSize="16" FontFamily="Arial" Background="#80D3DCEA" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="VendasButtonClick"/>
+                <Button x:Name="ProdutosButton" Content="Produtos" Margin="7" Grid.Column="1" MinHeight="66" FontSize="16" FontFamily="Arial" Background="#80D3DCEA" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="ProdutosButtonClick"/>
+                <Button x:Name="UsuariosButton" Content="Usuários" Margin="7" Grid.Column="2" MinHeight="66" FontSize="16" FontFamily="Arial" Background="#80D3DCEA" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="UsuariosButtonClick"/>
+                <Button x:Name="FornecedoresButton" Content="Fornecedores" Margin="7" Grid.Column="3" MinHeight="66" FontSize="16" FontFamily="Arial" Background="#80D3DCEA" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="FornecedoresButtonClick"/>
+                <Button x:Name="CaixasButton" Content="Caixas" Margin="7" Grid.Column="4" MinHeight="66" FontSize="16" FontFamily="Arial" Background="#80D3DCEA" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Click="CaixasButtonClick"/>
 
             </Grid>
             <Menu x:Name="Menu" Margin="-7,0" Height="25">
