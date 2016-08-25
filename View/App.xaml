@@ -5,10 +5,17 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
-        <SolidColorBrush x:Key="NetuneDefaultBackground" Color="#FFEFF6FF"/>
-        <SolidColorBrush x:Key="NetunoDefaultButtonBackground" Color="#80D3EAE9"/>
-        <SolidColorBrush x:Key="NetunoSubBackground" Color="#FFF9FBFF"/>
-        <SolidColorBrush x:Key="NetunoDefaultBorderBrush" Color="#FF626E8D"/>
+    	<ResourceDictionary>
+    		<ResourceDictionary.MergedDictionaries>
+    			<ResourceDictionary Source="Simple Styles.xaml"/>
+    		</ResourceDictionary.MergedDictionaries>
+
+    		<SolidColorBrush x:Key="NetuneDefaultBackground" Color="#FFEFF6FF"/>
+    		<SolidColorBrush x:Key="NetunoDefaultButtonBackground" Color="#FF447CBF"/>
+    		<SolidColorBrush x:Key="NetunoSubBackground" Color="#FFF9FBFF"/>
+    		<SolidColorBrush x:Key="NetunoDefaultBorderBrush" Color="#FF626E8D"/>
+
+    	</ResourceDictionary>
 
     </Application.Resources>
 </Application>

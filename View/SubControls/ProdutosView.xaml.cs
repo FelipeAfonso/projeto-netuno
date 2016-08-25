@@ -21,5 +21,25 @@ namespace View.UserControls {
         public ProdutosView() {
             InitializeComponent();
         }
+
+        private void ButtonAdicionar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonEditar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonDeletar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonEstoque_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
     }
 }

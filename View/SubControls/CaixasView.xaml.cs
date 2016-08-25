@@ -21,5 +21,25 @@ namespace View.UserControls {
         public CaixasView() {
             InitializeComponent();
         }
+
+        private void ButtonFecharCaixa_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonVerTotal_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonAdicionarDinheiro_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonRetirarDinheiro_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
     }
 }

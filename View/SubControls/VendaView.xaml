@@ -5,19 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="297.45" Width="Auto" Height="Auto">
-    <Grid>
-        <Grid x:Name="UpperGrid" Height="75" VerticalAlignment="Top" Background="{DynamicResource NetunoSubBackground}">
+             d:DesignHeight="300" d:DesignWidth="297.45" Width="Auto" Height="Auto" MinWidth="750" MinHeight="425">
+    <Grid Background="White" Margin="0">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="85"/>
+    		<RowDefinition Height="378*"/>
+    	</Grid.RowDefinitions>
+        <Grid x:Name="UpperGrid" Background="{DynamicResource NetunoSubBackground}" Margin="0,2,0,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
-                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="125"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="PontoVendaButton" Content="Ponto de&#xa;  Venda" Margin="5,2,2,2" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick"/>
+            <Button x:Name="ButtonPontoVenda" Content="Ponto de&#xa;  Venda" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick" MinHeight="75" MinWidth="75"/>
+            <Button x:Name="ButtonEditarVenda" Content="Editar&#xD;&#xA;Venda" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick" Grid.Column="1" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
+            <Button x:Name="ButtonTrocaDev" Content="Troca ou&#xD;&#xA;Devolução" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick" Grid.Column="2" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
+            <Button x:Name="ButtonCancelar" Content="Cancelar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick" Grid.Column="3" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
+            <Button x:Name="ButtonRecibo" Content="Imprimir&#xD;&#xA;Recibo" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick" Grid.Column="4" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
         </Grid>
+        <DataGrid Grid.Row="1" Margin="5" Background="White">
+        	<DataGrid.Columns>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Número" CanUserResize="False"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Data"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Hora"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Itens"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cliente"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Funcionário"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Desconto"/>
+        		<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Observações" CanUserSort="False"/>
+        	</DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>

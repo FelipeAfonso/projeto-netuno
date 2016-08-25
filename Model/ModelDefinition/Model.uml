@@ -4532,6 +4532,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="a4c5ee3e-2547-4ad3-8bdd-be71ce2b7a97"
+            isDerived="false"
+            sourceEndRoleName="Funcionário"
+            targetEndRoleName="Cadastrar Cliente"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bfde799a-23da-4466-b516-e5832a57ceca"
+              LastKnownName="Cadastrar Cliente"
+              LastKnownLocation="Model.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ae034fd-0bc8-4252-a646-1b81df07e077"
+                  name="Funcionário"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12d1c7e7-f47d-44d6-9e33-56b655d954e3"
+                  name="Cadastrar Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -4600,7 +4639,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="a1925fcc-de08-4389-bc02-7a953ecde187"
-              LastKnownName="Adicionar ao Carrinho"
+              LastKnownName="Gerenciar Carrinho"
               LastKnownLocation="Model.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -4639,7 +4678,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="6ec54b34-d795-44f5-ac03-e1f087caa598"
-              LastKnownName="Fechar Carrinho"
+              LastKnownName="Realizar Compra"
               LastKnownLocation="Model.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -4659,6 +4698,45 @@
                 <memberEnd
                   Id="4f87b906-3773-46da-9832-3b0563929946"
                   name="Fechar Carrinho"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="972aa829-798c-4abe-b8b2-c9983827fe86"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Se Cadastrar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="02b6e6a1-811a-4b2d-9fc6-3f1c5c05c725"
+              LastKnownName="Se Cadastrar"
+              LastKnownLocation="Model.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="69abb570-0a6f-4dbe-85c7-00b4b1944bf5"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf426699-8ecc-47e6-9f6a-c61a08f28d54"
+                  name="Se Cadastrar"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4718,45 +4796,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="bdf40e26-5f3a-4b9e-90cf-c9f7e5158f22"
-            isDerived="false"
-            sourceEndRoleName="Usuário"
-            targetEndRoleName="Cadastrar Cliente"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="bfde799a-23da-4466-b516-e5832a57ceca"
-              LastKnownName="Cadastrar Cliente"
-              LastKnownLocation="Model.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="12ae6a35-3f4e-4dd7-9eda-2ee937227053"
-                  name="Usuário"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="fccb335b-b741-414e-ab09-54afb8d74bcb"
-                  name="Cadastrar Cliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -4789,51 +4828,19 @@
         name="Cadastrar Cliente"
         isAbstract="false"
         isLeaf="false">
-        <targetEnds>
-          <association
-            Id="f78bb961-63e4-4800-9a31-7c41b89e71b8"
-            isDerived="false"
-            sourceEndRoleName="Cadastrar Cliente"
-            targetEndRoleName="Cliente"
-            isLeaf="false"
-            isAbstract="false">
-            <actorMoniker
-              Id="220e54e5-4152-4665-ac82-95a15e3334ef"
-              LastKnownName="Cliente"
+        <extendedCases>
+          <extend
+            Id="199253c6-f6f8-4cb8-b74c-cf0ac81156ee">
+            <useCaseMoniker
+              Id="02b6e6a1-811a-4b2d-9fc6-3f1c5c05c725"
+              LastKnownName="Se Cadastrar"
               LastKnownLocation="Model.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="0431d5b8-357f-493e-9c6c-69d7b5c05d79"
-                  name="Cadastrar Cliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="e2220e60-8a03-4e97-8d6f-f81351d498ee"
-                  name="Cliente"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker
-            Id="cbdfa85d-1ac8-4ab6-9b86-fd330cc98eaf"
-            LastKnownName="Junção Sistema Web e Desktop Protótipo 2"
+            Id="4eaad7f7-a7d1-4a03-821c-51f374033794"
+            LastKnownName="Principais Funções / Protótipo 1"
             LastKnownLocation="Model.uml" />
         </subjects>
       </useCase>
@@ -4892,7 +4899,7 @@
     <packageHasNamedElement>
       <useCase
         Id="a1925fcc-de08-4389-bc02-7a953ecde187"
-        name="Adicionar ao Carrinho"
+        name="Gerenciar Carrinho"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -4906,7 +4913,7 @@
     <packageHasNamedElement>
       <useCase
         Id="6ec54b34-d795-44f5-ac03-e1f087caa598"
-        name="Fechar Carrinho"
+        name="Realizar Compra"
         isAbstract="false"
         isLeaf="false">
         <subjects>
@@ -5045,6 +5052,20 @@
         isLeaf="false"
         isActiveClass="false"
         isIndirectlyInstantiated="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="02b6e6a1-811a-4b2d-9fc6-3f1c5c05c725"
+        name="Se Cadastrar"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="cbdfa85d-1ac8-4ab6-9b86-fd330cc98eaf"
+            LastKnownName="Junção Sistema Web e Desktop Protótipo 2"
+            LastKnownLocation="Model.uml" />
+        </subjects>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

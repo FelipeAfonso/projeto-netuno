@@ -21,5 +21,20 @@ namespace View.UserControls {
         public FornecedoresView() {
             InitializeComponent();
         }
+
+        private void ButtonEditar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonAdicionar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
+
+        private void ButtonDeletar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+        	// TODO: Add event handler implementation here.
+        }
     }
 }

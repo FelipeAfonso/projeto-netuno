@@ -24,7 +24,8 @@ namespace View {
         public MenuWindow() {
             InitializeComponent();
             this.Title = Globals.Instance.NomeEmpresa;
-            /*var c = new Categoria { Id = 0, Nome = "Teste" };
+            /*
+            var c = new Categoria { Id = 0, Nome = "Teste" };
             var p = new Produto { Nome = "Teste 1", Id = 0, DisponivelLojaVirtual = false, PrecoCusto=5.0, PrecoPrazo=7, PrecoVista=6, Quantidade=30 };
             var l = new List<Produto>();
             l.Add(p);
@@ -38,7 +39,8 @@ namespace View {
             foreach (Produto produto in prods)
             {
                 Console.WriteLine(p.Nome);
-            }*/
+            }
+            */
 
 
 
