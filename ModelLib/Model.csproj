@@ -85,6 +85,7 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controller.cs" />
     <Compile Include="Endereco.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>

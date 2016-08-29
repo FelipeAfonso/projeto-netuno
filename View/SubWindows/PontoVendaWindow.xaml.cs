@@ -22,10 +22,20 @@ namespace View {
             InitializeComponent();
         }
 
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e) {
-            base.OnClosing(e);
-            this.Hide();
+        private void AutoCompleteBoxBusca_KeyDown(object sender, KeyEventArgs e) {
+            if(e.Key == Key.Enter) {
+                //if (e.Key == Key.Enter & (sender as TextBox).AcceptsReturn == false) MoveToNextUIElement(e);
+            }
         }
 
+        private void textBoxQuantidade_KeyDown(object sender, KeyEventArgs e) {
+            if (e.Key == Key.Enter) {
+                //if (e.Key == Key.Enter & (sender as TextBox).AcceptsReturn == false) MoveToNextUIElement(e);
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e) {
+            FocusManager.SetFocusedElement(GridInput, AutoCompleteBoxBusca);
+        }
     }
 }

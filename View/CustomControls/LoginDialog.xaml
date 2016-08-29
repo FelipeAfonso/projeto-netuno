@@ -1,0 +1,45 @@
+﻿<Window x:Class="View.CustomControls.LoginDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:View.CustomControls"
+        mc:Ignorable="d"
+        Title="Login" Height="230" Width="300" BorderThickness="2" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Background="{DynamicResource NetuneDefaultBackground}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowStyle="None" Topmost="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="205*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFBDDAFF" Offset="0"/>
+                    <GradientStop Color="#FFEFF6FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label x:Name="label" Content="Login" Margin="10,0,0,10" Background="{x:Null}" FontSize="36" FontFamily="Segoe WP Semibold" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Button x:Name="buttonShutdown" Content="Desligar" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Top" IsCancel="True" FontSize="10" Padding="3,1" Background="#FFE23D3D" Foreground="#FFEFF6FF" BorderBrush="{x:Null}" Click="buttonShutdown_Click"/>
+        </Grid>
+        <Label Content="Nome:" HorizontalAlignment="Right" Margin="0,0,5,0" Grid.Row="1" VerticalAlignment="Center" FontSize="18"/>
+        <Label Content="Senha:" HorizontalAlignment="Right" Margin="0,0,5,0" Grid.Row="2" VerticalAlignment="Center" FontSize="18"/>
+        <TextBox x:Name="textBoxNome" Grid.Column="1" Margin="5,0,20,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18"/>
+        <PasswordBox x:Name="textBoxSenha" Grid.Column="1" Margin="5,0,20,0" Grid.Row="2" VerticalAlignment="Center" FontSize="18"/>
+        <Button x:Name="buttonLogin" Content="Entrar" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Foreground="{DynamicResource NetuneDefaultBackground}" FontSize="18" Padding="15,1" Height="28" Width="107" Click="buttonCadastrar_Click" Grid.ColumnSpan="2" IsDefault="True"/>
+
+    </Grid>
+</Window>

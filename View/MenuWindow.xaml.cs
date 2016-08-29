@@ -13,7 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ModelLib;
 using View.UserControls;
+using View.CustomControls;
 using System.Data.Entity.Validation;
+using System.Threading;
 
 namespace View {
     /// <summary>
@@ -24,26 +26,10 @@ namespace View {
         public MenuWindow() {
             InitializeComponent();
             this.Title = Globals.Instance.NomeEmpresa;
-            /*
-            var c = new Categoria { Id = 0, Nome = "Teste" };
-            var p = new Produto { Nome = "Teste 1", Id = 0, DisponivelLojaVirtual = false, PrecoCusto=5.0, PrecoPrazo=7, PrecoVista=6, Quantidade=30 };
-            var l = new List<Produto>();
-            l.Add(p);
-            c.Produto = l;
-            p.Categoria = c;
-            var context = new ERPDBModelContainer();
-            context.ProdutoSet.Add(p);
-            context.SaveChanges();
-            var prods = from pr in context.ProdutoSet
-                        select pr;
-            foreach (Produto produto in prods)
-            {
-                Console.WriteLine(p.Nome);
-            }
-            */
-
-
-
+            foreach (Button b in GridButtons.Children) b.IsEnabled = false;
+            var t = new Thread(LoginThread);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
         }
 
         private void VendasButtonClick(object sender, RoutedEventArgs e) {
@@ -57,11 +43,11 @@ namespace View {
         }
 
         private void MenuViewWindow_SizeChanged(object sender, SizeChangedEventArgs e) {
-            if (e.HeightChanged){
+            if (e.HeightChanged) {
                 double prev = e.PreviousSize.Height;
                 if (e.PreviousSize.Height == 0) prev = 600;
                 double diff = prev - e.NewSize.Height;
-                this.UpperGrid.Height = (this.UpperGrid.Height - diff < 0) ? 100: this.UpperGrid.Height - diff ;
+                this.UpperGrid.Height = (this.UpperGrid.Height - diff < 0) ? 100 : this.UpperGrid.Height - diff;
             }
         }
 
@@ -79,6 +65,66 @@ namespace View {
             this.ControlGrid.Children.Clear();
             this.ControlGrid.Children.Add(new CaixasView());
         }
+
+        private void MenuViewWindow_ContentRendered(object sender, EventArgs e) {
+
+        }
+
+        protected override void OnClosed(EventArgs e) {
+            base.OnClosed(e);
+            Application.Current.Shutdown();
+        }
+
+        private void LoginThread() {
+            var context = new ERPDBModelContainer();
+            //Liberar apenas para teste
+            //context.Database.ExecuteSqlCommand("TRUNCATE TABLE UsuarioSet_Administrador");
+            var query = context.UsuarioSet.OfType<Administrador>().ToList();
+            if (Controller.LoggedUser == null) {
+                if (query.Count == 0) {
+                    Application.Current.Dispatcher.Invoke((Action)(() => {
+                        var dialog = new CreateAdminDialog();
+                        foreach (Button b in GridButtons.Children) b.IsEnabled = true;
+                        LoadingGrid.Visibility = Visibility.Collapsed;
+                        Menu.IsEnabled = true;
+                        if (dialog.ShowDialog() == true) {
+                            context.UsuarioSet.Add(dialog.getAdmin);
+                            context.SaveChanges();
+                            Controller.LoggedUser = dialog.getAdmin;
+                        }
+                    }));
+                }
+                var valid = false;
+                if (Controller.LoggedUser == null) {
+                    Application.Current.Dispatcher.Invoke((Action)(() => {
+                        foreach (Button b in GridButtons.Children) b.IsEnabled = true;
+                        LoadingGrid.Visibility = Visibility.Collapsed;
+                        Menu.IsEnabled = true;
+                    }));
+                    while (!valid) {
+                        Application.Current.Dispatcher.Invoke((Action)(() => {
+                            var dialog = new LoginDialog();
+                            if (dialog.ShowDialog() == true) {
+                                var users = context.UsuarioSet.Where(u => u.Nome.ToLower() == dialog.getFuncionario.Nome.ToLower()).ToList();
+                                foreach (Funcionario f in users) {
+                                    if (f.Senha == dialog.getFuncionario.Senha) { Controller.LoggedUser = f; valid = true; }
+                                }
+                            }
+                            if (Controller.LoggedUser == null) MessageBox.Show("Usuário Inválido", "Erro ao acessar");
+                        }));
+                    }
+
+                }
+            } else {
+                Application.Current.Dispatcher.Invoke((Action)(() => {
+                    foreach (Button b in GridButtons.Children) b.IsEnabled = true;
+                    LoadingGrid.Visibility = Visibility.Collapsed;
+                    Menu.IsEnabled = true;
+                }));
+            }
+
+        }
+
     }
 
 }

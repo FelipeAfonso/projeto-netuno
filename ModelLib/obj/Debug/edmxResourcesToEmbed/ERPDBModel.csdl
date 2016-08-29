@@ -74,10 +74,10 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" />
-    <Property Name="PrecoCusto" Type="Double" Nullable="true" />
+    <Property Name="PrecoCusto" Type="Double" Nullable="false" />
     <Property Name="PrecoVista" Type="Double" Nullable="false" />
-    <Property Name="PrecoPrazo" Type="Double" Nullable="false" />
-    <Property Name="Quantidade" Type="Double" Nullable="false" />
+    <Property Name="PrecoPrazo" Type="Double" Nullable="true" />
+    <Property Name="Quantidade" Type="Double" Nullable="true" />
     <Property Name="DisponivelLojaVirtual" Type="Boolean" Nullable="true" />
     <Property Name="Descricao" Type="String" Nullable="true" />
     <Property Name="UnidadeMedida" Type="String" Nullable="true" />
@@ -86,6 +86,7 @@
     <NavigationProperty Name="Fornecedor" Relationship="ERPDBModel.FornecedorProduto" FromRole="Produto" ToRole="Fornecedor" />
     <NavigationProperty Name="Venda" Relationship="ERPDBModel.VendaProduto" FromRole="Produto" ToRole="Venda" />
     <Property Name="Imagem" Type="Byte" Nullable="true" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Categoria">
     <Key>
@@ -188,7 +189,7 @@
     <Property Name="Nome" Type="String" Nullable="false" />
     <Property Name="Rg" Type="String" Nullable="true" />
     <Property Name="Senha" Type="String" Nullable="true" />
-    <Property Name="Sexo" Type="String" Nullable="false" />
+    <Property Name="Sexo" Type="String" Nullable="true" />
   </EntityType>
   <EntityType Name="Funcionario" BaseType="ERPDBModel.Usuario">
     <Property Name="Foto" Type="String" Nullable="true" />
@@ -235,12 +236,12 @@
     <End Type="ERPDBModel.Venda" Role="Venda" Multiplicity="*" />
   </Association>
   <Association Name="UsuarioEndereco">
-    <End Type="ERPDBModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="1" />
+    <End Type="ERPDBModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="0..1" />
   </Association>
   <Association Name="EnderecoLoja">
-    <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="1" />
-    <End Type="ERPDBModel.Loja" Role="Loja" Multiplicity="1" />
+    <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+    <End Type="ERPDBModel.Loja" Role="Loja" Multiplicity="0..1" />
   </Association>
   <Association Name="FuncionarioPermissao">
     <End Type="ERPDBModel.Funcionario" Role="Funcionario" Multiplicity="*" />
@@ -252,6 +253,6 @@
   </Association>
   <Association Name="FuncionarioLoja">
     <End Type="ERPDBModel.Funcionario" Role="Funcionario" Multiplicity="*" />
-    <End Type="ERPDBModel.Loja" Role="Loja" Multiplicity="1" />
+    <End Type="ERPDBModel.Loja" Role="Loja" Multiplicity="0..1" />
   </Association>
 </Schema>

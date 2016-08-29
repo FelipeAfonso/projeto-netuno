@@ -5,41 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Width="Auto" Height="Auto" MinWidth="750" MinHeight="425">
-	<Grid Background="White" Margin="0">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="85"/>
-			<RowDefinition Height="378*"/>
-		</Grid.RowDefinitions>
-		<Grid x:Name="UpperGrid" Background="{DynamicResource NetunoSubBackground}" Margin="0,2,0,0" VerticalAlignment="Top">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="205"/>
-			</Grid.ColumnDefinitions>
-			<Button x:Name="ButtonAdicionar" Content="Adicionar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonAdicionar_Click" MinHeight="75" MinWidth="75" IsEnabled="False" ToolTip="To be implemented"/>
-			<Button x:Name="ButtonEditar" Content="Editar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75" Click="ButtonEditar_Click"/>
-			<Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonDeletar_Click" Grid.Column="2" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
-			<Button x:Name="ButtonEstoque" Content="Estoque" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonEstoque_Click" Grid.Column="3" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
-			<Label Content="Exibir:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="4" Margin="5,0,0,0"/>
-			<ComboBox x:Name="ComboBoxExibir" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="4" Margin="48,0,0,0" IsEnabled="False" SelectedIndex="0">
-				<ComboBoxItem Content="Todos"/>
-			</ComboBox>
-		</Grid>
-		<DataGrid Grid.Row="1" Margin="5" Background="White">
-			<DataGrid.Columns>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Código" CanUserResize="False"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Estoque"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Preço de Custo"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Preço a Vista"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Preço a Prazo"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Categoria"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Descrição"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fornecedor"/>
-			</DataGrid.Columns>
-		</DataGrid>
-	</Grid>
+             d:DesignHeight="300" d:DesignWidth="300" Width="Auto" Height="Auto" MinWidth="750" MinHeight="425" Loaded="UserControl_Loaded">
+    <Grid Background="White" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85"/>
+            <RowDefinition Height="378*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="UpperGrid" Background="{DynamicResource NetunoSubBackground}" Margin="0,2,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="287"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonAdicionar" Content="Adicionar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonAdicionar_Click" MinHeight="75" MinWidth="75" ToolTip=""/>
+            <Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonDeletar_Click" Grid.Column="1" ToolTip="" MinHeight="75" MinWidth="75"/>
+            <Button x:Name="ButtonEstoque" Content="Estoque" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonEstoque_Click" Grid.Column="2" ToolTip="To be implemented" MinHeight="75" MinWidth="75" IsEnabled="False"/>
+            <Label Content="Exibir:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="3" Margin="5,28,0,29"/>
+            <ComboBox x:Name="ComboBoxExibir" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="3" Margin="48,30,0,31" IsEnabled="False" SelectedIndex="0">
+                <ComboBoxItem Content="Todos"/>
+            </ComboBox>
+        </Grid>
+        <DataGrid x:Name="DataGridProduto" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" FontSize="14" CanUserAddRows="False" GridLinesVisibility="Horizontal" AlternatingRowBackground="{DynamicResource NetuneDefaultBackground}" AlternationCount="1" CellEditEnding="DataGridProduto_CellEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Codigo}" Header="Código" CanUserResize="False"/>
+                <DataGridTextColumn Binding="{Binding Nome}" Header="Nome"/>
+                <DataGridTextColumn Binding="{Binding Quantidade}" Header="Estoque"/>
+                <DataGridTextColumn Binding="{Binding PrecoCusto}" Header="Preço de Custo"/>
+                <DataGridTextColumn Binding="{Binding PrecoVista}" Header="Preço a Vista"/>
+                <DataGridTextColumn Binding="{Binding PrecoPrazo}" Header="Preço a Prazo"/>
+                <DataGridTextColumn Binding="{Binding Categoria.Nome}" Header="Categoria"/>
+                <DataGridTextColumn Binding="{Binding Descricao}" Header="Descrição"/>
+                <DataGridTextColumn Binding="{Binding Fornecedor.Nome}" Header="Fornecedor"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </UserControl>

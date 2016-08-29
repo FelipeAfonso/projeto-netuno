@@ -37,6 +37,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CurrencyTextBoxControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CurrencyTextBox.1.4.0\lib\CurrencyTextBoxControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -100,8 +104,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CustomControls\CreateAdminDialog.xaml.cs">
+      <DependentUpon>CreateAdminDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ProdutoListItem.xaml.cs">
       <DependentUpon>ProdutoListItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindows\AdicionarProdutoWindow.xaml.cs">
+      <DependentUpon>AdicionarProdutoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SubWindows\PontoVendaWindow.xaml.cs">
       <DependentUpon>PontoVendaWindow.xaml</DependentUpon>
@@ -121,6 +134,14 @@
     <Compile Include="SubControls\VendaView.xaml.cs">
       <DependentUpon>VendaView.xaml</DependentUpon>
     </Compile>
+    <Page Include="CustomControls\CreateAdminDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\LoginDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\ProdutoListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,6 +165,10 @@
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SubWindows\AdicionarProdutoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubWindows\PontoVendaWindow.xaml">
       <SubType>Designer</SubType>

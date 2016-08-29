@@ -14,6 +14,7 @@
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />
           <ScalarProperty Name="UnidadeMedida" ColumnName="UnidadeMedida" />
           <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -206,21 +207,23 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="UsuarioEndereco" TypeName="ERPDBModel.UsuarioEndereco" StoreEntitySet="UsuarioSet">
+    <AssociationSetMapping Name="UsuarioEndereco" TypeName="ERPDBModel.UsuarioEndereco" StoreEntitySet="EnderecoSet">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="Endereco">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Usuario_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EnderecoLoja" TypeName="ERPDBModel.EnderecoLoja" StoreEntitySet="LojaSet">
       <EndProperty Name="Endereco">
         <ScalarProperty Name="Id" ColumnName="Endereco_Id" />
       </EndProperty>
-      <EndProperty Name="Usuario">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="EnderecoLoja" TypeName="ERPDBModel.EnderecoLoja" StoreEntitySet="EnderecoSet">
       <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
-      </EndProperty>
-      <EndProperty Name="Endereco">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
+      <Condition ColumnName="Endereco_Id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="FuncionarioPermissao" TypeName="ERPDBModel.FuncionarioPermissao" StoreEntitySet="FuncionarioPermissao">
       <EndProperty Name="Funcionario">
@@ -245,6 +248,7 @@
       <EndProperty Name="Funcionario">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
+      <Condition ColumnName="Loja_Id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

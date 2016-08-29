@@ -1,356 +1,99 @@
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.exe
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.pdb
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.exe
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.pdb
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\ViewModel.dll
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\ViewModel.pdb
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\App.baml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\Caliburn.Micro.dll
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\Caliburn.Micro.Platform.Core.dll
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\Caliburn.Micro.Platform.dll
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\Caliburn.Micro.xml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\Caliburn.Micro.Platform.xml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\Caliburn.Micro.Platform.Core.xml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\ProdutosView.g.cs
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\VendaView.g.cs
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\ProdutosView.baml
-C:\Users\Felipe\Desktop\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\VendaView.baml
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.exe
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.pdb
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\ProdutosView.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\VendaView.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.exe
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.pdb
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\App.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\ProdutosView.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\VendaView.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\CaixasView.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\FornecedoresView.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\UsuarioView.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\CaixasView.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\FornecedoresView.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\UserControls\UsuarioView.g.cs
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\PontoVendaWindow.baml
-J:\Projeto Netuno\Projeto\NTN\View\obj\Debug\PontoVendaWindow.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.exe
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.pdb
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.exe
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\View.pdb
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\App.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.xml
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.xml
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.dll
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.dll
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.cs
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.cs
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Designer.cs
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.tt
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.edmx.diagram
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.tt
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.cs
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.cs
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Designer.cs
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.tt
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.edmx.diagram
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.tt
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.dll
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.dll
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.xml
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.xml
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB.mdf
-J:\Projeto Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB_log.ldf
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB.mdf
-G:\Projeto Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB_log.ldf
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.g.cs
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.baml
-G:\Projeto Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.baml
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB.mdf
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB_log.ldf
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.cs
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.cs
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Designer.cs
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.tt
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.edmx.diagram
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.tt
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.pdb
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.xml
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.xml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.baml
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.exe
-F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.pdb
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFTextBoxAutoComplete.dll
-F:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFToolkit.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.exe
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.pdb
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB.mdf
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB_log.ldf
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.cs
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.cs
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Designer.cs
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.tt
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.edmx.diagram
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.tt
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.pdb
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFTextBoxAutoComplete.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFToolkit.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.xml
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.xml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.baml
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB.mdf
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB_log.ldf
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.cs
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.cs
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Designer.cs
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.tt
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.edmx.diagram
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.tt
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.pdb
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFTextBoxAutoComplete.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFToolkit.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.xml
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.xml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.baml
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.exe
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.pdb
-J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\Simple Styles.baml
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Effects.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Interactions.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Effects.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Drawing.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Controls.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Controls.resources.dll
-J:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Controls.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Drawing.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Effects.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Interactions.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Controls.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Effects.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
-G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\Simple Styles.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB.mdf
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\LocalERPDB_log.ldf
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Designer.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.Context.tt
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.edmx.diagram
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ERPDBModel.tt
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe.config
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.exe
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\View.pdb
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\CurrencyTextBoxControl.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Controls.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Effects.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\WPFToolkit.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ModelLib.pdb
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.xml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Controls.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Effects.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\Simple Styles.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\CreateAdminDialog.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\LoginDialog.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\AdicionarProdutoWindow.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\PontoVendaWindow.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\CaixasView.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\FornecedoresView.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\UsuarioView.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.g.cs
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.cache
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View_MarkupCompile.lref
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\App.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\CreateAdminDialog.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\LoginDialog.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\CustomControls\ProdutoListItem.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MainWindow.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\MenuWindow.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\AdicionarProdutoWindow.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\ProdutosView.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubControls\VendaView.baml
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.g.resources
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.csproj.GenerateResource.Cache
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.exe
+C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\View.pdb

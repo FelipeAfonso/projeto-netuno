@@ -2,8 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:behaviors="clr-namespace:WPFTextBoxAutoComplete;assembly=WPFTextBoxAutoComplete"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="View.PontoVendaWindow"
-        Title="PontoVendaWindow" Height="600" Width="800" MinWidth="800" MinHeight="600" WindowState="Maximized">
+        xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" x:Class="View.PontoVendaWindow"
+        Title="Ponto de Venda" Height="600" Width="800" MinWidth="800" MinHeight="600" WindowState="Maximized" Loaded="Window_Loaded">
     <Window.Background>
         <RadialGradientBrush RadiusY="1.29" RadiusX="1.124" Center="0,-0.015" GradientOrigin="-0.119,-0.135">
             <GradientStop Color="#FFD7E9FB" Offset="1"/>
@@ -28,7 +30,7 @@
             </Grid>
         </DockPanel>
         <DockPanel x:Name="gridBottom" DockPanel.Dock="Bottom" MaxHeight="100" MinHeight="100" VerticalAlignment="Bottom">
-            <Grid HorizontalAlignment="Right" UseLayoutRounding="True" Background="{DynamicResource NetuneDefaultBackground}" DockPanel.Dock="Right">
+            <Grid HorizontalAlignment="Right" UseLayoutRounding="True" Background="{DynamicResource NetuneDefaultBackground}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -40,19 +42,17 @@
                 <RadioButton Content="Cartão" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Grid.Row="2" Margin="5,5,0,5" GroupName="FormaPagamento"/>
                 <RadioButton x:Name="RB" Content="Cheque" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Grid.Row="3" Margin="5,5,0,5" GroupName="FormaPagamento"/>
             </Grid>
-            <Grid>
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Adicionar Produto" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-                <Controls:AutoCompleteBox d:LayoutOverrides="Width" FontSize="16" FontFamily="Segoe UI Semibold" BorderThickness="3,2,2,2" Margin="0,21.28,15,38.72">
-                    <Controls:AutoCompleteBox.BorderBrush>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FFA3AEB9" Offset="0"/>
-                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
-                            <GradientStop Color="#FF718597" Offset="0.375"/>
-                            <GradientStop Color="#FFA7BBC5" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Controls:AutoCompleteBox.BorderBrush>
-                </Controls:AutoCompleteBox>
-                <TextBlock x:Name="textBlock1" Height="38" TextWrapping="Wrap" VerticalAlignment="Bottom"><Run Text="Insira o nome ou o código do produto desejado"/><Run Text=" e sua quantidade"/><Run Text=" (Sem quantidade irá adicionar 1 produto)"/></TextBlock>
+            <Grid x:Name="GridInput" DockPanel.Dock="Right" Margin="10,0,0,0" FocusManager.FocusedElement="{Binding ElementName=AutoCompleteBoxBusca}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,0,0,64" TextWrapping="Wrap" Text="Código ou Nome" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                <Controls:AutoCompleteBox x:Name="AutoCompleteBoxBusca" FontSize="18" FontFamily="Segoe UI Semibold" BorderThickness="3,2,2,2" Margin="0,0,15,0" VerticalAlignment="Center" Height="40" VerticalContentAlignment="Center" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" KeyDown="AutoCompleteBoxBusca_KeyDown"/>
+                <TextBox x:Name="textBoxQuantidade" Grid.Column="1" Height="40" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18" Padding="2" VerticalContentAlignment="Center" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" BorderThickness="2" KeyDown="textBoxQuantidade_KeyDown"/>
+                <Label x:Name="label" Content="Quantidade" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,64" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Padding="0"/>
+                <Button x:Name="buttonAdicionar" Content="Adicionar" Grid.Column="2" Margin="15" Background="{DynamicResource NetunoDefaultButtonBackground}" Foreground="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" FontSize="18" FontWeight="Bold"/>
             </Grid>
         </DockPanel>
         <Grid x:Name="gridDados" DockPanel.Dock="Right" Margin="10,0,0,0" Width="176" MinWidth="200" MaxWidth="350">

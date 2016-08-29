@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/18/2016 13:46:22
--- Generated from EDMX file: G:\Projeto Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
+-- Date Created: 08/28/2016 02:04:06
+-- Generated from EDMX file: C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [G:\PROJETO NETUNO\PROJETO\NTN\MODELLIB\LOCALERPDB.MDF];
+USE [LocalERPDB];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -45,10 +45,10 @@ IF OBJECT_ID(N'[dbo].[FK_ClienteVenda]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_ClienteVenda];
 GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioEndereco]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[UsuarioSet] DROP CONSTRAINT [FK_UsuarioEndereco];
+    ALTER TABLE [dbo].[EnderecoSet] DROP CONSTRAINT [FK_UsuarioEndereco];
 GO
 IF OBJECT_ID(N'[dbo].[FK_EnderecoLoja]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[EnderecoSet] DROP CONSTRAINT [FK_EnderecoLoja];
+    ALTER TABLE [dbo].[LojaSet] DROP CONSTRAINT [FK_EnderecoLoja];
 GO
 IF OBJECT_ID(N'[dbo].[FK_FuncionarioPermissao_Funcionario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[FuncionarioPermissao] DROP CONSTRAINT [FK_FuncionarioPermissao_Funcionario];
@@ -139,14 +139,15 @@ GO
 CREATE TABLE [dbo].[ProdutoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
-    [PrecoCusto] float  NULL,
+    [PrecoCusto] float  NOT NULL,
     [PrecoVista] float  NOT NULL,
-    [PrecoPrazo] float  NOT NULL,
-    [Quantidade] float  NOT NULL,
+    [PrecoPrazo] float  NULL,
+    [Quantidade] float  NULL,
     [DisponivelLojaVirtual] bit  NULL,
     [Descricao] nvarchar(max)  NULL,
     [UnidadeMedida] nvarchar(max)  NULL,
     [Imagem] tinyint  NULL,
+    [Codigo] int  NOT NULL,
     [Categoria_Id] int  NULL,
     [Estoque_Id] int  NULL,
     [Fornecedor_Id] int  NULL,
@@ -180,7 +181,8 @@ GO
 -- Creating table 'LojaSet'
 CREATE TABLE [dbo].[LojaSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Estoque_Id] int  NOT NULL
+    [Estoque_Id] int  NOT NULL,
+    [Endereco_Id] int  NULL
 );
 GO
 
@@ -219,8 +221,7 @@ CREATE TABLE [dbo].[UsuarioSet] (
     [Nome] nvarchar(max)  NOT NULL,
     [Rg] nvarchar(max)  NULL,
     [Senha] nvarchar(max)  NULL,
-    [Sexo] nvarchar(max)  NOT NULL,
-    [Endereco_Id] int  NOT NULL
+    [Sexo] nvarchar(max)  NULL
 );
 GO
 
@@ -232,7 +233,7 @@ CREATE TABLE [dbo].[EnderecoSet] (
     [Cidade] nvarchar(max)  NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
     [Logradouro] nvarchar(max)  NOT NULL,
-    [Loja_Id] int  NOT NULL
+    [Usuario_Id] int  NULL
 );
 GO
 
@@ -246,7 +247,7 @@ GO
 CREATE TABLE [dbo].[UsuarioSet_Funcionario] (
     [Foto] nvarchar(max)  NULL,
     [Id] int  NOT NULL,
-    [Loja_Id] int  NOT NULL
+    [Loja_Id] int  NULL
 );
 GO
 
@@ -517,34 +518,34 @@ ON [dbo].[VendaSet]
     ([Cliente_Id]);
 GO
 
--- Creating foreign key on [Endereco_Id] in table 'UsuarioSet'
-ALTER TABLE [dbo].[UsuarioSet]
+-- Creating foreign key on [Usuario_Id] in table 'EnderecoSet'
+ALTER TABLE [dbo].[EnderecoSet]
 ADD CONSTRAINT [FK_UsuarioEndereco]
-    FOREIGN KEY ([Endereco_Id])
-    REFERENCES [dbo].[EnderecoSet]
+    FOREIGN KEY ([Usuario_Id])
+    REFERENCES [dbo].[UsuarioSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioEndereco'
 CREATE INDEX [IX_FK_UsuarioEndereco]
-ON [dbo].[UsuarioSet]
-    ([Endereco_Id]);
+ON [dbo].[EnderecoSet]
+    ([Usuario_Id]);
 GO
 
--- Creating foreign key on [Loja_Id] in table 'EnderecoSet'
-ALTER TABLE [dbo].[EnderecoSet]
+-- Creating foreign key on [Endereco_Id] in table 'LojaSet'
+ALTER TABLE [dbo].[LojaSet]
 ADD CONSTRAINT [FK_EnderecoLoja]
-    FOREIGN KEY ([Loja_Id])
-    REFERENCES [dbo].[LojaSet]
+    FOREIGN KEY ([Endereco_Id])
+    REFERENCES [dbo].[EnderecoSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_EnderecoLoja'
 CREATE INDEX [IX_FK_EnderecoLoja]
-ON [dbo].[EnderecoSet]
-    ([Loja_Id]);
+ON [dbo].[LojaSet]
+    ([Endereco_Id]);
 GO
 
 -- Creating foreign key on [Funcionario_Id] in table 'FuncionarioPermissao'

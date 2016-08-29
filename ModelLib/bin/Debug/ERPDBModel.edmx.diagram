@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c50343026a164157a16cbd452e00ce9e" Name="Diagram1" ZoomLevel="112" >
+      <Diagram DiagramId="c50343026a164157a16cbd452e00ce9e" Name="Diagram1" ZoomLevel="110" >
         <EntityTypeShape EntityType="ERPDBModel.Produto" Width="1.5" PointX="10.875" PointY="4.75" FillColor="Green" />
         <EntityTypeShape EntityType="ERPDBModel.Categoria" Width="1.5" PointX="13" PointY="5.875" />
         <AssociationConnector Association="ERPDBModel.ProdutoCategoria" />
@@ -16,10 +16,10 @@
         <AssociationConnector Association="ERPDBModel.FornecedorProduto" />
         <EntityTypeShape EntityType="ERPDBModel.Loja" Width="1.5" PointX="9" PointY="1.25" />
         <AssociationConnector Association="ERPDBModel.LojaFornecedor" />
-        <EntityTypeShape EntityType="ERPDBModel.Caixa" Width="1.5" PointX="11.625" PointY="0.5" />
+        <EntityTypeShape EntityType="ERPDBModel.Caixa" Width="1.5" PointX="11.125" PointY="0.5" />
         <AssociationConnector Association="ERPDBModel.LojaCaixa" />
         <AssociationConnector Association="ERPDBModel.LojaEstoque" />
-        <EntityTypeShape EntityType="ERPDBModel.Venda" Width="1.5" PointX="9" PointY="3.875" FillColor="Yellow" />
+        <EntityTypeShape EntityType="ERPDBModel.Venda" Width="1.5" PointX="9" PointY="4.125" FillColor="Yellow" />
         <AssociationConnector Association="ERPDBModel.LojaVenda" />
         <AssociationConnector Association="ERPDBModel.VendaProduto" />
         <EntityTypeShape EntityType="ERPDBModel.Orcamento" Width="1.5" PointX="9" PointY="6.75" />

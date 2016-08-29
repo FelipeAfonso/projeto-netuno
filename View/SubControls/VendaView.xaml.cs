@@ -26,9 +26,13 @@ namespace View.UserControls {
         }
 
         private void PontoVendaButtonClick(object sender, RoutedEventArgs e) {
-            if (p == null) { p = new PontoVendaWindow(); }
-            if (!p.IsVisible) p.Show();
-            else p.Focus();
+            if(p == null) {
+                p = new PontoVendaWindow();
+                p.Closed += (a, b) => p = null;
+                p.Show();
+            }
+            else if (p.IsVisible) p.Focus();
+            else p.Show();
         }
     }
 }

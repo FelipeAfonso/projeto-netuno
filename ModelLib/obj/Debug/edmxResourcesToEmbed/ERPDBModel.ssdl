@@ -104,14 +104,15 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PrecoCusto" Type="float" Nullable="true" />
+    <Property Name="PrecoCusto" Type="float" Nullable="false" />
     <Property Name="PrecoVista" Type="float" Nullable="false" />
-    <Property Name="PrecoPrazo" Type="float" Nullable="false" />
-    <Property Name="Quantidade" Type="float" Nullable="false" />
+    <Property Name="PrecoPrazo" Type="float" Nullable="true" />
+    <Property Name="Quantidade" Type="float" Nullable="true" />
     <Property Name="DisponivelLojaVirtual" Type="bit" Nullable="true" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UnidadeMedida" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Imagem" Type="tinyint" Nullable="true" />
+    <Property Name="Codigo" Type="int" Nullable="false" />
     <Property Name="Categoria_Id" Type="int" Nullable="true" />
     <Property Name="Estoque_Id" Type="int" Nullable="true" />
     <Property Name="Fornecedor_Id" Type="int" Nullable="true" />
@@ -146,6 +147,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Estoque_Id" Type="int" Nullable="false" />
+    <Property Name="Endereco_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="VendaSet">
     <Key>
@@ -184,8 +186,7 @@
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Rg" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Senha" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Sexo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Endereco_Id" Type="int" Nullable="false" />
+    <Property Name="Sexo" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="EnderecoSet">
     <Key>
@@ -197,7 +198,7 @@
     <Property Name="Cidade" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Logradouro" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Loja_Id" Type="int" Nullable="false" />
+    <Property Name="Usuario_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="UsuarioSet_Cliente">
     <Key>
@@ -211,7 +212,7 @@
     </Key>
     <Property Name="Foto" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="Loja_Id" Type="int" Nullable="false" />
+    <Property Name="Loja_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="CategoriaSet_SubCategoria">
     <Key>
@@ -351,26 +352,26 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="UsuarioEndereco">
-    <End Role="Usuario" Type="ERPDBModel.Store.UsuarioSet" Multiplicity="*" />
-    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="1" />
+    <End Role="Usuario" Type="ERPDBModel.Store.UsuarioSet" Multiplicity="0..1" />
+    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Endereco">
+      <Principal Role="Usuario">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Usuario">
-        <PropertyRef Name="Endereco_Id" />
+      <Dependent Role="Endereco">
+        <PropertyRef Name="Usuario_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="EnderecoLoja">
-    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="*" />
-    <End Role="Loja" Type="ERPDBModel.Store.LojaSet" Multiplicity="1" />
+    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="0..1" />
+    <End Role="Loja" Type="ERPDBModel.Store.LojaSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Loja">
+      <Principal Role="Endereco">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Endereco">
-        <PropertyRef Name="Loja_Id" />
+      <Dependent Role="Loja">
+        <PropertyRef Name="Endereco_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -388,7 +389,7 @@
   </Association>
   <Association Name="FuncionarioLoja">
     <End Role="Funcionario" Type="ERPDBModel.Store.UsuarioSet_Funcionario" Multiplicity="*" />
-    <End Role="Loja" Type="ERPDBModel.Store.LojaSet" Multiplicity="1" />
+    <End Role="Loja" Type="ERPDBModel.Store.LojaSet" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Loja">
         <PropertyRef Name="Id" />

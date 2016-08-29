@@ -16,14 +16,15 @@ namespace ModelLib
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public Nullable<double> PrecoCusto { get; set; }
+        public double PrecoCusto { get; set; }
         public double PrecoVista { get; set; }
-        public double PrecoPrazo { get; set; }
-        public double Quantidade { get; set; }
+        public Nullable<double> PrecoPrazo { get; set; }
+        public Nullable<double> Quantidade { get; set; }
         public Nullable<bool> DisponivelLojaVirtual { get; set; }
         public string Descricao { get; set; }
         public string UnidadeMedida { get; set; }
         public Nullable<byte> Imagem { get; set; }
+        public int Codigo { get; set; }
     
         public virtual Categoria Categoria { get; set; }
         public virtual Estoque Estoque { get; set; }
