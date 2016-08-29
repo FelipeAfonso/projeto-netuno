@@ -22,7 +22,7 @@
             <Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonDeletar_Click" Grid.Column="1" ToolTip="" MinHeight="75" MinWidth="75"/>
             <Button x:Name="ButtonEstoque" Content="Estoque" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonEstoque_Click" Grid.Column="2" ToolTip="To be implemented" MinHeight="75" MinWidth="75" IsEnabled="False"/>
             <Label Content="Exibir:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="3" Margin="5,28,0,29"/>
-            <ComboBox x:Name="ComboBoxExibir" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="3" Margin="48,30,0,31" IsEnabled="False" SelectedIndex="0">
+            <ComboBox x:Name="ComboBoxExibir" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="3" Margin="48,30,0,31" SelectedIndex="0" SelectionChanged="ComboBoxExibir_SelectionChanged">
                 <ComboBoxItem Content="Todos"/>
             </ComboBox>
         </Grid>

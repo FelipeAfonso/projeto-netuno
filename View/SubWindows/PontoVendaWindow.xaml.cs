@@ -24,13 +24,13 @@ namespace View {
 
         private void AutoCompleteBoxBusca_KeyDown(object sender, KeyEventArgs e) {
             if(e.Key == Key.Enter) {
-                //if (e.Key == Key.Enter & (sender as TextBox).AcceptsReturn == false) MoveToNextUIElement(e);
+
             }
         }
 
         private void textBoxQuantidade_KeyDown(object sender, KeyEventArgs e) {
             if (e.Key == Key.Enter) {
-                //if (e.Key == Key.Enter & (sender as TextBox).AcceptsReturn == false) MoveToNextUIElement(e);
+
             }
         }
 

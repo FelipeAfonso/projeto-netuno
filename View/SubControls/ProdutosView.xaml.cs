@@ -58,7 +58,9 @@ namespace View.UserControls {
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e) {
+            var ctx = new ERPDBModelContainer();
             Update(sender, e);
+            ComboBoxExibir.ItemsSource = (ctx.CategoriaSet.ToList().Count>0 ) ? ctx.CategoriaSet.ToList() : null;
         }
 
         private void DataGridProduto_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e) {
@@ -72,6 +74,10 @@ namespace View.UserControls {
                 }
                 Update(sender, null);
             }
+        }
+
+        private void ComboBoxExibir_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            //DataGridProduto.ItemsSource = ((Categoria)e.AddedItems[1]).Produto;
         }
     }
 }
