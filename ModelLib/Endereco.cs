@@ -22,6 +22,5 @@ namespace ModelLib
         public string Logradouro { get; set; }
     
         public virtual Usuario Usuario { get; set; }
-        public virtual Loja Loja { get; set; }
     }
 }

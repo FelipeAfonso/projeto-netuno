@@ -76,9 +76,6 @@
     <Compile Include="Administrador.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Caixa.cs">
-      <DependentUpon>ERPDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Categoria.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
@@ -107,9 +104,6 @@
       <DependentUpon>ERPDBModel.edmx</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Estoque.cs">
-      <DependentUpon>ERPDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Fornecedor.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
@@ -117,9 +111,6 @@
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
-    <Compile Include="Loja.cs">
-      <DependentUpon>ERPDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Orcamento.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
@@ -127,6 +118,9 @@
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Produto.cs">
+      <DependentUpon>ERPDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutoVendaItem.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +166,13 @@
     <Content Include="ERPDBModel.edmx.sql" />
     <Content Include="LocalERPDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LocalERPDBOldSQL.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LocalERPDBOldSQL_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>LocalERPDBOldSQL.mdf</DependentUpon>
     </Content>
     <Content Include="LocalERPDB_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

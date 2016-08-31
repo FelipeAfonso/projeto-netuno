@@ -5,25 +5,39 @@
         xmlns:Controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d" x:Class="View.PontoVendaWindow"
-        Title="Ponto de Venda" Height="600" Width="800" MinWidth="800" MinHeight="600" WindowState="Maximized" Loaded="Window_Loaded">
+        Title="Ponto de Venda" Height="600" Width="800" MinWidth="800" MinHeight="600" WindowState="Maximized" Loaded="Window_Loaded" ContentRendered="Window_ContentRendered">
     <Window.Background>
         <RadialGradientBrush RadiusY="1.29" RadiusX="1.124" Center="0,-0.015" GradientOrigin="-0.119,-0.135">
             <GradientStop Color="#FFD7E9FB" Offset="1"/>
             <GradientStop Color="White" Offset="0.145"/>
         </RadialGradientBrush>
     </Window.Background>
+    <Window.Resources>
+        <DataTemplate x:Key="AutoCompleteBoxItemTemplate">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="{Binding Nome}"/>
+                <Label Content="{Binding Codigo}"/>
+                <Label Content="{Binding Descricao}" />
+                <Label Content="{Binding PrecoVista}" ContentStringFormat="R{0:C}" HorizontalAlignment="Right"/>
+                <Label Content="{Binding PrecoPrazo}" ContentStringFormat="R{0:C}" HorizontalAlignment="Right" Visibility="Collapsed"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <DockPanel x:Name="PVDock" Margin="15">
         <DockPanel x:Name="dockTop" DockPanel.Dock="Top" MaxHeight="150" Margin="-15,-15,-15,15" MinHeight="100">
             <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/View;component/Resources/Logo.png"/>
             <Grid HorizontalAlignment="Right" Height="150" DockPanel.Dock="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Content="Operador: " HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                <Label Content="23/08/2016" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,26,0,0" Grid.Column="1" HorizontalContentAlignment="Center"/>
-                <Label Content="09:31 AM" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Grid.Column="1" HorizontalContentAlignment="Center"/>
-                <Label x:Name="labelName" Content="Teste da Silva Souza" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+                <Label Content="Operador: " HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Label x:Name="labelName" Content="Teste da Silva Souza" Grid.Column="1" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Button x:Name="buttonSalvar" Content="Salvar" Margin="15" Background="{DynamicResource NetunoDefaultButtonBackground}" Foreground="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Row="1" Click="buttonSalvar_Click"/>
             </Grid>
             <Grid DockPanel.Dock="Top">
                 <TextBlock TextWrapping="Wrap" Text="Ponto de Venda" FontFamily="Segoe UI Semibold" FontSize="36" TextAlignment="Center" VerticalAlignment="Center"/>
@@ -38,7 +52,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Content="Forma de Pagamento" HorizontalAlignment="Center"/>
-                <RadioButton x:Name="RadioButtonDinheiro" Content="Dinheiro" Margin="5,5,0,5" Grid.Row="1" GroupName="FormaPagamento" IsChecked="True"/>
+                <RadioButton x:Name="RadioButtonDinheiro" Content="Dinheiro" Margin="5,5,0,5" Grid.Row="1" GroupName="FormaPagamento" IsChecked="True" Unchecked="RadioButtonDinheiro_Unchecked" Checked="RadioButtonDinheiro_Checked"/>
                 <RadioButton x:Name="RadioButtonCartao" Content="Cartão" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Grid.Row="2" Margin="5,5,0,5" GroupName="FormaPagamento"/>
                 <RadioButton x:Name="RadioButtonCheque" Content="Cheque" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16" Grid.Row="3" Margin="5,5,0,5" GroupName="FormaPagamento"/>
             </Grid>
@@ -48,7 +62,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <RadioButton x:Name="RadioButtonVista" Content="A Vista" Margin="0,0,0,5" GroupName="Pagamento" IsChecked="True" VerticalAlignment="Bottom" IsEnabled="False"/>
-                <RadioButton x:Name="RadioButtonPrazo" Content="A Prazo" Margin="0,5,15,0" GroupName="Pagamento" Grid.Row="1" IsEnabled="False"/>
+                <RadioButton x:Name="RadioButtonPrazo" Content="A Prazo" Margin="0,5,15,0" GroupName="Pagamento" Grid.Row="1" IsEnabled="False" Checked="RadioButtonPrazo_Checked" Unchecked="RadioButtonPrazo_Unchecked"/>
             </Grid>
             <Grid x:Name="GridInput" DockPanel.Dock="Right" Margin="10,0,0,0" FocusManager.FocusedElement="{Binding ElementName=AutoCompleteBoxBusca}">
                 <Grid.ColumnDefinitions>
@@ -57,10 +71,10 @@
                     <ColumnDefinition Width="120"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,0,0,64" TextWrapping="Wrap" Text="Código ou Nome" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-                <Controls:AutoCompleteBox x:Name="AutoCompleteBoxBusca" FontSize="18" FontFamily="Segoe UI Semibold" BorderThickness="3,2,2,2" Margin="0,0,15,0" VerticalAlignment="Center" Height="40" VerticalContentAlignment="Center" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" KeyDown="AutoCompleteBoxBusca_KeyDown"/>
-                <TextBox x:Name="textBoxQuantidade" Grid.Column="1" Height="40" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18" Padding="2" VerticalContentAlignment="Center" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" BorderThickness="2" KeyDown="textBoxQuantidade_KeyDown"/>
+                <Controls:AutoCompleteBox x:Name="AutoCompleteBoxBusca" FontSize="18" FontFamily="Segoe UI Semibold" BorderThickness="3,2,2,2" Margin="0,0,15,0" VerticalAlignment="Center" Height="40" VerticalContentAlignment="Center" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" KeyDown="AutoCompleteBoxBusca_KeyDown" ItemTemplate="{StaticResource AutoCompleteBoxItemTemplate}" ValueMemberPath="Nome"/>
+                <TextBox x:Name="textBoxQuantidade" Grid.Column="1" Height="40" Margin="0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="18" Padding="2" VerticalContentAlignment="Center" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" BorderThickness="2" KeyDown="textBoxQuantidade_KeyDown" PreviewTextInput="PreviewTextInput" />
                 <Label x:Name="label" Content="Quantidade" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,64" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Padding="0"/>
-                <Button x:Name="buttonAdicionar" Content="Adicionar" Grid.Column="2" Margin="15" Background="{DynamicResource NetunoDefaultButtonBackground}" Foreground="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" FontSize="18" FontWeight="Bold"/>
+                <Button x:Name="buttonAdicionar" Content="Adicionar" Grid.Column="2" Margin="15" Background="{DynamicResource NetunoDefaultButtonBackground}" Foreground="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" FontSize="18" FontWeight="Bold" Click="buttonAdicionar_Click"/>
             </Grid>
         </DockPanel>
         <Grid x:Name="gridDados" DockPanel.Dock="Right" Margin="10,0,0,0" Width="176" MinWidth="200" MaxWidth="350">
@@ -84,7 +98,7 @@
             <Grid Grid.ColumnSpan="4" Grid.Row="1" Margin="0,5">
                 <Rectangle Fill="#FFE9F3FF" Stroke="{DynamicResource NetunoDefaultBorderBrush}" Margin="0" RadiusX="5" RadiusY="5"/>
                 <TextBlock Margin="5" TextWrapping="Wrap" Text="Valor Total" VerticalAlignment="Center" HorizontalAlignment="Left" MaxWidth="100" FontFamily="Segoe UI Semibold" FontSize="20"/>
-                <TextBlock x:Name="textBlockValorTotal" Margin="5" TextWrapping="Wrap" Text="R$ 0,00" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="20" VerticalAlignment="Center"/>
+                <TextBlock x:Name="textBlockValorTotal" Margin="5" TextWrapping="Wrap" Text="R$ 0.0" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="20" VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.ColumnSpan="4" Grid.Row="2" Margin="0,5">
                 <Rectangle Fill="{DynamicResource NetuneDefaultBackground}" Stroke="{DynamicResource NetunoDefaultBorderBrush}" Margin="0" RadiusX="5" RadiusY="5"/>
@@ -102,14 +116,13 @@
                 <TextBlock x:Name="textBlockValorTotal3" Margin="5" TextWrapping="Wrap" Text="R$ 0,00" HorizontalAlignment="Right" FontFamily="Segoe UI Semibold" FontSize="16" VerticalAlignment="Center"/>
             </Grid>
         </Grid>
-        <DataGrid x:Name="dataGridProdutos" Margin="0,0,0,5" Padding="0" Background="White">
+        <DataGrid x:Name="dataGridProdutos" Margin="0,0,0,5" Padding="0" Background="White" IsSynchronizedWithCurrentItem="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Codigo}" ClipboardContentBinding="{x:Null}" Header="Código"/>
-                <DataGridTextColumn Binding="{Binding Nome}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
-                <DataGridTextColumn Binding="{Binding PrecoVista}" ClipboardContentBinding="{x:Null}" Header="Preço a Vista"/>
-                <DataGridTextColumn Binding="{Binding PrecoPrazo}" ClipboardContentBinding="{x:Null}" Header="Preço a Prazo"/>
-                <DataGridTextColumn Binding="{Binding Quantidade}" ClipboardContentBinding="{x:Null}" Header="Quantidade"/>
-                <DataGridTextColumn Binding="{Binding Total}" ClipboardContentBinding="{x:Null}" Header="Total"/>
+                <DataGridTextColumn Binding="{Binding Key.Codigo}" ClipboardContentBinding="{x:Null}" Header="Código"/>
+                <DataGridTextColumn Binding="{Binding Key.Nome}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
+                <DataGridTextColumn x:Name="DataGridColumnVista" Binding="{Binding Key.PrecoVista, StringFormat='R{0:C}'}" ClipboardContentBinding="{x:Null}" Header="Preço a Vista"/>
+                <DataGridTextColumn x:Name="DataGridColumPrazo" Binding="{Binding Key.PrecoPrazo, StringFormat='R{0:C}'}" ClipboardContentBinding="{x:Null}" Header="Preço a Prazo" Visibility="Collapsed"/>
+                <DataGridTextColumn Binding="{Binding Value}" ClipboardContentBinding="{x:Null}" Header="Quantidade"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -33,27 +33,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EstoqueSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Estoque)">
-        <MappingFragment StoreEntitySet="EstoqueSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Custo" ColumnName="Custo" />
-          <ScalarProperty Name="Valor" ColumnName="Valor" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="FornecedorSet">
       <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Fornecedor)">
         <MappingFragment StoreEntitySet="FornecedorSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="LojaSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Loja)">
-        <MappingFragment StoreEntitySet="LojaSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -69,14 +53,6 @@
         <MappingFragment StoreEntitySet="VendaSet_Orcamento">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Expiracao" ColumnName="Expiracao" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CaixaSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Caixa)">
-        <MappingFragment StoreEntitySet="CaixaSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Valor" ColumnName="Valor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -130,6 +106,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoVendaItemSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.ProdutoVendaItem)">
+        <MappingFragment StoreEntitySet="ProdutoVendaItemSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="ProdutoCategoria" TypeName="ERPDBModel.ProdutoCategoria" StoreEntitySet="ProdutoSet">
       <EndProperty Name="Categoria">
         <ScalarProperty Name="Id" ColumnName="Categoria_Id" />
@@ -138,15 +122,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
       <Condition ColumnName="Categoria_Id" IsNull="false" />
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="EstoqueProduto" TypeName="ERPDBModel.EstoqueProduto" StoreEntitySet="ProdutoSet">
-      <EndProperty Name="Estoque">
-        <ScalarProperty Name="Id" ColumnName="Estoque_Id" />
-      </EndProperty>
-      <EndProperty Name="Produto">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-      <Condition ColumnName="Estoque_Id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="FornecedorProduto" TypeName="ERPDBModel.FornecedorProduto" StoreEntitySet="ProdutoSet">
       <EndProperty Name="Fornecedor">
@@ -157,48 +132,6 @@
       </EndProperty>
       <Condition ColumnName="Fornecedor_Id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="LojaFornecedor" TypeName="ERPDBModel.LojaFornecedor" StoreEntitySet="FornecedorSet">
-      <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
-      </EndProperty>
-      <EndProperty Name="Fornecedor">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-      <Condition ColumnName="Loja_Id" IsNull="false" />
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="LojaCaixa" TypeName="ERPDBModel.LojaCaixa" StoreEntitySet="CaixaSet">
-      <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
-      </EndProperty>
-      <EndProperty Name="Caixa">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="LojaEstoque" TypeName="ERPDBModel.LojaEstoque" StoreEntitySet="LojaSet">
-      <EndProperty Name="Estoque">
-        <ScalarProperty Name="Id" ColumnName="Estoque_Id" />
-      </EndProperty>
-      <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="LojaVenda" TypeName="ERPDBModel.LojaVenda" StoreEntitySet="VendaSet">
-      <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
-      </EndProperty>
-      <EndProperty Name="Venda">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VendaProduto" TypeName="ERPDBModel.VendaProduto" StoreEntitySet="ProdutoSet">
-      <EndProperty Name="Venda">
-        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
-      </EndProperty>
-      <EndProperty Name="Produto">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-      <Condition ColumnName="Venda_Id" IsNull="false" />
-    </AssociationSetMapping>
     <AssociationSetMapping Name="ClienteVenda" TypeName="ERPDBModel.ClienteVenda" StoreEntitySet="VendaSet">
       <EndProperty Name="Cliente">
         <ScalarProperty Name="Id" ColumnName="Cliente_Id" />
@@ -206,6 +139,7 @@
       <EndProperty Name="Venda">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
+      <Condition ColumnName="Cliente_Id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="UsuarioEndereco" TypeName="ERPDBModel.UsuarioEndereco" StoreEntitySet="EnderecoSet">
       <EndProperty Name="Usuario">
@@ -214,16 +148,6 @@
       <EndProperty Name="Endereco">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
-      <Condition ColumnName="Usuario_Id" IsNull="false" />
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="EnderecoLoja" TypeName="ERPDBModel.EnderecoLoja" StoreEntitySet="LojaSet">
-      <EndProperty Name="Endereco">
-        <ScalarProperty Name="Id" ColumnName="Endereco_Id" />
-      </EndProperty>
-      <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-      <Condition ColumnName="Endereco_Id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="FuncionarioPermissao" TypeName="ERPDBModel.FuncionarioPermissao" StoreEntitySet="FuncionarioPermissao">
       <EndProperty Name="Funcionario">
@@ -241,14 +165,21 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="FuncionarioLoja" TypeName="ERPDBModel.FuncionarioLoja" StoreEntitySet="UsuarioSet_Funcionario">
-      <EndProperty Name="Loja">
-        <ScalarProperty Name="Id" ColumnName="Loja_Id" />
+    <AssociationSetMapping Name="VendaProdutoVendaItem" TypeName="ERPDBModel.VendaProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
       </EndProperty>
-      <EndProperty Name="Funcionario">
+      <EndProperty Name="ProdutoVendaItem">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
-      <Condition ColumnName="Loja_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProdutoVendaItemProduto" TypeName="ERPDBModel.ProdutoVendaItemProduto" StoreEntitySet="ProdutoVendaItemSet">
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Produto_Id" />
+      </EndProperty>
+      <EndProperty Name="ProdutoVendaItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

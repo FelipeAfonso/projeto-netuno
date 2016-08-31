@@ -27,13 +27,11 @@ namespace ModelLib
     
         public virtual DbSet<Produto> ProdutoSet { get; set; }
         public virtual DbSet<Categoria> CategoriaSet { get; set; }
-        public virtual DbSet<Estoque> EstoqueSet { get; set; }
         public virtual DbSet<Fornecedor> FornecedorSet { get; set; }
-        public virtual DbSet<Loja> LojaSet { get; set; }
         public virtual DbSet<Venda> VendaSet { get; set; }
-        public virtual DbSet<Caixa> CaixaSet { get; set; }
         public virtual DbSet<Permissao> PermissaoSet { get; set; }
         public virtual DbSet<Usuario> UsuarioSet { get; set; }
         public virtual DbSet<Endereco> EnderecoSet { get; set; }
+        public virtual DbSet<ProdutoVendaItem> ProdutoVendaItemSet { get; set; }
     }
 }

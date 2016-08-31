@@ -12,16 +12,12 @@ namespace ModelLib
     using System;
     using System.Collections.Generic;
     
-    public partial class Fornecedor
+    public partial class ProdutoVendaItem
     {
-        public Fornecedor()
-        {
-            this.Produto = new HashSet<Produto>();
-        }
-    
         public int Id { get; set; }
-        public string Nome { get; set; }
+        public int Quantidade { get; set; }
     
-        public virtual ICollection<Produto> Produto { get; set; }
+        public virtual Venda Venda { get; set; }
+        public virtual Produto Produto { get; set; }
     }
 }

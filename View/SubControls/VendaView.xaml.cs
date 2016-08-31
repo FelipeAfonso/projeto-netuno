@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,14 +26,35 @@ namespace View.UserControls {
             InitializeComponent();
         }
 
+        private void Update(object sender, RoutedEventArgs e) {
+            var context = new ERPDBModelContainer();
+            DataGridVendas.ItemsSource = (context.VendaSet.ToList().Count > 0) ? context.VendaSet.ToList() : null;
+            //context.Dispose();
+        }
+
         private void PontoVendaButtonClick(object sender, RoutedEventArgs e) {
             if(p == null) {
                 p = new PontoVendaWindow();
                 p.Closed += (a, b) => p = null;
+                p.buttonSalvar.Click += Update;
                 p.Show();
             }
             else if (p.IsVisible) p.Focus();
             else p.Show();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e) {
+            Update(sender, e);
+        }
+
+        private void ButtonCancelar_Click(object sender, RoutedEventArgs e) {
+            var context = new ERPDBModelContainer();
+            foreach (Venda venda in DataGridVendas.SelectedItems) {
+                var v = context.VendaSet.Single(o => o.Id == venda.Id);
+                context.VendaSet.Remove(v);
+            }
+            context.SaveChanges();
+            Update(sender, e);
         }
     }
 }

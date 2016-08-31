@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\App.xaml
-131314626200
+14-425892365
 
-161611137717
+17830138720
 33-104066531
-CustomControls\CreateAdminDialog.xaml;CustomControls\LoginDialog.xaml;CustomControls\ProdutoListItem.xaml;MainWindow.xaml;MenuWindow.xaml;Simple Styles.xaml;SubWindows\AdicionarProdutoWindow.xaml;SubWindows\PontoVendaWindow.xaml;SubControls\CaixasView.xaml;SubControls\FornecedoresView.xaml;SubControls\ProdutosView.xaml;SubControls\UsuarioView.xaml;SubControls\VendaView.xaml;
+CustomControls\CreateAdminDialog.xaml;CustomControls\EstoqueDialog.xaml;CustomControls\LoginDialog.xaml;CustomControls\ProdutoListItem.xaml;MainWindow.xaml;MenuWindow.xaml;Simple Styles.xaml;SubWindows\AdicionarProdutoWindow.xaml;SubWindows\PontoVendaWindow.xaml;SubControls\CaixasView.xaml;SubControls\FornecedoresView.xaml;SubControls\ProdutosView.xaml;SubControls\UsuarioView.xaml;SubControls\VendaView.xaml;
 
 False
 

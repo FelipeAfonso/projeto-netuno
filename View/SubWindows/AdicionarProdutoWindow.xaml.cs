@@ -43,7 +43,6 @@ namespace View.SubWindows {
                     Nome = textBoxNome.Text,
                     PrecoCusto = Double.Parse(textBoxPrecoCusto.Text.Substring(1), NumberStyles.Currency, CultureInfo.InvariantCulture),
                     PrecoVista = Double.Parse(textBoxPrecoVista.Text.Substring(1), NumberStyles.Currency, CultureInfo.InvariantCulture),
-                    Estoque = Controller.getLojaSingleton(context).Estoque,
                     //Categoria = textBoxCategoria.Text,
                     Descricao = textBoxDescricao.Text
                 };//Double.Parse(textBoxPrecoCusto.Text.Substring(1), NumberStyles.Currency, CultureInfo.InvariantCulture)
@@ -86,11 +85,7 @@ namespace View.SubWindows {
         }
 
         private void PreviewTextInput(object sender, TextCompositionEventArgs e) {
-            e.Handled = !IsTextAllowed(e.Text);
-        }
-        private static bool IsTextAllowed(string text) {
-            Regex regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
-            return !regex.IsMatch(text);
+            e.Handled = !Controller.IsTextAllowed(e.Text);
         }
 
         private void checkBox_Checked_1(object sender, RoutedEventArgs e) {

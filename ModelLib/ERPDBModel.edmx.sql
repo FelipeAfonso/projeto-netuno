@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/28/2016 02:04:06
+-- Date Created: 08/31/2016 17:39:42
 -- Generated from EDMX file: C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
 -- --------------------------------------------------
 
@@ -20,35 +20,14 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_ProdutoCategoria]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ProdutoSet] DROP CONSTRAINT [FK_ProdutoCategoria];
 GO
-IF OBJECT_ID(N'[dbo].[FK_EstoqueProduto]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ProdutoSet] DROP CONSTRAINT [FK_EstoqueProduto];
-GO
 IF OBJECT_ID(N'[dbo].[FK_FornecedorProduto]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ProdutoSet] DROP CONSTRAINT [FK_FornecedorProduto];
-GO
-IF OBJECT_ID(N'[dbo].[FK_LojaFornecedor]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[FornecedorSet] DROP CONSTRAINT [FK_LojaFornecedor];
-GO
-IF OBJECT_ID(N'[dbo].[FK_LojaCaixa]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[CaixaSet] DROP CONSTRAINT [FK_LojaCaixa];
-GO
-IF OBJECT_ID(N'[dbo].[FK_LojaEstoque]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LojaSet] DROP CONSTRAINT [FK_LojaEstoque];
-GO
-IF OBJECT_ID(N'[dbo].[FK_LojaVenda]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_LojaVenda];
-GO
-IF OBJECT_ID(N'[dbo].[FK_VendaProduto]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ProdutoSet] DROP CONSTRAINT [FK_VendaProduto];
 GO
 IF OBJECT_ID(N'[dbo].[FK_ClienteVenda]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_ClienteVenda];
 GO
 IF OBJECT_ID(N'[dbo].[FK_UsuarioEndereco]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[EnderecoSet] DROP CONSTRAINT [FK_UsuarioEndereco];
-GO
-IF OBJECT_ID(N'[dbo].[FK_EnderecoLoja]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LojaSet] DROP CONSTRAINT [FK_EnderecoLoja];
 GO
 IF OBJECT_ID(N'[dbo].[FK_FuncionarioPermissao_Funcionario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[FuncionarioPermissao] DROP CONSTRAINT [FK_FuncionarioPermissao_Funcionario];
@@ -59,8 +38,11 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_FuncionarioVenda]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_FuncionarioVenda];
 GO
-IF OBJECT_ID(N'[dbo].[FK_FuncionarioLoja]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[UsuarioSet_Funcionario] DROP CONSTRAINT [FK_FuncionarioLoja];
+IF OBJECT_ID(N'[dbo].[FK_VendaProdutoVendaItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProdutoVendaItemSet] DROP CONSTRAINT [FK_VendaProdutoVendaItem];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ProdutoVendaItemProduto]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProdutoVendaItemSet] DROP CONSTRAINT [FK_ProdutoVendaItemProduto];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Cliente_inherits_Usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[UsuarioSet_Cliente] DROP CONSTRAINT [FK_Cliente_inherits_Usuario];
@@ -88,20 +70,11 @@ GO
 IF OBJECT_ID(N'[dbo].[CategoriaSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CategoriaSet];
 GO
-IF OBJECT_ID(N'[dbo].[EstoqueSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[EstoqueSet];
-GO
 IF OBJECT_ID(N'[dbo].[FornecedorSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[FornecedorSet];
 GO
-IF OBJECT_ID(N'[dbo].[LojaSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[LojaSet];
-GO
 IF OBJECT_ID(N'[dbo].[VendaSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[VendaSet];
-GO
-IF OBJECT_ID(N'[dbo].[CaixaSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CaixaSet];
 GO
 IF OBJECT_ID(N'[dbo].[PermissaoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PermissaoSet];
@@ -111,6 +84,9 @@ IF OBJECT_ID(N'[dbo].[UsuarioSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[EnderecoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[EnderecoSet];
+GO
+IF OBJECT_ID(N'[dbo].[ProdutoVendaItemSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProdutoVendaItemSet];
 GO
 IF OBJECT_ID(N'[dbo].[UsuarioSet_Cliente]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UsuarioSet_Cliente];
@@ -149,9 +125,7 @@ CREATE TABLE [dbo].[ProdutoSet] (
     [Imagem] tinyint  NULL,
     [Codigo] int  NOT NULL,
     [Categoria_Id] int  NULL,
-    [Estoque_Id] int  NULL,
-    [Fornecedor_Id] int  NULL,
-    [Venda_Id] int  NULL
+    [Fornecedor_Id] int  NULL
 );
 GO
 
@@ -162,27 +136,10 @@ CREATE TABLE [dbo].[CategoriaSet] (
 );
 GO
 
--- Creating table 'EstoqueSet'
-CREATE TABLE [dbo].[EstoqueSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Custo] float  NOT NULL,
-    [Valor] float  NOT NULL
-);
-GO
-
 -- Creating table 'FornecedorSet'
 CREATE TABLE [dbo].[FornecedorSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Nome] nvarchar(max)  NOT NULL,
-    [Loja_Id] int  NULL
-);
-GO
-
--- Creating table 'LojaSet'
-CREATE TABLE [dbo].[LojaSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Estoque_Id] int  NOT NULL,
-    [Endereco_Id] int  NULL
+    [Nome] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -191,17 +148,8 @@ CREATE TABLE [dbo].[VendaSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Data] datetime  NOT NULL,
     [Total] float  NOT NULL,
-    [Loja_Id] int  NOT NULL,
-    [Cliente_Id] int  NOT NULL,
+    [Cliente_Id] int  NULL,
     [Funcionario_Id] int  NOT NULL
-);
-GO
-
--- Creating table 'CaixaSet'
-CREATE TABLE [dbo].[CaixaSet] (
-    [Id] int IDENTITY(1,1) NOT NULL,
-    [Valor] float  NOT NULL,
-    [Loja_Id] int  NOT NULL
 );
 GO
 
@@ -233,7 +181,16 @@ CREATE TABLE [dbo].[EnderecoSet] (
     [Cidade] nvarchar(max)  NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
     [Logradouro] nvarchar(max)  NOT NULL,
-    [Usuario_Id] int  NULL
+    [Usuario_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'ProdutoVendaItemSet'
+CREATE TABLE [dbo].[ProdutoVendaItemSet] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Quantidade] int  NOT NULL,
+    [Venda_Id] int  NOT NULL,
+    [Produto_Id] int  NOT NULL
 );
 GO
 
@@ -246,8 +203,7 @@ GO
 -- Creating table 'UsuarioSet_Funcionario'
 CREATE TABLE [dbo].[UsuarioSet_Funcionario] (
     [Foto] nvarchar(max)  NULL,
-    [Id] int  NOT NULL,
-    [Loja_Id] int  NULL
+    [Id] int  NOT NULL
 );
 GO
 
@@ -295,33 +251,15 @@ ADD CONSTRAINT [PK_CategoriaSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'EstoqueSet'
-ALTER TABLE [dbo].[EstoqueSet]
-ADD CONSTRAINT [PK_EstoqueSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
 -- Creating primary key on [Id] in table 'FornecedorSet'
 ALTER TABLE [dbo].[FornecedorSet]
 ADD CONSTRAINT [PK_FornecedorSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'LojaSet'
-ALTER TABLE [dbo].[LojaSet]
-ADD CONSTRAINT [PK_LojaSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
 -- Creating primary key on [Id] in table 'VendaSet'
 ALTER TABLE [dbo].[VendaSet]
 ADD CONSTRAINT [PK_VendaSet]
-    PRIMARY KEY CLUSTERED ([Id] ASC);
-GO
-
--- Creating primary key on [Id] in table 'CaixaSet'
-ALTER TABLE [dbo].[CaixaSet]
-ADD CONSTRAINT [PK_CaixaSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -340,6 +278,12 @@ GO
 -- Creating primary key on [Id] in table 'EnderecoSet'
 ALTER TABLE [dbo].[EnderecoSet]
 ADD CONSTRAINT [PK_EnderecoSet]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'ProdutoVendaItemSet'
+ALTER TABLE [dbo].[ProdutoVendaItemSet]
+ADD CONSTRAINT [PK_ProdutoVendaItemSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -398,21 +342,6 @@ ON [dbo].[ProdutoSet]
     ([Categoria_Id]);
 GO
 
--- Creating foreign key on [Estoque_Id] in table 'ProdutoSet'
-ALTER TABLE [dbo].[ProdutoSet]
-ADD CONSTRAINT [FK_EstoqueProduto]
-    FOREIGN KEY ([Estoque_Id])
-    REFERENCES [dbo].[EstoqueSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_EstoqueProduto'
-CREATE INDEX [IX_FK_EstoqueProduto]
-ON [dbo].[ProdutoSet]
-    ([Estoque_Id]);
-GO
-
 -- Creating foreign key on [Fornecedor_Id] in table 'ProdutoSet'
 ALTER TABLE [dbo].[ProdutoSet]
 ADD CONSTRAINT [FK_FornecedorProduto]
@@ -426,81 +355,6 @@ GO
 CREATE INDEX [IX_FK_FornecedorProduto]
 ON [dbo].[ProdutoSet]
     ([Fornecedor_Id]);
-GO
-
--- Creating foreign key on [Loja_Id] in table 'FornecedorSet'
-ALTER TABLE [dbo].[FornecedorSet]
-ADD CONSTRAINT [FK_LojaFornecedor]
-    FOREIGN KEY ([Loja_Id])
-    REFERENCES [dbo].[LojaSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_LojaFornecedor'
-CREATE INDEX [IX_FK_LojaFornecedor]
-ON [dbo].[FornecedorSet]
-    ([Loja_Id]);
-GO
-
--- Creating foreign key on [Loja_Id] in table 'CaixaSet'
-ALTER TABLE [dbo].[CaixaSet]
-ADD CONSTRAINT [FK_LojaCaixa]
-    FOREIGN KEY ([Loja_Id])
-    REFERENCES [dbo].[LojaSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_LojaCaixa'
-CREATE INDEX [IX_FK_LojaCaixa]
-ON [dbo].[CaixaSet]
-    ([Loja_Id]);
-GO
-
--- Creating foreign key on [Estoque_Id] in table 'LojaSet'
-ALTER TABLE [dbo].[LojaSet]
-ADD CONSTRAINT [FK_LojaEstoque]
-    FOREIGN KEY ([Estoque_Id])
-    REFERENCES [dbo].[EstoqueSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_LojaEstoque'
-CREATE INDEX [IX_FK_LojaEstoque]
-ON [dbo].[LojaSet]
-    ([Estoque_Id]);
-GO
-
--- Creating foreign key on [Loja_Id] in table 'VendaSet'
-ALTER TABLE [dbo].[VendaSet]
-ADD CONSTRAINT [FK_LojaVenda]
-    FOREIGN KEY ([Loja_Id])
-    REFERENCES [dbo].[LojaSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_LojaVenda'
-CREATE INDEX [IX_FK_LojaVenda]
-ON [dbo].[VendaSet]
-    ([Loja_Id]);
-GO
-
--- Creating foreign key on [Venda_Id] in table 'ProdutoSet'
-ALTER TABLE [dbo].[ProdutoSet]
-ADD CONSTRAINT [FK_VendaProduto]
-    FOREIGN KEY ([Venda_Id])
-    REFERENCES [dbo].[VendaSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_VendaProduto'
-CREATE INDEX [IX_FK_VendaProduto]
-ON [dbo].[ProdutoSet]
-    ([Venda_Id]);
 GO
 
 -- Creating foreign key on [Cliente_Id] in table 'VendaSet'
@@ -531,21 +385,6 @@ GO
 CREATE INDEX [IX_FK_UsuarioEndereco]
 ON [dbo].[EnderecoSet]
     ([Usuario_Id]);
-GO
-
--- Creating foreign key on [Endereco_Id] in table 'LojaSet'
-ALTER TABLE [dbo].[LojaSet]
-ADD CONSTRAINT [FK_EnderecoLoja]
-    FOREIGN KEY ([Endereco_Id])
-    REFERENCES [dbo].[EnderecoSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_EnderecoLoja'
-CREATE INDEX [IX_FK_EnderecoLoja]
-ON [dbo].[LojaSet]
-    ([Endereco_Id]);
 GO
 
 -- Creating foreign key on [Funcionario_Id] in table 'FuncionarioPermissao'
@@ -587,19 +426,34 @@ ON [dbo].[VendaSet]
     ([Funcionario_Id]);
 GO
 
--- Creating foreign key on [Loja_Id] in table 'UsuarioSet_Funcionario'
-ALTER TABLE [dbo].[UsuarioSet_Funcionario]
-ADD CONSTRAINT [FK_FuncionarioLoja]
-    FOREIGN KEY ([Loja_Id])
-    REFERENCES [dbo].[LojaSet]
+-- Creating foreign key on [Venda_Id] in table 'ProdutoVendaItemSet'
+ALTER TABLE [dbo].[ProdutoVendaItemSet]
+ADD CONSTRAINT [FK_VendaProdutoVendaItem]
+    FOREIGN KEY ([Venda_Id])
+    REFERENCES [dbo].[VendaSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
--- Creating non-clustered index for FOREIGN KEY 'FK_FuncionarioLoja'
-CREATE INDEX [IX_FK_FuncionarioLoja]
-ON [dbo].[UsuarioSet_Funcionario]
-    ([Loja_Id]);
+-- Creating non-clustered index for FOREIGN KEY 'FK_VendaProdutoVendaItem'
+CREATE INDEX [IX_FK_VendaProdutoVendaItem]
+ON [dbo].[ProdutoVendaItemSet]
+    ([Venda_Id]);
+GO
+
+-- Creating foreign key on [Produto_Id] in table 'ProdutoVendaItemSet'
+ALTER TABLE [dbo].[ProdutoVendaItemSet]
+ADD CONSTRAINT [FK_ProdutoVendaItemProduto]
+    FOREIGN KEY ([Produto_Id])
+    REFERENCES [dbo].[ProdutoSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ProdutoVendaItemProduto'
+CREATE INDEX [IX_FK_ProdutoVendaItemProduto]
+ON [dbo].[ProdutoVendaItemSet]
+    ([Produto_Id]);
 GO
 
 -- Creating foreign key on [Id] in table 'UsuarioSet_Cliente'

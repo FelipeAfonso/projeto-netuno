@@ -5,26 +5,17 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="c50343026a164157a16cbd452e00ce9e" Name="Diagram1" ZoomLevel="110" >
-        <EntityTypeShape EntityType="ERPDBModel.Produto" Width="1.5" PointX="10.875" PointY="4.75" FillColor="Green" />
+        <EntityTypeShape EntityType="ERPDBModel.Produto" Width="1.5" PointX="11.125" PointY="4.875" FillColor="Green" />
         <EntityTypeShape EntityType="ERPDBModel.Categoria" Width="1.5" PointX="13" PointY="5.875" />
         <AssociationConnector Association="ERPDBModel.ProdutoCategoria" />
         <EntityTypeShape EntityType="ERPDBModel.SubCategoria" Width="1.5" PointX="15" PointY="6" />
         <InheritanceConnector EntityType="ERPDBModel.SubCategoria" />
-        <EntityTypeShape EntityType="ERPDBModel.Estoque" Width="1.5" PointX="12.875" PointY="1.75" />
-        <AssociationConnector Association="ERPDBModel.EstoqueProduto" />
         <EntityTypeShape EntityType="ERPDBModel.Fornecedor" Width="1.5" PointX="11" PointY="2.5" />
         <AssociationConnector Association="ERPDBModel.FornecedorProduto" />
-        <EntityTypeShape EntityType="ERPDBModel.Loja" Width="1.5" PointX="9" PointY="1.25" />
-        <AssociationConnector Association="ERPDBModel.LojaFornecedor" />
-        <EntityTypeShape EntityType="ERPDBModel.Caixa" Width="1.5" PointX="11.125" PointY="0.5" />
-        <AssociationConnector Association="ERPDBModel.LojaCaixa" />
-        <AssociationConnector Association="ERPDBModel.LojaEstoque" />
-        <EntityTypeShape EntityType="ERPDBModel.Venda" Width="1.5" PointX="9" PointY="4.125" FillColor="Yellow" />
-        <AssociationConnector Association="ERPDBModel.LojaVenda" />
-        <AssociationConnector Association="ERPDBModel.VendaProduto" />
+        <EntityTypeShape EntityType="ERPDBModel.Venda" Width="1.5" PointX="6.75" PointY="4.125" FillColor="Yellow" />
         <EntityTypeShape EntityType="ERPDBModel.Orcamento" Width="1.5" PointX="9" PointY="6.75" />
         <InheritanceConnector EntityType="ERPDBModel.Orcamento" />
-        <EntityTypeShape EntityType="ERPDBModel.Cliente" Width="1.5" PointX="6.5" PointY="6.75" />
+        <EntityTypeShape EntityType="ERPDBModel.Cliente" Width="1.5" PointX="6.875" PointY="7" />
         <EntityTypeShape EntityType="ERPDBModel.Usuario" Width="1.5" PointX="4.375" PointY="6.75" />
         <EntityTypeShape EntityType="ERPDBModel.Endereco" Width="1.5" PointX="1.875" PointY="4.375" />
         <EntityTypeShape EntityType="ERPDBModel.Funcionario" Width="1.5" PointX="4.375" PointY="3.875" />
@@ -34,11 +25,6 @@
         <InheritanceConnector EntityType="ERPDBModel.Funcionario" />
         <InheritanceConnector EntityType="ERPDBModel.Administrador" />
         <AssociationConnector Association="ERPDBModel.EnderecoUsuario" />
-        <AssociationConnector Association="ERPDBModel.EnderecoLoja" ManuallyRouted="true" >
-          <ConnectorPoint PointX="2.625" PointY="4.3749999999999982" />
-          <ConnectorPoint PointX="2.625" PointY="1.312320756799108" />
-          <ConnectorPoint PointX="9" PointY="1.312320756799108" />
-        </AssociationConnector>
         <EntityTypeShape EntityType="ERPDBModel.Permissao" Width="1.5" PointX="6.875" PointY="2" />
         <InheritanceConnector EntityType="ERPDBModel.Orcamento" />
         <InheritanceConnector EntityType="ERPDBModel.Cliente" />
@@ -47,7 +33,9 @@
         <AssociationConnector Association="ERPDBModel.UsuarioEndereco" />
         <AssociationConnector Association="ERPDBModel.FuncionarioPermissao" />
         <AssociationConnector Association="ERPDBModel.FuncionarioVenda" />
-        <AssociationConnector Association="ERPDBModel.FuncionarioLoja" />
+        <EntityTypeShape EntityType="ERPDBModel.ProdutoVendaItem" Width="1.5" PointX="9" PointY="4" />
+        <AssociationConnector Association="ERPDBModel.VendaProdutoVendaItem" />
+        <AssociationConnector Association="ERPDBModel.ProdutoVendaItemProduto" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

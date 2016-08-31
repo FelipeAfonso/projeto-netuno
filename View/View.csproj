@@ -107,6 +107,9 @@
     <Compile Include="CustomControls\CreateAdminDialog.xaml.cs">
       <DependentUpon>CreateAdminDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\EstoqueDialog.xaml.cs">
+      <DependentUpon>EstoqueDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\LoginDialog.xaml.cs">
       <DependentUpon>LoginDialog.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
       <DependentUpon>VendaView.xaml</DependentUpon>
     </Compile>
     <Page Include="CustomControls\CreateAdminDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\EstoqueDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

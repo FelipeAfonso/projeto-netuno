@@ -27,8 +27,7 @@ namespace ModelLib
         public int Codigo { get; set; }
     
         public virtual Categoria Categoria { get; set; }
-        public virtual Estoque Estoque { get; set; }
         public virtual Fornecedor Fornecedor { get; set; }
-        public virtual Venda Venda { get; set; }
+        public virtual ProdutoVendaItem ProdutoVendaItem { get; set; }
     }
 }

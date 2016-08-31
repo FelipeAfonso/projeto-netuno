@@ -16,16 +16,15 @@ namespace ModelLib
     {
         public Venda()
         {
-            this.Produto = new HashSet<Produto>();
+            this.ProdutoVendaItem = new HashSet<ProdutoVendaItem>();
         }
     
         public int Id { get; set; }
         public System.DateTime Data { get; set; }
         public double Total { get; set; }
     
-        public virtual Loja Loja { get; set; }
-        public virtual ICollection<Produto> Produto { get; set; }
         public virtual Cliente Cliente { get; set; }
         public virtual Funcionario Funcionario { get; set; }
+        public virtual ICollection<ProdutoVendaItem> ProdutoVendaItem { get; set; }
     }
 }

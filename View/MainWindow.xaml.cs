@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModelLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,8 @@ namespace View {
         }
 
         private void LoadData() {
-            // Load Logic
+
+
 
             new MenuWindow().Show();
             this.Close();
