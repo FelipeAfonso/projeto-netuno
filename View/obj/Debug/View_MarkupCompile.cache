@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\obj\Debug\
+G:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\
 View
 none
 false
 DEBUG;TRACE
-C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\View\App.xaml
-14-425892365
+G:\Projetos\Netuno\Projeto\NTN\View\App.xaml
+15-1648701284
 
-17830138720
-33-104066531
-CustomControls\CreateAdminDialog.xaml;CustomControls\EstoqueDialog.xaml;CustomControls\LoginDialog.xaml;CustomControls\ProdutoListItem.xaml;MainWindow.xaml;MenuWindow.xaml;Simple Styles.xaml;SubWindows\AdicionarProdutoWindow.xaml;SubWindows\PontoVendaWindow.xaml;SubControls\CaixasView.xaml;SubControls\FornecedoresView.xaml;SubControls\ProdutosView.xaml;SubControls\UsuarioView.xaml;SubControls\VendaView.xaml;
+181619113666
+33-1939209246
+CustomControls\CreateAdminDialog.xaml;CustomControls\EstoqueDialog.xaml;CustomControls\LoginDialog.xaml;CustomControls\ProdutoListItem.xaml;MainWindow.xaml;MenuWindow.xaml;Simple Styles.xaml;SubWindows\AdicionarProdutoWindow.xaml;SubWindows\FornecedorManagerWindow.xaml;SubWindows\PontoVendaWindow.xaml;SubControls\CaixasView.xaml;SubControls\FornecedoresView.xaml;SubControls\ProdutosView.xaml;SubControls\UsuarioView.xaml;SubControls\VendaView.xaml;
 
 False
 

@@ -13,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Globalization;
+using System.Collections;
+using System.Resources;
 
 namespace View {
     /// <summary>
@@ -26,7 +29,11 @@ namespace View {
 
         private void LoadData() {
 
-
+            Controller.Permissoes.Add("LançarVendas", new Permissao() { Descricao = PermissoesResource.LancarCompras });
+            Controller.Permissoes.Add("EditarVendas", new Permissao() { Descricao = PermissoesResource.EditarCompras });
+            Controller.Permissoes.Add("GerenciarEstoque", new Permissao() { Descricao = PermissoesResource.GerenciarEstoque });
+            Controller.Permissoes.Add("GerenciarProdutos", new Permissao() { Descricao = PermissoesResource.GerenciarProdutos });
+            Controller.Permissoes.Add("GerenciarFornecedores", new Permissao() { Descricao = PermissoesResource.GerenciarFornecedores});
 
             new MenuWindow().Show();
             this.Close();

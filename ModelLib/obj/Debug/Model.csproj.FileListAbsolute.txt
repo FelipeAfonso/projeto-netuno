@@ -124,3 +124,9 @@ J:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDBOldSQL.mdf
 J:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDBOldSQL_log.ldf
 C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDBOldSQL.mdf
 C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDBOldSQL_log.ldf
+G:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDBOldSQL.mdf
+G:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\LocalERPDBOldSQL_log.ldf
+G:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\PermissoesResource.Designer.cs
+G:\Projetos\Netuno\Projeto\NTN\ModelLib\bin\Debug\PermissoesResource.resx
+G:\Projetos\Netuno\Projeto\NTN\ModelLib\obj\Debug\ModelLib.PermissoesResource.resources
+G:\Projetos\Netuno\Projeto\NTN\ModelLib\obj\Debug\Model.csproj.GenerateResource.Cache

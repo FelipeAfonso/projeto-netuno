@@ -119,6 +119,9 @@
     <Compile Include="SubWindows\AdicionarProdutoWindow.xaml.cs">
       <DependentUpon>AdicionarProdutoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SubWindows\FornecedorManagerWindow.xaml.cs">
+      <DependentUpon>FornecedorManagerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubWindows\PontoVendaWindow.xaml.cs">
       <DependentUpon>PontoVendaWindow.xaml</DependentUpon>
     </Compile>
@@ -177,6 +180,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SubWindows\FornecedorManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SubWindows\PontoVendaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -231,7 +238,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModelLib\Model.csproj">

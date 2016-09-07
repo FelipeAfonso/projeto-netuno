@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c50343026a164157a16cbd452e00ce9e" Name="Diagram1" ZoomLevel="110" >
+      <Diagram DiagramId="c50343026a164157a16cbd452e00ce9e" Name="Diagram1" ZoomLevel="82" >
         <EntityTypeShape EntityType="ERPDBModel.Produto" Width="1.5" PointX="11.125" PointY="4.875" FillColor="Green" />
         <EntityTypeShape EntityType="ERPDBModel.Categoria" Width="1.5" PointX="13" PointY="5.875" />
         <AssociationConnector Association="ERPDBModel.ProdutoCategoria" />
         <EntityTypeShape EntityType="ERPDBModel.SubCategoria" Width="1.5" PointX="15" PointY="6" />
         <InheritanceConnector EntityType="ERPDBModel.SubCategoria" />
-        <EntityTypeShape EntityType="ERPDBModel.Fornecedor" Width="1.5" PointX="11" PointY="2.5" />
+        <EntityTypeShape EntityType="ERPDBModel.Fornecedor" Width="1.5" PointX="11" PointY="1.875" />
         <AssociationConnector Association="ERPDBModel.FornecedorProduto" />
         <EntityTypeShape EntityType="ERPDBModel.Venda" Width="1.5" PointX="6.75" PointY="4.125" FillColor="Yellow" />
         <EntityTypeShape EntityType="ERPDBModel.Orcamento" Width="1.5" PointX="9" PointY="6.75" />
@@ -36,6 +36,8 @@
         <EntityTypeShape EntityType="ERPDBModel.ProdutoVendaItem" Width="1.5" PointX="9" PointY="4" />
         <AssociationConnector Association="ERPDBModel.VendaProdutoVendaItem" />
         <AssociationConnector Association="ERPDBModel.ProdutoVendaItemProduto" />
+        <AssociationConnector Association="ERPDBModel.EnderecoFornecedor" ManuallyRouted="false" >
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

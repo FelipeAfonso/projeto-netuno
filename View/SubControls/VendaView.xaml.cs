@@ -24,6 +24,11 @@ namespace View.UserControls {
 
         public VendaView() {
             InitializeComponent();
+            if(Controller.LoggedUser.GetType() == typeof(Administrador)
+                || Controller.LoggedUser.Permissao.Contains(Controller.Permissoes["LançarVendas"])) {
+                ButtonCancelar.IsEnabled = true;
+                ButtonPontoVenda.IsEnabled = true;
+            }
         }
 
         private void Update(object sender, RoutedEventArgs e) {
@@ -48,13 +53,30 @@ namespace View.UserControls {
         }
 
         private void ButtonCancelar_Click(object sender, RoutedEventArgs e) {
-            var context = new ERPDBModelContainer();
-            foreach (Venda venda in DataGridVendas.SelectedItems) {
-                var v = context.VendaSet.Single(o => o.Id == venda.Id);
-                context.VendaSet.Remove(v);
+            if (Controller.LoggedUser.GetType() == typeof(Administrador)
+                || Controller.LoggedUser.Permissao.Contains(Controller.Permissoes["EditarVendas"])) {
+                var context = new ERPDBModelContainer();
+                foreach (Venda venda in DataGridVendas.SelectedItems) {
+                    var v = context.VendaSet.Single(o => o.Id == venda.Id);
+                    context.VendaSet.Remove(v);
+                }
+                context.SaveChanges();
+                Update(sender, e);
+            } else {
+                var t = true;
+                foreach (Venda v in DataGridVendas.SelectedItems) {
+                    if(v.Funcionario != Controller.LoggedUser) t = false;
+                }
+                if (t) {
+                    var context = new ERPDBModelContainer();
+                    foreach (Venda venda in DataGridVendas.SelectedItems) {
+                        var v = context.VendaSet.Single(o => o.Id == venda.Id);
+                        context.VendaSet.Remove(v);
+                    }
+                    context.SaveChanges();
+                    Update(sender, e);
+                }
             }
-            context.SaveChanges();
-            Update(sender, e);
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:View.SubWindows"
         xmlns:currency="clr-namespace:CurrencyTextBoxControl;assembly=CurrencyTextBoxControl"
         mc:Ignorable="d"
-        Title="Cadastrar Produto" Icon="/View;component/NoImageIcon.png" MinWidth="800" MinHeight="600" Background="{DynamicResource NetuneDefaultBackground}">
+        Title="Cadastrar Produto" MinWidth="800" MinHeight="600" Background="{DynamicResource NetuneDefaultBackground}">
     <Grid Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180"/>
@@ -45,7 +45,7 @@
         <Label Content="Código:" HorizontalAlignment="Right" Margin="0,10" Grid.Row="1" VerticalAlignment="Center" FontSize="18" Height="34" FontWeight="Bold"/>
         <Label Content="Nome:" Margin="0,10" Grid.Row="2" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Right" Height="34" FontWeight="Bold"/>
         <Label Content="Preço de Custo:" Margin="0,10" Grid.Row="3" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Right" Height="34"/>
-        <Label Content="Preço a Vista:" Margin="0,10" Grid.Row="4" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Right" Height="34"/>
+        <Label Content="Preço a Vista:" Margin="0,10" Grid.Row="4" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Right" Height="34" FontWeight="Bold"/>
         <Label Content="Preço a Prazo:" Margin="0,10,0,11" Grid.Row="5" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Right" Height="34"/>
         <Label Content="Categoria:" Margin="0,10" Grid.Row="6" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Right" Height="34"/>
         <Label Content="Estoque Inicial:" Margin="0,11,0,10" Grid.Row="7" VerticalAlignment="Center" FontSize="18" HorizontalAlignment="Right" Height="34"/>

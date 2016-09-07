@@ -51,6 +51,10 @@
       <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
       <End Role="Produto" EntitySet="ProdutoSet" />
     </AssociationSet>
+    <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.Store.EnderecoFornecedor">
+      <End Role="Endereco" EntitySet="EnderecoSet" />
+      <End Role="Fornecedor" EntitySet="FornecedorSet" />
+    </AssociationSet>
     <AssociationSet Name="FK_Cliente_inherits_Usuario" Association="ERPDBModel.Store.FK_Cliente_inherits_Usuario">
       <End Role="Usuario" EntitySet="UsuarioSet" />
       <End Role="Cliente" EntitySet="UsuarioSet_Cliente" />
@@ -103,6 +107,12 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Celular" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CNPJ" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Observacoes" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Endereco_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="VendaSet">
     <Key>
@@ -139,12 +149,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Numero" Type="int" Nullable="false" />
-    <Property Name="Bairro" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Cidade" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Logradouro" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Usuario_Id" Type="int" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="true" />
+    <Property Name="Bairro" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Cidade" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Logradouro" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="CEP" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Usuario_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="ProdutoVendaItemSet">
     <Key>
@@ -234,7 +245,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="UsuarioEndereco">
-    <End Role="Usuario" Type="ERPDBModel.Store.UsuarioSet" Multiplicity="1" />
+    <End Role="Usuario" Type="ERPDBModel.Store.UsuarioSet" Multiplicity="0..1" />
     <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Usuario">
@@ -278,6 +289,18 @@
       </Principal>
       <Dependent Role="ProdutoVendaItem">
         <PropertyRef Name="Produto_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EnderecoFornecedor">
+    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="ERPDBModel.Store.FornecedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="Endereco_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

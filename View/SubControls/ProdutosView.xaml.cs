@@ -27,6 +27,16 @@ namespace View.UserControls {
 
         public ProdutosView() {
             InitializeComponent();
+
+            if (Controller.LoggedUser.GetType() == typeof(Administrador)
+                || Controller.LoggedUser.Permissao.Contains(Controller.Permissoes["GerenciarProdutos"])) {
+                ButtonAdicionar.IsEnabled = true;
+                ButtonDeletar.IsEnabled = true;
+            }
+            if (Controller.LoggedUser.GetType() == typeof(Administrador)
+                || Controller.LoggedUser.Permissao.Contains(Controller.Permissoes["GerenciarEstoque"])) {
+                ButtonEstoque.IsEnabled = true;
+            }
         }
 
         private void ButtonAdicionar_Click(object sender, System.Windows.RoutedEventArgs e) {
@@ -41,7 +51,7 @@ namespace View.UserControls {
 
         private void Update(object sender, RoutedEventArgs e) {
             var context = new ERPDBModelContainer();
-            DataGridProduto.ItemsSource = (context.ProdutoSet.ToList().Count>0) ? context.ProdutoSet.ToList() : null;
+            DataGridProduto.ItemsSource = (context.ProdutoSet.ToList().Count > 0) ? context.ProdutoSet.ToList() : null;
         }
 
         private void ButtonDeletar_Click(object sender, System.Windows.RoutedEventArgs e) {
@@ -69,7 +79,7 @@ namespace View.UserControls {
         private void UserControl_Loaded(object sender, RoutedEventArgs e) {
             var ctx = new ERPDBModelContainer();
             Update(sender, e);
-            ComboBoxExibir.ItemsSource = (ctx.CategoriaSet.ToList().Count>0 ) ? ctx.CategoriaSet.ToList() : null;
+            ComboBoxExibir.ItemsSource = (ctx.CategoriaSet.ToList().Count > 0) ? ctx.CategoriaSet.ToList() : null;
         }
 
         private void DataGridProduto_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e) {
@@ -77,7 +87,7 @@ namespace View.UserControls {
                 var context = new ERPDBModelContainer();
                 var produto = (Produto)e.Row.Item;
                 var original = context.ProdutoSet.Find(produto.Id);
-                if(original != null) {
+                if (original != null) {
                     context.Entry(original).CurrentValues.SetValues(produto);
                     context.SaveChanges();
                 }
@@ -86,9 +96,9 @@ namespace View.UserControls {
         }
 
         private void ComboBoxExibir_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-            if (e.AddedItems[0].GetType() != typeof(ComboBoxItem)){
+            if (e.AddedItems[0].GetType() != typeof(ComboBoxItem)) {
                 DataGridProduto.ItemsSource = ((Categoria)e.AddedItems[0]).Produto;
-            } else if (e.RemovedItems.Count>0) {
+            } else if (e.RemovedItems.Count > 0) {
                 Update(sender, null);
             }
         }

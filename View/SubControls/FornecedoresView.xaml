@@ -6,30 +6,35 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" MinWidth="750" MinHeight="425">
     <Grid Background="White" Margin="0">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="85"/>
-			<RowDefinition Height="378*"/>
-		</Grid.RowDefinitions>
-		<Grid x:Name="UpperGrid" Background="{DynamicResource NetunoSubBackground}" Margin="0,2,0,0">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="80"/>
-				<ColumnDefinition Width="285"/>
-			</Grid.ColumnDefinitions>
-			<Button x:Name="ButtonAdicionar" Content="Adicionar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MinHeight="75" MinWidth="75" IsEnabled="False" ToolTip="To be implemented" Click="ButtonAdicionar_Click"/>
-			<Button x:Name="ButtonEditar" Content="Editar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75" Click="ButtonEditar_Click"/>
-			<Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="2" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75" Click="ButtonDeletar_Click"/>
-			<TextBox HorizontalAlignment="Left" Height="23" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" IsEnabled="False" Grid.Column="3"/>
-			<Label Content="Buscar:" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" Grid.Column="3"/>
-		</Grid>
-		<DataGrid Grid.Row="1" Margin="5" Background="White">
-			<DataGrid.Columns>
-				<DataGridTextColumn Binding="{x:Null}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Código"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Endereço" CanUserSort="False"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Produtos" CanUserSort="False"/>
-			</DataGrid.Columns>
-		</DataGrid>
-	</Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85"/>
+            <RowDefinition Height="378*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="UpperGrid" Background="{DynamicResource NetunoSubBackground}" Margin="0,2,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="285"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonAdicionar" Content="Adicionar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MinHeight="75" MinWidth="75" ToolTip="To be implemented" Click="ButtonAdicionar_Click" IsEnabled="False"/>
+            <Button x:Name="ButtonEditar" Content="Editar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" MinHeight="75" MinWidth="75" Click="ButtonEditar_Click" IsEnabled="False"/>
+            <Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="2" MinHeight="75" MinWidth="75" Click="ButtonDeletar_Click" IsEnabled="False"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" IsEnabled="False" Grid.Column="3"/>
+            <Label Content="Buscar:" HorizontalAlignment="Left" Margin="0,30,0,27" VerticalAlignment="Center" Grid.Column="3"/>
+        </Grid>
+        <DataGrid x:Name="DataGridFornecedores" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" GridLinesVisibility="Horizontal" CanUserDeleteRows="False" CanUserAddRows="False" CellEditEnding="DataGridFornecedores_CellEditEnding">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Código"/>
+                <DataGridTextColumn Binding="{Binding Nome}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
+                <DataGridTextColumn Binding="{Binding getEndereco}" ClipboardContentBinding="{x:Null}" Header="Endereço" CanUserSort="False"/>
+                <DataGridTextColumn Binding="{Binding getCidade}" ClipboardContentBinding="{x:Null}" Header="Cidade" CanUserSort="False"/>
+                <DataGridTextColumn Binding="{Binding Telefone}" ClipboardContentBinding="{x:Null}" Header="Telefone"/>
+                <DataGridTextColumn Binding="{Binding Celular}" ClipboardContentBinding="{x:Null}" Header="Celular"/>
+                <DataGridTextColumn Binding="{Binding CNPJ}" ClipboardContentBinding="{x:Null}" Header="CNPJ"/>
+                <DataGridTextColumn Binding="{Binding Email}" ClipboardContentBinding="{x:Null}" Header="Email"/>
+                <DataGridTextColumn Binding="{Binding Observacoes}" ClipboardContentBinding="{x:Null}" Header="Observações"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </UserControl>

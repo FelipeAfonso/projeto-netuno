@@ -10,7 +10,9 @@ using System.Text.RegularExpressions;
 namespace ModelLib {
     public static class Controller {
 
-        public static Funcionario LoggedUser;// = new Administrador() { Nome = "Teste", Senha = "", Email = "asd@asd.com" };
+        public static Dictionary<string, Permissao> Permissoes = new Dictionary<string, Permissao>();
+
+        public static Funcionario LoggedUser = new Administrador() { Nome = "Teste", Senha = "", Email = "asd@asd.com" };
 
         public static string getMD5(String i) {
             var md5 = System.Security.Cryptography.MD5.Create();

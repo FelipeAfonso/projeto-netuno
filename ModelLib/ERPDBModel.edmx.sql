@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/31/2016 17:39:42
--- Generated from EDMX file: C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
+-- Date Created: 09/07/2016 01:51:26
+-- Generated from EDMX file: G:\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -43,6 +43,9 @@ IF OBJECT_ID(N'[dbo].[FK_VendaProdutoVendaItem]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_ProdutoVendaItemProduto]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ProdutoVendaItemSet] DROP CONSTRAINT [FK_ProdutoVendaItemProduto];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EnderecoFornecedor]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[FornecedorSet] DROP CONSTRAINT [FK_EnderecoFornecedor];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Cliente_inherits_Usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[UsuarioSet_Cliente] DROP CONSTRAINT [FK_Cliente_inherits_Usuario];
@@ -139,7 +142,13 @@ GO
 -- Creating table 'FornecedorSet'
 CREATE TABLE [dbo].[FornecedorSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Nome] nvarchar(max)  NOT NULL
+    [Nome] nvarchar(max)  NOT NULL,
+    [Telefone] nvarchar(max)  NULL,
+    [Celular] nvarchar(max)  NULL,
+    [CNPJ] nvarchar(max)  NULL,
+    [Email] nvarchar(max)  NULL,
+    [Observacoes] nvarchar(max)  NULL,
+    [Endereco_Id] int  NULL
 );
 GO
 
@@ -176,12 +185,13 @@ GO
 -- Creating table 'EnderecoSet'
 CREATE TABLE [dbo].[EnderecoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Numero] int  NOT NULL,
-    [Bairro] nvarchar(max)  NOT NULL,
-    [Cidade] nvarchar(max)  NOT NULL,
-    [Estado] nvarchar(max)  NOT NULL,
-    [Logradouro] nvarchar(max)  NOT NULL,
-    [Usuario_Id] int  NOT NULL
+    [Numero] int  NULL,
+    [Bairro] nvarchar(max)  NULL,
+    [Cidade] nvarchar(max)  NULL,
+    [Estado] nvarchar(max)  NULL,
+    [Logradouro] nvarchar(max)  NULL,
+    [CEP] nvarchar(max)  NULL,
+    [Usuario_Id] int  NULL
 );
 GO
 
@@ -454,6 +464,21 @@ GO
 CREATE INDEX [IX_FK_ProdutoVendaItemProduto]
 ON [dbo].[ProdutoVendaItemSet]
     ([Produto_Id]);
+GO
+
+-- Creating foreign key on [Endereco_Id] in table 'FornecedorSet'
+ALTER TABLE [dbo].[FornecedorSet]
+ADD CONSTRAINT [FK_EnderecoFornecedor]
+    FOREIGN KEY ([Endereco_Id])
+    REFERENCES [dbo].[EnderecoSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_EnderecoFornecedor'
+CREATE INDEX [IX_FK_EnderecoFornecedor]
+ON [dbo].[FornecedorSet]
+    ([Endereco_Id]);
 GO
 
 -- Creating foreign key on [Id] in table 'UsuarioSet_Cliente'

@@ -24,9 +24,5 @@ namespace ModelLib
     
         public virtual ICollection<Permissao> Permissao { get; set; }
         public virtual ICollection<Venda> Venda { get; set; }
-
-        public override string ToString() {
-            return Nome;
-        }
     }
 }

@@ -38,6 +38,11 @@
         <MappingFragment StoreEntitySet="FornecedorSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="CNPJ" ColumnName="CNPJ" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Observacoes" ColumnName="Observacoes" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -103,6 +108,7 @@
           <ScalarProperty Name="Cidade" ColumnName="Cidade" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Logradouro" ColumnName="Logradouro" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -148,6 +154,7 @@
       <EndProperty Name="Endereco">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
+      <Condition ColumnName="Usuario_Id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="FuncionarioPermissao" TypeName="ERPDBModel.FuncionarioPermissao" StoreEntitySet="FuncionarioPermissao">
       <EndProperty Name="Funcionario">
@@ -180,6 +187,15 @@
       <EndProperty Name="ProdutoVendaItem">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EnderecoFornecedor" TypeName="ERPDBModel.EnderecoFornecedor" StoreEntitySet="FornecedorSet">
+      <EndProperty Name="Endereco">
+        <ScalarProperty Name="Id" ColumnName="Endereco_Id" />
+      </EndProperty>
+      <EndProperty Name="Fornecedor">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Endereco_Id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
