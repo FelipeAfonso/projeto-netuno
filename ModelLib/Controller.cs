@@ -12,7 +12,7 @@ namespace ModelLib {
 
         public static Dictionary<string, Permissao> Permissoes = new Dictionary<string, Permissao>();
 
-        public static Funcionario LoggedUser = new Administrador() { Nome = "Teste", Senha = "", Email = "asd@asd.com" };
+        public static Funcionario LoggedUser;// = new Administrador() { Id=1, Nome = "Teste", Senha = "", Email = "asd@asd.com", Venda= new List<Venda>() };
 
         public static string getMD5(String i) {
             var md5 = System.Security.Cryptography.MD5.Create();

@@ -22,6 +22,8 @@ namespace ModelLib
         public string Rg { get; set; }
         public string Senha { get; set; }
         public string Sexo { get; set; }
+        public string Telefone { get; set; }
+        public string Celular { get; set; }
     
         public virtual Endereco Endereco { get; set; }
     }

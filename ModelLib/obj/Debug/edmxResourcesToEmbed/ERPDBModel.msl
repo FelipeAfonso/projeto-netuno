@@ -80,6 +80,8 @@
           <ScalarProperty Name="Rg" ColumnName="Rg" />
           <ScalarProperty Name="Senha" ColumnName="Senha" />
           <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Cliente)">
@@ -172,22 +174,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VendaProdutoVendaItem" TypeName="ERPDBModel.VendaProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
-      <EndProperty Name="Venda">
-        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
-      </EndProperty>
-      <EndProperty Name="ProdutoVendaItem">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="ProdutoVendaItemProduto" TypeName="ERPDBModel.ProdutoVendaItemProduto" StoreEntitySet="ProdutoVendaItemSet">
-      <EndProperty Name="Produto">
-        <ScalarProperty Name="Id" ColumnName="Produto_Id" />
-      </EndProperty>
-      <EndProperty Name="ProdutoVendaItem">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="EnderecoFornecedor" TypeName="ERPDBModel.EnderecoFornecedor" StoreEntitySet="FornecedorSet">
       <EndProperty Name="Endereco">
         <ScalarProperty Name="Id" ColumnName="Endereco_Id" />
@@ -196,6 +182,23 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
       <Condition ColumnName="Endereco_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VendaProdutoVendaItem" TypeName="ERPDBModel.VendaProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
+      </EndProperty>
+      <EndProperty Name="ProdutoVendaItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProdutoProdutoVendaItem" TypeName="ERPDBModel.ProdutoProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Produto_Id" />
+      </EndProperty>
+      <EndProperty Name="ProdutoVendaItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Produto_Id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

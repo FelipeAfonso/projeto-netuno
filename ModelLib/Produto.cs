@@ -14,6 +14,11 @@ namespace ModelLib
     
     public partial class Produto
     {
+        public Produto()
+        {
+            this.ProdutoVendaItem = new HashSet<ProdutoVendaItem>();
+        }
+    
         public int Id { get; set; }
         public string Nome { get; set; }
         public double PrecoCusto { get; set; }
@@ -28,6 +33,6 @@ namespace ModelLib
     
         public virtual Categoria Categoria { get; set; }
         public virtual Fornecedor Fornecedor { get; set; }
-        public virtual ProdutoVendaItem ProdutoVendaItem { get; set; }
+        public virtual ICollection<ProdutoVendaItem> ProdutoVendaItem { get; set; }
     }
 }

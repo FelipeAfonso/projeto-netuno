@@ -43,17 +43,17 @@
       <End Role="Funcionario" EntitySet="UsuarioSet_Funcionario" />
       <End Role="Venda" EntitySet="VendaSet" />
     </AssociationSet>
+    <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.Store.EnderecoFornecedor">
+      <End Role="Endereco" EntitySet="EnderecoSet" />
+      <End Role="Fornecedor" EntitySet="FornecedorSet" />
+    </AssociationSet>
     <AssociationSet Name="VendaProdutoVendaItem" Association="ERPDBModel.Store.VendaProdutoVendaItem">
       <End Role="Venda" EntitySet="VendaSet" />
       <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
     </AssociationSet>
-    <AssociationSet Name="ProdutoVendaItemProduto" Association="ERPDBModel.Store.ProdutoVendaItemProduto">
-      <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
+    <AssociationSet Name="ProdutoProdutoVendaItem" Association="ERPDBModel.Store.ProdutoProdutoVendaItem">
       <End Role="Produto" EntitySet="ProdutoSet" />
-    </AssociationSet>
-    <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.Store.EnderecoFornecedor">
-      <End Role="Endereco" EntitySet="EnderecoSet" />
-      <End Role="Fornecedor" EntitySet="FornecedorSet" />
+      <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
     </AssociationSet>
     <AssociationSet Name="FK_Cliente_inherits_Usuario" Association="ERPDBModel.Store.FK_Cliente_inherits_Usuario">
       <End Role="Usuario" EntitySet="UsuarioSet" />
@@ -143,6 +143,8 @@
     <Property Name="Rg" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Senha" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Sexo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Celular" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="EnderecoSet">
     <Key>
@@ -164,7 +166,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Quantidade" Type="int" Nullable="false" />
     <Property Name="Venda_Id" Type="int" Nullable="false" />
-    <Property Name="Produto_Id" Type="int" Nullable="false" />
+    <Property Name="Produto_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="UsuarioSet_Cliente">
     <Key>
@@ -268,6 +270,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="EnderecoFornecedor">
+    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="ERPDBModel.Store.FornecedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="Endereco_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="VendaProdutoVendaItem">
     <End Role="Venda" Type="ERPDBModel.Store.VendaSet" Multiplicity="1" />
     <End Role="ProdutoVendaItem" Type="ERPDBModel.Store.ProdutoVendaItemSet" Multiplicity="*" />
@@ -280,27 +294,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ProdutoVendaItemProduto">
+  <Association Name="ProdutoProdutoVendaItem">
+    <End Role="Produto" Type="ERPDBModel.Store.ProdutoSet" Multiplicity="0..1" />
     <End Role="ProdutoVendaItem" Type="ERPDBModel.Store.ProdutoVendaItemSet" Multiplicity="*" />
-    <End Role="Produto" Type="ERPDBModel.Store.ProdutoSet" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Produto">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="ProdutoVendaItem">
         <PropertyRef Name="Produto_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="EnderecoFornecedor">
-    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="0..1" />
-    <End Role="Fornecedor" Type="ERPDBModel.Store.FornecedorSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Endereco">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Fornecedor">
-        <PropertyRef Name="Endereco_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

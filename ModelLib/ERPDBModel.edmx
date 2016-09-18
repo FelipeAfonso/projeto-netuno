@@ -48,17 +48,17 @@
       <End Role="Funcionario" EntitySet="UsuarioSet_Funcionario" />
       <End Role="Venda" EntitySet="VendaSet" />
     </AssociationSet>
+    <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.Store.EnderecoFornecedor">
+      <End Role="Endereco" EntitySet="EnderecoSet" />
+      <End Role="Fornecedor" EntitySet="FornecedorSet" />
+    </AssociationSet>
     <AssociationSet Name="VendaProdutoVendaItem" Association="ERPDBModel.Store.VendaProdutoVendaItem">
       <End Role="Venda" EntitySet="VendaSet" />
       <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
     </AssociationSet>
-    <AssociationSet Name="ProdutoVendaItemProduto" Association="ERPDBModel.Store.ProdutoVendaItemProduto">
-      <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
+    <AssociationSet Name="ProdutoProdutoVendaItem" Association="ERPDBModel.Store.ProdutoProdutoVendaItem">
       <End Role="Produto" EntitySet="ProdutoSet" />
-    </AssociationSet>
-    <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.Store.EnderecoFornecedor">
-      <End Role="Endereco" EntitySet="EnderecoSet" />
-      <End Role="Fornecedor" EntitySet="FornecedorSet" />
+      <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
     </AssociationSet>
     <AssociationSet Name="FK_Cliente_inherits_Usuario" Association="ERPDBModel.Store.FK_Cliente_inherits_Usuario">
       <End Role="Usuario" EntitySet="UsuarioSet" />
@@ -148,6 +148,8 @@
     <Property Name="Rg" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Senha" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Sexo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Telefone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Celular" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="EnderecoSet">
     <Key>
@@ -169,7 +171,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Quantidade" Type="int" Nullable="false" />
     <Property Name="Venda_Id" Type="int" Nullable="false" />
-    <Property Name="Produto_Id" Type="int" Nullable="false" />
+    <Property Name="Produto_Id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="UsuarioSet_Cliente">
     <Key>
@@ -273,6 +275,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="EnderecoFornecedor">
+    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="0..1" />
+    <End Role="Fornecedor" Type="ERPDBModel.Store.FornecedorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Endereco">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fornecedor">
+        <PropertyRef Name="Endereco_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="VendaProdutoVendaItem">
     <End Role="Venda" Type="ERPDBModel.Store.VendaSet" Multiplicity="1" />
     <End Role="ProdutoVendaItem" Type="ERPDBModel.Store.ProdutoVendaItemSet" Multiplicity="*" />
@@ -285,27 +299,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ProdutoVendaItemProduto">
+  <Association Name="ProdutoProdutoVendaItem">
+    <End Role="Produto" Type="ERPDBModel.Store.ProdutoSet" Multiplicity="0..1" />
     <End Role="ProdutoVendaItem" Type="ERPDBModel.Store.ProdutoVendaItemSet" Multiplicity="*" />
-    <End Role="Produto" Type="ERPDBModel.Store.ProdutoSet" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Produto">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="ProdutoVendaItem">
         <PropertyRef Name="Produto_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="EnderecoFornecedor">
-    <End Role="Endereco" Type="ERPDBModel.Store.EnderecoSet" Multiplicity="0..1" />
-    <End Role="Fornecedor" Type="ERPDBModel.Store.FornecedorSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Endereco">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Fornecedor">
-        <PropertyRef Name="Endereco_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -440,17 +442,17 @@
             <End Role="Venda" EntitySet="VendaSet" />
           </AssociationSet>
           <EntitySet Name="ProdutoVendaItemSet" EntityType="ERPDBModel.ProdutoVendaItem" />
+          <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.EnderecoFornecedor">
+            <End Role="Endereco" EntitySet="EnderecoSet" />
+            <End Role="Fornecedor" EntitySet="FornecedorSet" />
+          </AssociationSet>
           <AssociationSet Name="VendaProdutoVendaItem" Association="ERPDBModel.VendaProdutoVendaItem">
             <End Role="Venda" EntitySet="VendaSet" />
             <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
           </AssociationSet>
-          <AssociationSet Name="ProdutoVendaItemProduto" Association="ERPDBModel.ProdutoVendaItemProduto">
-            <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
+          <AssociationSet Name="ProdutoProdutoVendaItem" Association="ERPDBModel.ProdutoProdutoVendaItem">
             <End Role="Produto" EntitySet="ProdutoSet" />
-          </AssociationSet>
-          <AssociationSet Name="EnderecoFornecedor" Association="ERPDBModel.EnderecoFornecedor">
-            <End Role="Endereco" EntitySet="EnderecoSet" />
-            <End Role="Fornecedor" EntitySet="FornecedorSet" />
+            <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Produto">
@@ -470,7 +472,7 @@
           <NavigationProperty Name="Fornecedor" Relationship="ERPDBModel.FornecedorProduto" FromRole="Produto" ToRole="Fornecedor" />
           <Property Name="Imagem" Type="Byte" Nullable="true" />
           <Property Name="Codigo" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="ProdutoVendaItem" Relationship="ERPDBModel.ProdutoVendaItemProduto" FromRole="Produto" ToRole="ProdutoVendaItem" />
+          <NavigationProperty Name="ProdutoVendaItem" Relationship="ERPDBModel.ProdutoProdutoVendaItem" FromRole="Produto" ToRole="ProdutoVendaItem" />
         </EntityType>
         <EntityType Name="Categoria">
           <Key>
@@ -544,6 +546,8 @@
           <Property Name="Rg" Type="String" Nullable="true" />
           <Property Name="Senha" Type="String" Nullable="true" />
           <Property Name="Sexo" Type="String" Nullable="true" />
+          <Property Name="Telefone" Type="String" Nullable="true" />
+          <Property Name="Celular" Type="String" Nullable="true" />
         </EntityType>
         <EntityType Name="Funcionario" BaseType="ERPDBModel.Usuario">
           <Property Name="Foto" Type="String" Nullable="true" />
@@ -587,21 +591,21 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Venda" Relationship="ERPDBModel.VendaProdutoVendaItem" FromRole="ProdutoVendaItem" ToRole="Venda" />
-          <NavigationProperty Name="Produto" Relationship="ERPDBModel.ProdutoVendaItemProduto" FromRole="ProdutoVendaItem" ToRole="Produto" />
           <Property Name="Quantidade" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Venda" Relationship="ERPDBModel.VendaProdutoVendaItem" FromRole="ProdutoVendaItem" ToRole="Venda" />
+          <NavigationProperty Name="Produto" Relationship="ERPDBModel.ProdutoProdutoVendaItem" FromRole="ProdutoVendaItem" ToRole="Produto" />
         </EntityType>
+        <Association Name="EnderecoFornecedor">
+          <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+          <End Type="ERPDBModel.Fornecedor" Role="Fornecedor" Multiplicity="0..1" />
+        </Association>
         <Association Name="VendaProdutoVendaItem">
           <End Type="ERPDBModel.Venda" Role="Venda" Multiplicity="1" />
           <End Type="ERPDBModel.ProdutoVendaItem" Role="ProdutoVendaItem" Multiplicity="*" />
         </Association>
-        <Association Name="ProdutoVendaItemProduto">
-          <End Type="ERPDBModel.ProdutoVendaItem" Role="ProdutoVendaItem" Multiplicity="0..1" />
-          <End Type="ERPDBModel.Produto" Role="Produto" Multiplicity="1" />
-        </Association>
-        <Association Name="EnderecoFornecedor">
-          <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="0..1" />
-          <End Type="ERPDBModel.Fornecedor" Role="Fornecedor" Multiplicity="0..1" />
+        <Association Name="ProdutoProdutoVendaItem">
+          <End Type="ERPDBModel.Produto" Role="Produto" Multiplicity="0..1" />
+          <End Type="ERPDBModel.ProdutoVendaItem" Role="ProdutoVendaItem" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -688,6 +692,8 @@
           <ScalarProperty Name="Rg" ColumnName="Rg" />
           <ScalarProperty Name="Senha" ColumnName="Senha" />
           <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(ERPDBModel.Cliente)">
@@ -780,22 +786,6 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="VendaProdutoVendaItem" TypeName="ERPDBModel.VendaProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
-      <EndProperty Name="Venda">
-        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
-      </EndProperty>
-      <EndProperty Name="ProdutoVendaItem">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="ProdutoVendaItemProduto" TypeName="ERPDBModel.ProdutoVendaItemProduto" StoreEntitySet="ProdutoVendaItemSet">
-      <EndProperty Name="Produto">
-        <ScalarProperty Name="Id" ColumnName="Produto_Id" />
-      </EndProperty>
-      <EndProperty Name="ProdutoVendaItem">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="EnderecoFornecedor" TypeName="ERPDBModel.EnderecoFornecedor" StoreEntitySet="FornecedorSet">
       <EndProperty Name="Endereco">
         <ScalarProperty Name="Id" ColumnName="Endereco_Id" />
@@ -804,6 +794,23 @@
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
       <Condition ColumnName="Endereco_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VendaProdutoVendaItem" TypeName="ERPDBModel.VendaProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="Id" ColumnName="Venda_Id" />
+      </EndProperty>
+      <EndProperty Name="ProdutoVendaItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProdutoProdutoVendaItem" TypeName="ERPDBModel.ProdutoProdutoVendaItem" StoreEntitySet="ProdutoVendaItemSet">
+      <EndProperty Name="Produto">
+        <ScalarProperty Name="Id" ColumnName="Produto_Id" />
+      </EndProperty>
+      <EndProperty Name="ProdutoVendaItem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Produto_Id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>

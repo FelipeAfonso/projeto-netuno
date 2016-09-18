@@ -73,6 +73,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\ProdutoAdapter.cs" />
+    <Compile Include="Adapters\VendaAdapter.cs" />
     <Compile Include="Administrador.cs">
       <DependentUpon>ERPDBModel.tt</DependentUpon>
     </Compile>

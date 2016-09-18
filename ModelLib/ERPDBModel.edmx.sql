@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/07/2016 01:51:26
--- Generated from EDMX file: G:\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
+-- Date Created: 09/18/2016 00:52:05
+-- Generated from EDMX file: C:\Users\Felipe\Desktop\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [LocalERPDB];
+USE [LocalERPDBOldSQL];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -38,14 +38,14 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_FuncionarioVenda]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_FuncionarioVenda];
 GO
+IF OBJECT_ID(N'[dbo].[FK_EnderecoFornecedor]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[FornecedorSet] DROP CONSTRAINT [FK_EnderecoFornecedor];
+GO
 IF OBJECT_ID(N'[dbo].[FK_VendaProdutoVendaItem]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ProdutoVendaItemSet] DROP CONSTRAINT [FK_VendaProdutoVendaItem];
 GO
-IF OBJECT_ID(N'[dbo].[FK_ProdutoVendaItemProduto]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ProdutoVendaItemSet] DROP CONSTRAINT [FK_ProdutoVendaItemProduto];
-GO
-IF OBJECT_ID(N'[dbo].[FK_EnderecoFornecedor]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[FornecedorSet] DROP CONSTRAINT [FK_EnderecoFornecedor];
+IF OBJECT_ID(N'[dbo].[FK_ProdutoProdutoVendaItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProdutoVendaItemSet] DROP CONSTRAINT [FK_ProdutoProdutoVendaItem];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Cliente_inherits_Usuario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[UsuarioSet_Cliente] DROP CONSTRAINT [FK_Cliente_inherits_Usuario];
@@ -178,7 +178,9 @@ CREATE TABLE [dbo].[UsuarioSet] (
     [Nome] nvarchar(max)  NOT NULL,
     [Rg] nvarchar(max)  NULL,
     [Senha] nvarchar(max)  NULL,
-    [Sexo] nvarchar(max)  NULL
+    [Sexo] nvarchar(max)  NULL,
+    [Telefone] nvarchar(max)  NULL,
+    [Celular] nvarchar(max)  NULL
 );
 GO
 
@@ -200,7 +202,7 @@ CREATE TABLE [dbo].[ProdutoVendaItemSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Quantidade] int  NOT NULL,
     [Venda_Id] int  NOT NULL,
-    [Produto_Id] int  NOT NULL
+    [Produto_Id] int  NULL
 );
 GO
 
@@ -436,6 +438,21 @@ ON [dbo].[VendaSet]
     ([Funcionario_Id]);
 GO
 
+-- Creating foreign key on [Endereco_Id] in table 'FornecedorSet'
+ALTER TABLE [dbo].[FornecedorSet]
+ADD CONSTRAINT [FK_EnderecoFornecedor]
+    FOREIGN KEY ([Endereco_Id])
+    REFERENCES [dbo].[EnderecoSet]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_EnderecoFornecedor'
+CREATE INDEX [IX_FK_EnderecoFornecedor]
+ON [dbo].[FornecedorSet]
+    ([Endereco_Id]);
+GO
+
 -- Creating foreign key on [Venda_Id] in table 'ProdutoVendaItemSet'
 ALTER TABLE [dbo].[ProdutoVendaItemSet]
 ADD CONSTRAINT [FK_VendaProdutoVendaItem]
@@ -453,32 +470,17 @@ GO
 
 -- Creating foreign key on [Produto_Id] in table 'ProdutoVendaItemSet'
 ALTER TABLE [dbo].[ProdutoVendaItemSet]
-ADD CONSTRAINT [FK_ProdutoVendaItemProduto]
+ADD CONSTRAINT [FK_ProdutoProdutoVendaItem]
     FOREIGN KEY ([Produto_Id])
     REFERENCES [dbo].[ProdutoSet]
         ([Id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
--- Creating non-clustered index for FOREIGN KEY 'FK_ProdutoVendaItemProduto'
-CREATE INDEX [IX_FK_ProdutoVendaItemProduto]
+-- Creating non-clustered index for FOREIGN KEY 'FK_ProdutoProdutoVendaItem'
+CREATE INDEX [IX_FK_ProdutoProdutoVendaItem]
 ON [dbo].[ProdutoVendaItemSet]
     ([Produto_Id]);
-GO
-
--- Creating foreign key on [Endereco_Id] in table 'FornecedorSet'
-ALTER TABLE [dbo].[FornecedorSet]
-ADD CONSTRAINT [FK_EnderecoFornecedor]
-    FOREIGN KEY ([Endereco_Id])
-    REFERENCES [dbo].[EnderecoSet]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_EnderecoFornecedor'
-CREATE INDEX [IX_FK_EnderecoFornecedor]
-ON [dbo].[FornecedorSet]
-    ([Endereco_Id]);
 GO
 
 -- Creating foreign key on [Id] in table 'UsuarioSet_Cliente'
