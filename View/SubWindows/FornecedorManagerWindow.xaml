@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:View.SubWindows"
         xmlns:CurrencyTextBoxControl="clr-namespace:CurrencyTextBoxControl;assembly=CurrencyTextBoxControl" x:Class="View.SubWindows.FornecedorManagerWindow"
         mc:Ignorable="d"
-        Title="FornecedorManagerWindow" MinWidth="800" MinHeight="600" Background="{DynamicResource NetuneDefaultBackground}" Height="300" Width="300">
+        Title="FornecedorManagerWindow" MinWidth="800" MinHeight="600" Background="{DynamicResource NetuneDefaultBackground}" Height="300" Width="300" Icon="/View;component/Resources/Logo.png">
     <Grid Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180"/>

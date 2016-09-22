@@ -126,6 +126,9 @@
   <data name="GerenciarFornecedores" xml:space="preserve">
     <value>Registrar e Alterar Fornecedores</value>
   </data>
+  <data name="GerenciarFuncionarios" xml:space="preserve">
+    <value>Cadastrar novos Funcionários</value>
+  </data>
   <data name="GerenciarProdutos" xml:space="preserve">
     <value>Cadastrar e Alterar Produtos</value>
   </data>

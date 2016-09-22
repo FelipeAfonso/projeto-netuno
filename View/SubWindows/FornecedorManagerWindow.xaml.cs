@@ -60,7 +60,7 @@ namespace View.SubWindows {
                 if (query.Count == 0) {
                     ctx.FornecedorSet.Add(fornecedor);
                     ctx.SaveChanges();
-                    if (MessageBox.Show("Produto Cadastrado com Sucesso!\nLimpar informações e cadastrar outro produto?", "Sucesso!", MessageBoxButton.YesNo) == MessageBoxResult.Yes) {
+                    if (MessageBox.Show("Fornecedor Cadastrado com Sucesso!\nLimpar informações e cadastrar outro fornecedor?", "Sucesso!", MessageBoxButton.YesNo) == MessageBoxResult.Yes) {
                         buttonLimpar_Click(sender, e);
                     } else {
                         this.Close();

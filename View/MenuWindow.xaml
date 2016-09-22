@@ -8,7 +8,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ec="http://schemas.microsoft.com/expression/2010/controls" x:Name="MenuViewWindow" x:Class="View.MenuWindow"
         mc:Ignorable="d"
         
-        Title="Undertow" Height="600" Width="800" Background="{DynamicResource NetuneDefaultBackground}" Foreground="#FF00011B" WindowState="Maximized" MinWidth="800" MinHeight="600" SizeChanged="MenuViewWindow_SizeChanged" Icon="NoImageIcon.png" ContentRendered="MenuViewWindow_ContentRendered">
+        Title="Undertow" Height="600" Width="800" Background="{DynamicResource NetuneDefaultBackground}" Foreground="#FF00011B" WindowState="Maximized" MinWidth="800" MinHeight="600" SizeChanged="MenuViewWindow_SizeChanged" Icon="Resources/Logo.png" ContentRendered="MenuViewWindow_ContentRendered">
     <Window.Resources>
         <Storyboard x:Key="OnMouseLeave1"/>
     </Window.Resources>
@@ -39,9 +39,20 @@
 
             </Grid>
             <Menu x:Name="Menu" Margin="-7,0" Height="25" IsEnabled="False">
-                <MenuItem x:Name="Arquivo" Header="Arquivo"/>
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <DockPanel HorizontalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem x:Name="Arquivo" Header="Arquivo">
+                    <MenuItem x:Name="Log" Header="Log do Administrador" Click="Log_Click"/>
+                </MenuItem>
                 <MenuItem x:Name="Exibir" Header="Exibir"/>
                 <MenuItem x:Name="Ajuda" Header="Ajuda"/>
+                <MenuItem x:Name="Sessao" Header="Sessão" Margin="0" HorizontalAlignment="Right" Foreground="{DynamicResource NetunoDefaultBorderBrush}" FontWeight="Bold">
+                    <TextBlock x:Name="TextBlockNomeUsuario" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" FontStyle="Italic"/>
+                    <MenuItem x:Name="Desconectar" Header="Desconectar" Click="Desconectar_Click" FontWeight="Normal"/>
+                </MenuItem>
             </Menu>
         </Grid>
         <StatusBar VerticalAlignment="Stretch" DockPanel.Dock="Bottom" MinHeight="25" Background="#FFF0F0F0">
@@ -50,7 +61,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <ProgressBar IsIndeterminate="True" ToolTip="Verificando Banco de Dados" Margin="0" Grid.Row="1" MinWidth="200"/>
+                <ProgressBar x:Name="ProgressBar" ToolTip="Verificando Banco de Dados" Margin="0,5,0,0" Grid.Row="1" MinWidth="200" Maximum="5" SmallChange="0.5" IsIndeterminate="True"/>
                 <Label Content="Carregando..." HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1"/>
             </Grid>
         </StatusBar>

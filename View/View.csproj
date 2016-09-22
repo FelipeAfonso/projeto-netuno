@@ -122,6 +122,12 @@
     <Compile Include="SubWindows\FornecedorManagerWindow.xaml.cs">
       <DependentUpon>FornecedorManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SubWindows\FuncionarioManagerWindow.xaml.cs">
+      <DependentUpon>FuncionarioManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindows\LogWindow.xaml.cs">
+      <DependentUpon>LogWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubWindows\PontoVendaWindow.xaml.cs">
       <DependentUpon>PontoVendaWindow.xaml</DependentUpon>
     </Compile>
@@ -181,6 +187,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubWindows\FornecedorManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindows\FuncionarioManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindows\LogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -256,6 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\NoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NoLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Logo.png" />

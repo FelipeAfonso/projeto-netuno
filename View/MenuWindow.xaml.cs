@@ -16,12 +16,15 @@ using View.UserControls;
 using View.CustomControls;
 using System.Data.Entity.Validation;
 using System.Threading;
+using View.SubWindows;
 
 namespace View {
     /// <summary>
     /// Interaction logic for MenuWindow.xaml
     /// </summary>
     public partial class MenuWindow : Window {
+
+        LogWindow l;
 
         public MenuWindow() {
             InitializeComponent();
@@ -67,7 +70,7 @@ namespace View {
         }
 
         private void MenuViewWindow_ContentRendered(object sender, EventArgs e) {
-
+            if (Controller.LoggedUser is Administrador) Log.IsEnabled = true;
         }
 
         protected override void OnClosed(EventArgs e) {
@@ -88,9 +91,9 @@ namespace View {
                         LoadingGrid.Visibility = Visibility.Collapsed;
                         Menu.IsEnabled = true;
                         if (dialog.ShowDialog() == true) {
-                            context.UsuarioSet.Add(dialog.getAdmin);
-                            context.SaveChanges();
                             Controller.LoggedUser = dialog.getAdmin;
+                            context.UsuarioSet.Add(Controller.LoggedUser);
+                            context.SaveChanges();
                         }
                     }));
                 }
@@ -116,13 +119,33 @@ namespace View {
 
                 }
             } else {
+                context.UsuarioSet.Add(Controller.LoggedUser);
+                context.SaveChanges();
                 Application.Current.Dispatcher.Invoke((Action)(() => {
                     foreach (Button b in GridButtons.Children) b.IsEnabled = true;
                     LoadingGrid.Visibility = Visibility.Collapsed;
                     Menu.IsEnabled = true;
                 }));
             }
+            Application.Current.Dispatcher.Invoke((Action)(() => {TextBlockNomeUsuario.Text = Controller.LoggedUser.Nome;}));
+        }
 
+        private void Desconectar_Click(object sender, RoutedEventArgs e) {
+            this.ControlGrid.Children.Clear();
+            foreach (Button b in GridButtons.Children) b.IsEnabled = false;
+            Controller.LoggedUser = null;
+            var t = new Thread(LoginThread);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+        }
+
+        private void Log_Click(object sender, RoutedEventArgs e) {
+            if (l == null) {
+                l = new LogWindow();
+                l.Closed += (a, b) => l = null;
+                l.Show();
+            } else if (l.IsVisible) l.Focus();
+            else l.Show();
         }
 
     }

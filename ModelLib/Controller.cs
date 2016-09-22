@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using ModelLib;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace ModelLib {
     public static class Controller {
@@ -30,6 +31,19 @@ namespace ModelLib {
         public static bool IsTextAllowed(string text) {
             Regex regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
             return !regex.IsMatch(text);
+        }
+
+        public static void Log(string action) {
+            using (var w = File.AppendText("log.ntn")) {
+                var s = "";
+                s += "\r\nUsuario " + Controller.LoggedUser.Nome + ": as ";
+                s+= DateTime.Now.ToLongTimeString() + " " + DateTime.Now.ToLongDateString() + "\n";
+                //w.WriteLine("  :");
+                s+= "  : "+ action;
+                s+="\n-------------------------------";
+                w.WriteLine(Crypto.EncryptStringAES(s, "capitu"));
+                //w.WriteLine(s);
+            }
         }
 
     }

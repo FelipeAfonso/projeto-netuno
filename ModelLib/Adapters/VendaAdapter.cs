@@ -22,6 +22,8 @@ namespace ModelLib.Adapters {
             Funcionario = v.Funcionario;
         }
 
+        public String TotalFormated { get { return (Total > 0) ? String.Format("{0:C}", Total) : ""; } }
+
         public String FuncionarioNome { get { return Funcionario.Nome; } }
 
         public String ClienteNome { get { return (Cliente != null) ? Cliente.Nome : ""; } }

@@ -26,14 +26,26 @@
             <Button x:Name="ButtonCancelar" Content="Cancelar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="3" MinHeight="75" MinWidth="75" Click="ButtonCancelar_Click" IsEnabled="False"/>
             <Button x:Name="ButtonRecibo" Content="Imprimir&#xD;&#xA;Recibo" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="PontoVendaButtonClick" Grid.Column="4" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75"/>
         </Grid>
-        <DataGrid x:Name="DataGridVendas" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid x:Name="DataGridVendas" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" FontSize="14" CanUserAddRows="False" GridLinesVisibility="Horizontal" AlternatingRowBackground="{DynamicResource NetuneDefaultBackground}" AlternationCount="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}"  Header="Número" CanUserResize="False"/>
                 <DataGridTextColumn Binding="{Binding Data}" Header="Data"/>
-                <DataGridTextColumn Binding="{Binding Itens}" Header="Itens"/>
-                <DataGridTextColumn Binding="{Binding Total}" Header="Total"/>
-                <DataGridTextColumn Binding="{Binding Cliente}" Header="Cliente"/>
-                <DataGridTextColumn Binding="{Binding Funcionario}" Header="Funcionário"/>
+                <DataGridTextColumn Binding="{Binding Itens}" Header="Itens">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping" Value="Wrap" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <Setter Property="TextWrapping" Value="Wrap" />
+                            <Setter Property="AcceptsReturn" Value="true" />
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding TotalFormated}" Header="Total"/>
+                <DataGridTextColumn Binding="{Binding ClienteNome}" Header="Cliente"/>
+                <DataGridTextColumn Binding="{Binding FuncionarioNome}" Header="Funcionário"/>
                 <DataGridTextColumn Binding="{x:Null}" Header="Desconto"/>
                 <DataGridTextColumn Binding="{x:Null}" Header="Observações" CanUserSort="False"/>
             </DataGrid.Columns>

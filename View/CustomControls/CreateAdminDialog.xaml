@@ -37,9 +37,9 @@
             <Button x:Name="buttonShutdown" Content="Desligar" HorizontalAlignment="Right" Margin="0,5,5,0" VerticalAlignment="Top" IsCancel="True" FontSize="10" Padding="3,1" Background="#FFE23D3D" Foreground="#FFEFF6FF" BorderBrush="{x:Null}" Click="buttonShutdown_Click"/>
         </Grid>
         <Label Content="Nome:" HorizontalAlignment="Right" Margin="0,14,5,14" Grid.Row="1" VerticalAlignment="Center" FontSize="18" Height="34" Width="63"/>
-        <TextBox x:Name="textBoxNome" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10,18,20,18" FontSize="18" Height="26"/>
+        <TextBox x:Name="textBoxNome" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,20,0" FontSize="18"/>
         <Label Content="Email:" HorizontalAlignment="Right" Margin="0,14,5,14" Grid.Row="2" VerticalAlignment="Center" FontSize="18" Height="34" Width="56"/>
-        <TextBox x:Name="textBoxEmail" TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Margin="10,18,20,18" FontSize="18" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBoxEmail" TextWrapping="Wrap" Grid.Row="2" Grid.Column="1" Margin="10,0,20,0" FontSize="18" VerticalAlignment="Center"/>
         <Label Content="Senha:" HorizontalAlignment="Right" Margin="0,14,5,14" Grid.Row="3" VerticalAlignment="Center" FontSize="18" Height="34" Width="62"/>
         <PasswordBox x:Name="textBoxPassword" Grid.Column="1" Margin="10,0,20,0" Grid.Row="3" VerticalAlignment="Center" FontSize="18"/>
         <Button x:Name="buttonCadastrar" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,20" Grid.Row="4" VerticalAlignment="Bottom" Background="{DynamicResource NetunoDefaultButtonBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" Foreground="{DynamicResource NetuneDefaultBackground}" FontSize="18" Padding="15,1" Height="28" Width="107" Click="buttonCadastrar_Click" IsDefault="True"/>

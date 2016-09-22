@@ -43,7 +43,7 @@ namespace View.CustomControls {
         public Administrador getAdmin {
             get {
                 return new Administrador() {
-                    Nome = textBoxNome.Text, Email = textBoxEmail.Text, Senha = Controller.getMD5(textBoxPassword.Password)
+                    Nome = textBoxNome.Text, Email = textBoxEmail.Text, Senha = Controller.getMD5(textBoxPassword.Password), Venda=new List<Venda>()
                 };
             }
         }

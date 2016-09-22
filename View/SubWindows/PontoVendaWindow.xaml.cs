@@ -21,7 +21,15 @@ namespace View {
     public partial class PontoVendaWindow : Window {
 
         private Dictionary<Produto, int> cache = new Dictionary<Produto, int>();
-        private double valortotal = 0;
+        private double valortotal {
+            get {
+                double t = 0;
+                foreach (Produto p in cache.Keys) {
+                    t += p.PrecoVista * cache[p];
+                }
+                return t;
+            }
+        }
         private bool loaded = false;
 
         public PontoVendaWindow() {
@@ -58,15 +66,16 @@ namespace View {
         }
 
         private void buttonAdicionar_Click(object sender, RoutedEventArgs e) {
-            if (textBoxQuantidade.Text != "" || AutoCompleteBoxBusca.Text != "") {
-                var p = (Produto)AutoCompleteBoxBusca.SelectedItem;
-                if (cache.Keys.Contains(p)) {
-                    cache[p] += Int32.Parse(textBoxQuantidade.Text);
-                } else { cache.Add(p, Int32.Parse(textBoxQuantidade.Text)); }
-                dataGridProdutos.ItemsSource = null;
-                dataGridProdutos.ItemsSource = cache;
-                valortotal += p.PrecoVista * Int32.Parse(textBoxQuantidade.Text);
-                textBlockValorTotal.Text = String.Format("R$ {0:0.00}", valortotal);
+            if (textBoxQuantidade.Text != "" && AutoCompleteBoxBusca.Text != "") {
+                try {
+                    var p = (Produto)AutoCompleteBoxBusca.SelectedItem;
+                    if (cache.Keys.Contains(p)) {
+                        cache[p] += Int32.Parse(textBoxQuantidade.Text);
+                    } else { cache.Add(p, Int32.Parse(textBoxQuantidade.Text)); }
+                    dataGridProdutos.ItemsSource = null;
+                    dataGridProdutos.ItemsSource = cache;
+                    textBlockValorTotal.Text = String.Format("R$ {0:0.00}", valortotal);
+                } catch { MessageBox.Show("Produto Inválido!", "Erro", MessageBoxButton.OK, MessageBoxImage.Error); }
             } else {
                 MessageBox.Show("Todos os campos devem ser preenchidos para adicionar uma venda", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -101,22 +110,38 @@ namespace View {
         }
 
         private void buttonSalvar_Click(object sender, RoutedEventArgs e) {
-            if (dataGridProdutos.Items.Count>0) {
-                var ctx = new ERPDBModelContainer();
-                var venda = new Venda() {
-                    Data = DateTime.Now,
-                    Funcionario = Controller.LoggedUser,
-                    Total = valortotal
-                };
-                var l = new List<ProdutoVendaItem>();
-                foreach (KeyValuePair<Produto, int> pair in cache) {
-                    ctx.ProdutoSet.Single(p => p.Id == pair.Key.Id).Quantidade -= pair.Value;
-                    var newp = ctx.ProdutoSet.Single(p => p.Id == pair.Key.Id);
-                    l.Add(new ProdutoVendaItem() { Produto = newp, Quantidade = pair.Value, Venda = venda });
+            if (dataGridProdutos.Items.Count > 0) {
+                using (var ctx = new ERPDBModelContainer()) {
+                    //List<Venda> vset = ctx.VendaSet.ToList();
+                    var venda = new Venda() {
+                        Data = DateTime.Now,
+                        Funcionario = null,//Controller.LoggedUser,
+                        Total = valortotal
+                    };
+                    //ctx.UsuarioSet.Attach(venda.Funcionario);
+                    //ctx.VendaSet.Add(venda);
+                    var l = new List<ProdutoVendaItem>();
+                    //Entities in 'ERPDBModelContainer.ProdutoVendaItemSet' participate in the 
+                    //'VendaProdutoVendaItem' relationship. 0 related 'Venda' were found. 1 'Venda' is expected.
+                    foreach (KeyValuePair<Produto, int> pair in cache) {
+                        var pr = ctx.ProdutoSet.Single(p => p.Id == pair.Key.Id);
+                        var pvi = new ProdutoVendaItem() { Produto = pr, Quantidade = pair.Value, Venda = null };
+                        ctx.ProdutoSet.Attach(pr);
+                        //ctx.VendaSet.Attach(pvi.Venda);
+                        //ctx.ProdutoVendaItemSet.Add(pvi);
+                        //ctx.ProdutoVendaItemSet.Attach(pvi);
+                        ctx.ProdutoSet.Single(p => p.Id == pair.Key.Id).Quantidade -= pair.Value;
+                        l.Add(pvi);
+                    }
+                    //((Funcionario)ctx.UsuarioSet.First(o=>o.Id == Controller.LoggedUser.Id)).Venda.Add(venda);
+                    //ctx.VendaSet.Attach(venda);
+                    //ctx.VendaSet.RemoveRange(ctx.VendaSet.Where(o=>o.Id>venda.Id));
+                    
+                    //venda.ProdutoVendaItem.Concat(l);
+                    venda.ProdutoVendaItem = l;
+                    ctx.UsuarioSet.OfType<Funcionario>().Single(o=>o.Id == Controller.LoggedUser.Id).Venda.Add(venda);
+                    ctx.SaveChanges();
                 }
-                venda.ProdutoVendaItem = l;
-                ctx.VendaSet.Add(venda);
-                ctx.SaveChanges();
                 if (MessageBox.Show("Venda Cadastrada com Sucesso\nDeseja cadastrar outra venda?", "Sucesso",
                     MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes) {
                     cache.Clear();
@@ -124,12 +149,28 @@ namespace View {
                     textBoxQuantidade.Clear();
                     dataGridProdutos.ItemsSource = null;
                     dataGridProdutos.ItemsSource = cache;
+                    textBlockValorTotal.Text = String.Format("R$ {0:0.00}", valortotal);
                 } else {
                     Close();
                 }
+
             } else {
                 MessageBox.Show("Precisa de pelo menos um produto para realizar uma venda", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void buttonRemover_Click(object sender, RoutedEventArgs e) {
+            foreach (Produto prod in this.dataGridProdutos.SelectedItems) {
+                cache.Remove(prod);
+                dataGridProdutos.ItemsSource = null;
+                dataGridProdutos.ItemsSource = cache;
+            }
+        }
+
+        private void buttonLimpar_Click(object sender, RoutedEventArgs e) {
+            cache.Clear();
+            dataGridProdutos.ItemsSource = null;
+            dataGridProdutos.ItemsSource = cache;
         }
     }
 }

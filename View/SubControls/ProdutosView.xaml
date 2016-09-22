@@ -16,27 +16,29 @@
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width="80"/>
-                <ColumnDefinition Width="287"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="ButtonAdicionar" Content="Adicionar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonAdicionar_Click" MinHeight="75" MinWidth="75" IsEnabled="False" />
             <Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonDeletar_Click" Grid.Column="1" MinHeight="75" MinWidth="75" IsEnabled="False"/>
-            <Button x:Name="ButtonEstoque" Content="Estoque" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonEstoque_Click" Grid.Column="2" MinHeight="75" MinWidth="75" IsEnabled="False"/>
-            <Label Content="Exibir:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="3" Margin="5,28,0,29"/>
-            <ComboBox x:Name="ComboBoxExibir" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="3" Margin="48,30,0,31" SelectedIndex="0" SelectionChanged="ComboBoxExibir_SelectionChanged">
+            <Button x:Name="ButtonEditar" Content="Editar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonEditar_Click" Grid.Column="2" MinHeight="75" MinWidth="75" IsEnabled="False"/>
+            <Button x:Name="ButtonEstoque" Content="Estoque" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonEstoque_Click" Grid.Column="3" MinHeight="75" MinWidth="75" IsEnabled="False"/>
+            <Label Content="Exibir:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="4" Margin="5,28,0,29"/>
+            <ComboBox x:Name="ComboBoxExibir" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="4" Margin="48,30,0,31" SelectedIndex="0" SelectionChanged="ComboBoxExibir_SelectionChanged">
                 <ComboBoxItem Content="Todos"/>
             </ComboBox>
         </Grid>
-        <DataGrid x:Name="DataGridProduto" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" FontSize="14" CanUserAddRows="False" GridLinesVisibility="Horizontal" AlternatingRowBackground="{DynamicResource NetuneDefaultBackground}" AlternationCount="1" CellEditEnding="DataGridProduto_CellEditEnding">
+        <DataGrid x:Name="DataGridProduto" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" FontSize="14" CanUserAddRows="False" GridLinesVisibility="Horizontal" AlternatingRowBackground="{DynamicResource NetuneDefaultBackground}" AlternationCount="1" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Codigo}" Header="Código" CanUserResize="False"/>
                 <DataGridTextColumn Binding="{Binding Nome}" Header="Nome"/>
                 <DataGridTextColumn Binding="{Binding Quantidade}" Header="Estoque"/>
-                <DataGridTextColumn Binding="{Binding PrecoCusto, StringFormat='R{0:C}'}" Header="Preço de Custo"/>
-                <DataGridTextColumn Binding="{Binding PrecoVista, StringFormat='R{0:C}'}"  Header="Preço a Vista"/>
-                <DataGridTextColumn Binding="{Binding PrecoPrazo, StringFormat='R{0:C}'}" Header="Preço a Prazo"/>
-                <DataGridTextColumn Binding="{Binding Categoria.Nome}" Header="Categoria"/>
+                <DataGridTextColumn Binding="{Binding PrecoCustoFormated}" Header="Preço de Custo"/>
+                <DataGridTextColumn Binding="{Binding PrecoVista, StringFormat='R{0:C}'}" Header="Preço a Vista"/>
+                <DataGridTextColumn Binding="{Binding PrecoPrazoFormated}" Header="Preço a Prazo"/>
+                <DataGridTextColumn Binding="{Binding CategoriaNome}" Header="Categoria"/>
                 <DataGridTextColumn Binding="{Binding Descricao}" Header="Descrição"/>
-                <DataGridTextColumn Binding="{Binding Fornecedor.Nome}" Header="Fornecedor"/>
+                <DataGridTextColumn Binding="{Binding FornecedorNome}" Header="Fornecedor"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

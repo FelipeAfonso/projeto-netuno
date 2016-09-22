@@ -21,7 +21,7 @@
 			<Button x:Name="ButtonAdicionarCliente" Content="Adicionar&#xD;&#xA;Cliente" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonAdicionarCliente_Click" MinHeight="75" MinWidth="75" IsEnabled="False" ToolTip="To be implemented"/>
 			<Button x:Name="ButtonEditar" Content="Editar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75" Click="ButtonEditar_Click"/>
 			<Button x:Name="ButtonDeletar" Content="Deletar" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="2" IsEnabled="False" ToolTip="To be implemented" MinHeight="75" MinWidth="75" Click="ButtonDeletar_Click"/>
-			<Button x:Name="ButtonAdicionarFuncionario" Content="Adicionar&#xD;&#xA;Funcionário" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonAdicionarFuncionario_Click" Grid.Column="3" MinHeight="75" MinWidth="75"/>
+			<Button x:Name="ButtonAdicionarFuncionario" Content="Adicionar&#xD;&#xA;Funcionário" Margin="5,2,0,6" Background="{DynamicResource NetuneDefaultBackground}" BorderBrush="{DynamicResource NetunoDefaultBorderBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="ButtonAdicionarFuncionario_Click" Grid.Column="3" MinHeight="75" MinWidth="75" IsEnabled="False"/>
 			<Label Content="Exibir:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="4" Margin="5,0,0,25"/>
 			<ComboBox x:Name="ComboBoxExibir" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="4" Margin="48,0,0,25" IsEnabled="False" SelectedIndex="0">
 				<ComboBoxItem Content="Todos"/>
@@ -31,17 +31,17 @@
 			<TextBox Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="48,45.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
 			<Label Content="Buscar:" Grid.Column="3" HorizontalAlignment="Left" Margin="79.03,42.54,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
 		</Grid>
-		<DataGrid Grid.Row="1" Margin="5" Background="White">
-			<DataGrid.Columns>
-				<DataGridTextColumn Binding="{x:Null}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Código"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tipo"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Endereço"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Email"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Idade"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Sexo"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="CPF"/>
-				<DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="RG"/>
+        <DataGrid x:Name="DataGridUsuarios" Grid.Row="1" Margin="5" Background="White" AutoGenerateColumns="False" FontSize="14" CanUserAddRows="False" GridLinesVisibility="Horizontal" AlternatingRowBackground="{DynamicResource NetuneDefaultBackground}" AlternationCount="1" IsReadOnly="True">
+            <DataGrid.Columns>
+				<DataGridTextColumn Binding="{Binding Id}" CanUserResize="False"  Header="Código"/>
+                <DataGridTextColumn Binding="{Binding getTipo}"  Header="Tipo"/>
+                <DataGridTextColumn Binding="{Binding Nome}"  Header="Nome"/>
+                <DataGridTextColumn Binding="{Binding Endereco}"  Header="Endereço"/>
+                <DataGridTextColumn Binding="{Binding Email}"  Header="Email"/>
+                <DataGridTextColumn Binding="{Binding getIdade}"  Header="Idade"/>
+                <DataGridTextColumn Binding="{Binding Sexo}"  Header="Sexo"/>
+                <DataGridTextColumn Binding="{Binding Cpf}"  Header="CPF"/>
+                <DataGridTextColumn Binding="{Binding RG}"  Header="RG"/>
 			</DataGrid.Columns>
 		</DataGrid>
 	</Grid>

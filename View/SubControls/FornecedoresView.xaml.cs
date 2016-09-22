@@ -26,11 +26,12 @@ namespace View.UserControls {
         public FornecedoresView() {
             InitializeComponent();
 
-            if (Controller.LoggedUser.GetType() == typeof(Administrador)
-                || Controller.LoggedUser.Permissao.Contains(Controller.Permissoes["GerenciarFornecedores"])) {
+            if (Controller.LoggedUser is Administrador
+                || Controller.LoggedUser.Permissao.FirstOrDefault(o => o.Descricao == Controller.Permissoes["GerenciarFornecedores"].Descricao) != null) {
                 ButtonAdicionar.IsEnabled = true;
                 ButtonDeletar.IsEnabled = true;
             }
+            Update(null, null);
         }
 
         private void ButtonEditar_Click(object sender, System.Windows.RoutedEventArgs e) {
@@ -51,6 +52,7 @@ namespace View.UserControls {
             var context = new ERPDBModelContainer();
             foreach (Fornecedor fornecedor in DataGridFornecedores.SelectedItems) {
                 var p = context.FornecedorSet.Single(o => o.Id == fornecedor.Id);
+                p.Produto.Clear();
                 context.FornecedorSet.Remove(p);
             }
             context.SaveChanges();

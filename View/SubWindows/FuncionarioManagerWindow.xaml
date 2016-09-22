@@ -1,7 +1,7 @@
 ﻿<Window x:Class="View.SubWindows.FuncionarioManagerWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Cadastrar Funcionário" MinWidth="800" MinHeight="600" Background="{DynamicResource NetuneDefaultBackground}" Height="300" Width="300" ContentRendered="Window_ContentRendered">
+        Title="Cadastrar Funcionário" MinWidth="800" MinHeight="600" Background="{DynamicResource NetuneDefaultBackground}" Height="300" Width="300" ContentRendered="Window_ContentRendered" Icon="/View;component/Resources/Logo.png">
     <Grid Margin="0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="180"/>
