@@ -543,6 +543,3 @@ J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\LogWindow.baml
 J:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\LogWindow.g.cs
 F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\LogWindow.baml
 F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\SubWindows\LogWindow.g.cs
-C:\Users\Felipe\Documents\Repositório\projeto-netuno\View\bin\Debug\View.exe.config
-C:\Users\Felipe\Documents\Repositório\projeto-netuno\View\obj\Debug\View.exe
-C:\Users\Felipe\Documents\Repositório\projeto-netuno\View\obj\Debug\View.pdb

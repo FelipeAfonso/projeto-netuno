@@ -73,11 +73,12 @@ namespace View.UserControls {
 
                         p.ProdutoVendaItem.Clear();
                         context.ProdutoSet.Remove(p);
-
+                        Controller.Log("Deletou o Produto: " + p.Nome + " removendo-o as vendas realizadas anteriormente");
 
                     }
                 } else {
                     context.ProdutoSet.Remove(p);
+                    Controller.Log("Deletou o Produto: " + p.Nome);
                 }
             }
             context.SaveChanges();
@@ -91,6 +92,7 @@ namespace View.UserControls {
                 ctx.ProdutoSet.First(p => p.Id == dialog.getProduto.Value.Id).Quantidade += dialog.getProduto.Key;
                 ctx.SaveChanges();
                 Update(sender, e);
+                Controller.Log("Atualizou o Estoque: " + dialog.getProduto.Key + " " + dialog.getProduto.Value.Nome);
                 MessageBox.Show("Estoque atualizado com sucesso");
             }
 
@@ -99,29 +101,6 @@ namespace View.UserControls {
         private void UserControl_Loaded(object sender, RoutedEventArgs e) {
             //var ctx = new ERPDBModelContainer();
             Update(sender, e);
-        }
-
-        private void DataGridProduto_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e) {
-            if (e.EditAction == DataGridEditAction.Commit) {
-                var context = new ERPDBModelContainer();
-                //var original = (Produto)e.Row.Item;
-                var original = context.ProdutoSet.Find(((Produto)e.Row.Item).Id);
-                //var novo = original;
-                ///try {
-                foreach (PropertyInfo prop in typeof(Produto).GetProperties()) {
-                    if (prop.Name == e.Column.Header.ToString()) {
-                        if (prop.PropertyType == typeof(String)) prop.SetValue(original, ((TextBox)e.EditingElement).Text);
-                        else if (prop.PropertyType == typeof(Double)) prop.SetValue(original, Double.Parse(((TextBox)e.EditingElement).Text, NumberStyles.Currency, CultureInfo.InvariantCulture));
-                    }
-                }
-
-                if (original != null) {
-                    //context.Entry(original).CurrentValues.SetValues(novo);
-                    context.SaveChanges();
-                }
-                //} catch { MessageBox.Show("Erro ao modificar produto"); }
-                Update(sender, null);
-            }
         }
 
         private void ComboBoxExibir_SelectionChanged(object sender, SelectionChangedEventArgs e) {

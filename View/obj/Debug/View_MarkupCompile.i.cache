@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Felipe\Documents\Repositório\projeto-netuno\View\obj\Debug\
+F:\Projetos\Netuno\Projeto\NTN\View\obj\Debug\
 View
 none
 false
 DEBUG;TRACE
-C:\Users\Felipe\Documents\Repositório\projeto-netuno\View\App.xaml
+F:\Projetos\Netuno\Projeto\NTN\View\App.xaml
 171378962289
 
 24-1665121018
-33248308165
+33-696348952
 CustomControls\CreateAdminDialog.xaml;CustomControls\EstoqueDialog.xaml;CustomControls\LoginDialog.xaml;CustomControls\ProdutoListItem.xaml;MainWindow.xaml;MenuWindow.xaml;Simple Styles.xaml;SubWindows\AdicionarProdutoWindow.xaml;SubWindows\FornecedorManagerWindow.xaml;SubWindows\FuncionarioManagerWindow.xaml;SubWindows\LogWindow.xaml;SubWindows\PontoVendaWindow.xaml;SubControls\CaixasView.xaml;SubControls\FornecedoresView.xaml;SubControls\ProdutosView.xaml;SubControls\UsuarioView.xaml;SubControls\VendaView.xaml;
 
-True
+False
 

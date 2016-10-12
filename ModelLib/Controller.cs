@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using ModelLib;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Net;
+using System.Web.Script.Serialization;
 
 namespace ModelLib {
     public static class Controller {
@@ -14,6 +15,48 @@ namespace ModelLib {
         public static Dictionary<string, Permissao> Permissoes = new Dictionary<string, Permissao>();
 
         public static Funcionario LoggedUser;// = new Administrador() { Id=1, Nome = "Teste", Senha = "", Email = "asd@asd.com", Venda= new List<Venda>() };
+
+        public static List<object> PostJsonProduto(List<Produto> l) {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:8094/WebService/Products");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
+                var temp = new List<dynamic>();
+                foreach (Produto p in l) {
+                    if (p.Categoria != null)
+                        temp.Add(new {
+                            Id = p.Id, Nome = p.Nome, PrecoCusto = p.PrecoCusto, PrecoVista = p.PrecoVista,
+                            PrecoPrazo = p.PrecoPrazo, Quantidade = p.Quantidade, DisponivelLojaVirtual = p.DisponivelLojaVirtual,
+                            Descricao = p.Descricao, UnidadeMedida = p.UnidadeMedida, Imagem = p.Imagem, Codigo = p.Codigo,
+                            Fornecedor =p.Fornecedor, ProdutoVendaItem = p.ProdutoVendaItem,
+                            Categoria = new { Id = p.Categoria.Id, Nome = p.Categoria.Nome }
+                        });
+                    else
+                        temp.Add(new {
+                            Id = p.Id, Nome = p.Nome, PrecoCusto = p.PrecoCusto, PrecoVista = p.PrecoVista,
+                            PrecoPrazo = p.PrecoPrazo, Quantidade = p.Quantidade, DisponivelLojaVirtual = p.DisponivelLojaVirtual,
+                            Descricao = p.Descricao, UnidadeMedida = p.UnidadeMedida, Imagem = p.Imagem, Codigo = p.Codigo,
+                            Fornecedor = p.Fornecedor, ProdutoVendaItem = p.ProdutoVendaItem, Categoria = p.Categoria
+                        });
+                }
+
+                string json = new JavaScriptSerializer().Serialize(temp);
+                //string json = new JavaScriptSerializer().Serialize(l);
+                streamWriter.Write(json);
+                streamWriter.Flush();
+                streamWriter.Close();
+            }
+            try {
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream())) {
+                    var result = streamReader.ReadToEnd();
+                    return new JavaScriptSerializer().Deserialize(result, typeof(List<object>)) as List<object>;
+                }
+            } catch {
+                return null;
+            }
+        }
 
         public static string getMD5(String i) {
             var md5 = System.Security.Cryptography.MD5.Create();

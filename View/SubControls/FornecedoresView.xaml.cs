@@ -1,4 +1,5 @@
 ﻿using ModelLib;
+using ModelLib.Adapters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,9 +51,10 @@ namespace View.UserControls {
 
         private void ButtonDeletar_Click(object sender, System.Windows.RoutedEventArgs e) {
             var context = new ERPDBModelContainer();
-            foreach (Fornecedor fornecedor in DataGridFornecedores.SelectedItems) {
+            foreach (FornecedorAdapter fornecedor in DataGridFornecedores.SelectedItems) {
                 var p = context.FornecedorSet.Single(o => o.Id == fornecedor.Id);
                 p.Produto.Clear();
+                Controller.Log("Deletou o Fornecedor: " + fornecedor.Nome);
                 context.FornecedorSet.Remove(p);
             }
             context.SaveChanges();
@@ -61,7 +63,11 @@ namespace View.UserControls {
 
         private void Update(object sender, RoutedEventArgs e) {
             var context = new ERPDBModelContainer();
-            DataGridFornecedores.ItemsSource = (context.FornecedorSet.ToList().Count > 0) ? context.FornecedorSet.ToList() : null;
+            var l = new List<FornecedorAdapter>();
+            foreach (var f in context.FornecedorSet.ToList()) {
+                l.Add(new FornecedorAdapter(f));
+            }
+            DataGridFornecedores.ItemsSource = (l.Count > 0) ? l : null;
         }
 
         private void DataGridFornecedores_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e) {

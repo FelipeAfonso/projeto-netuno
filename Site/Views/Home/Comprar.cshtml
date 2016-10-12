@@ -1,0 +1,33 @@
+﻿@model Site.Models.Produto
+@{
+    ViewBag.Title = Model.Nome;
+}
+<div class="container">
+    <br />
+    <div class="row ">
+
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4">
+                    @if (Model.Imagem != null) {<img src="@Model.Imagem" alt="" class="border-udt" />} else {<img src="http://vignette3.wikia.nocookie.net/marveldatabase/images/6/60/No_Image_Available.png/revision/latest?cb=20100915045609" alt="" class="border-udt" /> }
+                </div>
+                <div class="col-md-8">
+                    <h2 class="pull-right">R$ @Model.PrecoVista</h2><h2>@Html.Label(Model.Nome)</h2>
+                    <p>Quantidade Disponível: @Model.Quantidade</p>
+                    <p>@Model.Descricao</p>
+                    @using (Html.BeginForm("Comprar", "Home", new { id = Model.Nome, post = true }, FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+                        <button class="btn btn-default pull-right">Adicionar ao Carrinho</button>
+                        @Html.Label("Quantidade: ")
+                        @Html.TextBox("txtQtd", 1, new { @class = "form-control" })
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

@@ -69,6 +69,11 @@ namespace View.UserControls {
                     }
                     context.ProdutoVendaItemSet.RemoveRange(l);
                     context.VendaSet.Remove(v);
+                    var s = "";
+                    foreach (ProdutoVendaItem pvi in venda.ProdutoVendaItem) {
+                        s += "\n - " + pvi.Quantidade + " " + pvi.Produto.Nome;
+                    }
+                    Controller.Log("Cancelou a venda: " + v.Id + " com o valor de " +  v.Total + " que continha os seguintes produtos:" + s);
                 }
                 context.SaveChanges();
                 Update(sender, e);

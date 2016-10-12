@@ -28,6 +28,7 @@ namespace View.SubWindows {
                 t.Clear();
                 if (t.GetType() == typeof(CurrencyTextBoxControl.CurrencyTextBox)) t.Text = "$0.00";
             }
+            textBoxPassword.Clear();
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e) {
@@ -54,14 +55,24 @@ namespace View.SubWindows {
             if (textBoxCidade.Text != "") { if (endereco == null) endereco = new Endereco(); endereco.Cidade = textBoxCidade.Text; }
             if (textBoxEstado.Text != "") { if (endereco == null) endereco = new Endereco(); endereco.Estado = textBoxEstado.Text; }
             if (textBoxCep.Text != "") { if (endereco == null) endereco = new Endereco(); endereco.CEP = textBoxCep.Text; }
-            if (endereco != null) funcionario.Endereco = endereco;
+            if (endereco != null) {
+                endereco.Usuario = funcionario;
+            }
             if (textBoxEmail.Text != "") funcionario.Email = textBoxEmail.Text;
 
             if (funcionario != null) {
                 var query = ctx.UsuarioSet.OfType<Funcionario>().Where(f => f.Nome == funcionario.Nome).ToList();
                 if (query.Count == 0) {
-                    ctx.UsuarioSet.Add(funcionario);
+                    //ctx.UsuarioSet.Add(funcionario);
+                    //ctx.UsuarioSet.Attach(endereco.Usuario);
+                    if (endereco != null) ctx.EnderecoSet.Add(endereco);
+                    else ctx.UsuarioSet.Add(funcionario);
                     ctx.SaveChanges();
+                    var s = "";
+                    foreach(Permissao p in funcionario.Permissao) {
+                        s += "\n - " + p.Descricao;
+                    }
+                    Controller.Log("Adicionou o Funcionário: " + funcionario.Nome + " com as seguintes permissões:" + s);
                     if (MessageBox.Show("Funcionário Cadastrado com Sucesso!\nLimpar informações e cadastrar outro Funcionário?", "Sucesso!", MessageBoxButton.YesNo) == MessageBoxResult.Yes) {
                         buttonLimpar_Click(sender, e);
                     } else {

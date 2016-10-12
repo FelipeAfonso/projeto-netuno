@@ -89,7 +89,7 @@
     <Property Name="DisponivelLojaVirtual" Type="bit" Nullable="true" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="true" />
     <Property Name="UnidadeMedida" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="Imagem" Type="tinyint" Nullable="true" />
+    <Property Name="Imagem" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Codigo" Type="int" Nullable="false" />
     <Property Name="Categoria_Id" Type="int" Nullable="true" />
     <Property Name="Fornecedor_Id" Type="int" Nullable="true" />

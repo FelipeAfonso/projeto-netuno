@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Site.Models.Categoria>
+<div class="col-md-3">
+    @if (Model.ToList().Count > 0) {
+        <div class="list-group">
+            @{
+                foreach (var item in Model) {
+                    //Html.ActionLink(item.Nome, "Produtos", new { id = item.Nome }, new { CssClass = "list-group-item" });
+                    <a href="/Home/Produtos/@item.Nome" class="categoria-item-udt list-group-item">@item.Nome</a>
+                }
+            }
+        </div>
+    }
+</div>

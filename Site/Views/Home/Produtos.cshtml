@@ -1,0 +1,33 @@
+﻿@model Site.Models.Adapters.ProdutosCategoriasModelAdapter
+
+@{
+    ViewBag.Title = "Produtos";
+}
+
+<div class="container">
+    <br />
+    <div class="row ">
+
+        @Html.Partial("Categorias", Model.Categorias)
+
+        <div class="col-md-9">
+            <div class="row">
+                @foreach (var item in Model.Produtos) {
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            @if(item.Imagem!=null){<img src="@item.Imagem"  alt=""/>} else {<img src="http://vignette3.wikia.nocookie.net/marveldatabase/images/6/60/No_Image_Available.png/revision/latest?cb=20100915045609" alt="" /> }
+                            <div class="caption">
+                                <h4 class="pull-right">R$ @item.PrecoVista</h4>
+                                <h4>@Html.ActionLink(item.Nome, "Comprar", new { id = item.Nome })</h4>
+                                <p>@item.Descricao</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

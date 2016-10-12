@@ -28,7 +28,7 @@ namespace ModelLib
         public Nullable<bool> DisponivelLojaVirtual { get; set; }
         public string Descricao { get; set; }
         public string UnidadeMedida { get; set; }
-        public Nullable<byte> Imagem { get; set; }
+        public string Imagem { get; set; }
         public int Codigo { get; set; }
     
         public virtual Categoria Categoria { get; set; }

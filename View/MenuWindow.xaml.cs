@@ -17,6 +17,8 @@ using View.CustomControls;
 using System.Data.Entity.Validation;
 using System.Threading;
 using View.SubWindows;
+using System.Net;
+using System.IO;
 
 namespace View {
     /// <summary>
@@ -38,6 +40,12 @@ namespace View {
         private void VendasButtonClick(object sender, RoutedEventArgs e) {
             this.ControlGrid.Children.Clear();
             this.ControlGrid.Children.Add(new VendaView());
+            try {
+                using (var ctx = new ERPDBModelContainer()) {
+                    MessageBox.Show(Controller.PostJsonProduto(ctx.ProdutoSet.ToList()).ToString());
+                }
+            } 
+            catch { }
         }
 
         private void ProdutosButtonClick(object sender, RoutedEventArgs e) {
@@ -127,7 +135,7 @@ namespace View {
                     Menu.IsEnabled = true;
                 }));
             }
-            Application.Current.Dispatcher.Invoke((Action)(() => {TextBlockNomeUsuario.Text = Controller.LoggedUser.Nome;}));
+            Application.Current.Dispatcher.Invoke((Action)(() => { TextBlockNomeUsuario.Text = Controller.LoggedUser.Nome; }));
         }
 
         private void Desconectar_Click(object sender, RoutedEventArgs e) {

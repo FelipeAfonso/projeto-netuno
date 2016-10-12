@@ -51,15 +51,19 @@ namespace View.SubWindows {
             if (textBoxCidade.Text != "") { if (endereco == null) endereco = new Endereco(); endereco.Cidade = textBoxCidade.Text; }
             if (textBoxEstado.Text != "") { if (endereco == null) endereco = new Endereco(); endereco.Estado = textBoxEstado.Text; }
             if (textBoxCep.Text != "") { if (endereco == null) endereco = new Endereco(); endereco.CEP = textBoxCep.Text; }
-            if (endereco != null) fornecedor.Endereco = endereco;
+            if (endereco != null) {
+                endereco.Fornecedor = fornecedor;
+            }
             if (textBoxEmail.Text != "") fornecedor.Email = textBoxEmail.Text;
             if (textBoxObservacoes.Text != "") fornecedor.Observacoes = textBoxObservacoes.Text;
 
             if(fornecedor != null) {
                 var query = ctx.FornecedorSet.Where(f => f.Nome == fornecedor.Nome).ToList();
                 if (query.Count == 0) {
-                    ctx.FornecedorSet.Add(fornecedor);
+                    if (endereco != null) ctx.EnderecoSet.Add(endereco);
+                    else ctx.FornecedorSet.Add(fornecedor);
                     ctx.SaveChanges();
+                    Controller.Log("Adicionou o Fornecedor: " + fornecedor.Nome);
                     if (MessageBox.Show("Fornecedor Cadastrado com Sucesso!\nLimpar informações e cadastrar outro fornecedor?", "Sucesso!", MessageBoxButton.YesNo) == MessageBoxResult.Yes) {
                         buttonLimpar_Click(sender, e);
                     } else {

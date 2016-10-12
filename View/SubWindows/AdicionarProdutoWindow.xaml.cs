@@ -1,8 +1,11 @@
-﻿using ModelLib;
+﻿using Microsoft.Win32;
+using ModelLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -80,6 +83,9 @@ namespace View.SubWindows {
                 }
 
             } catch { produto = null; }
+            try {
+                if ((bool)checkBoxOnline.IsChecked) { produto.DisponivelLojaVirtual = true; }
+            } catch { }
             if (edit_mode) {
                 var original = context.ProdutoSet.First(o => o.Id == produto_edit.Id);
                 original.Nome = produto.Nome;
@@ -154,6 +160,16 @@ namespace View.SubWindows {
                 textBoxDescricao.Text = produto_edit.Descricao;
                 AutoCompleteBoxCategoria.Text = produto_edit.Nome;
                 comboBoxFornecedores.SelectedItem = (produto_edit.Fornecedor != null) ? produto_edit.Fornecedor.Nome : "";
+            }
+        }
+
+
+        private byte[] imgToByteArray(BitmapImage image) {
+            JpegBitmapEncoder enc = new JpegBitmapEncoder();
+            enc.Frames.Add(BitmapFrame.Create(image));
+            using (var ms = new MemoryStream()) {
+                enc.Save(ms);
+                return ms.ToArray();
             }
         }
     }

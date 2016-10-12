@@ -61,7 +61,7 @@
     <Property Name="UnidadeMedida" Type="String" Nullable="true" />
     <NavigationProperty Name="Categoria" Relationship="ERPDBModel.ProdutoCategoria" FromRole="Produto" ToRole="Categoria" />
     <NavigationProperty Name="Fornecedor" Relationship="ERPDBModel.FornecedorProduto" FromRole="Produto" ToRole="Fornecedor" />
-    <Property Name="Imagem" Type="Byte" Nullable="true" />
+    <Property Name="Imagem" Type="String" Nullable="true" />
     <Property Name="Codigo" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ProdutoVendaItem" Relationship="ERPDBModel.ProdutoProdutoVendaItem" FromRole="Produto" ToRole="ProdutoVendaItem" />
   </EntityType>

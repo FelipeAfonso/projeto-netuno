@@ -141,6 +141,11 @@ namespace View {
                     venda.ProdutoVendaItem = l;
                     ctx.UsuarioSet.OfType<Funcionario>().Single(o=>o.Id == Controller.LoggedUser.Id).Venda.Add(venda);
                     ctx.SaveChanges();
+                    var s = "";
+                    foreach (KeyValuePair<Produto, int> pair in cache) {
+                        s += "\n - " + pair.Value + " " + pair.Key.Nome;
+                    }
+                    Controller.Log("Realizou uma venda no valor de: " + venda.Total + " com os seguintes produtos:" + s);
                 }
                 if (MessageBox.Show("Venda Cadastrada com Sucesso\nDeseja cadastrar outra venda?", "Sucesso",
                     MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes) {

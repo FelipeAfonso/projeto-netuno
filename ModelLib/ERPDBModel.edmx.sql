@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/20/2016 17:40:29
+-- Date Created: 10/06/2016 19:18:39
 -- Generated from EDMX file: F:\Projetos\Netuno\Projeto\NTN\ModelLib\ERPDBModel.edmx
 -- --------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE [dbo].[ProdutoSet] (
     [DisponivelLojaVirtual] bit  NULL,
     [Descricao] nvarchar(max)  NULL,
     [UnidadeMedida] nvarchar(max)  NULL,
-    [Imagem] tinyint  NULL,
+    [Imagem] nvarchar(max)  NULL,
     [Codigo] int  NOT NULL,
     [Categoria_Id] int  NULL,
     [Fornecedor_Id] int  NULL

@@ -1,0 +1,27 @@
+﻿@model Site.Models.Adapters.PVIsCategoriasModelAdapter
+@{
+    ViewBag.Title = "Carrinho";
+}
+
+<div class="container">
+    <br />
+    <div class="row ">
+
+        @Html.Partial("Categorias", Model.Categoria)
+
+        <div class="col-md-9">
+            <div class="row">
+                <ul class="list-group">
+                    @{ foreach (var item in Model.PVI) {
+                        <li class="list-group-item"> @Html.Label(item.Quantidade.ToString()) @Html.Label(item.Produto.Nome) </li>
+                     }
+                    }
+                </ul>
+
+            </div>
+            @using (Html.BeginForm("Carrinho", "Home", new { post = true }, FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+                <button clss="btn btn-default pull-right">Fechar Carrinho</button>
+            }
+        </div>
+    </div>
+</div>

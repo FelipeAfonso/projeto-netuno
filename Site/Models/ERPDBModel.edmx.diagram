@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c50343026a164157a16cbd452e00ce9e" Name="Diagram1" ZoomLevel="90" >
+        <EntityTypeShape EntityType="ERPDBModel.Produto" Width="1.5" PointX="11.125" PointY="4.625" FillColor="Green" />
+        <EntityTypeShape EntityType="ERPDBModel.Categoria" Width="1.5" PointX="13.25" PointY="4.75" />
+        <AssociationConnector Association="ERPDBModel.ProdutoCategoria" />
+        <EntityTypeShape EntityType="ERPDBModel.SubCategoria" Width="1.5" PointX="13.25" PointY="7" />
+        <InheritanceConnector EntityType="ERPDBModel.SubCategoria" />
+        <EntityTypeShape EntityType="ERPDBModel.Venda" Width="1.5" PointX="6.5" PointY="4.5" FillColor="Yellow" />
+        <EntityTypeShape EntityType="ERPDBModel.Cliente" Width="1.5" PointX="6.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERPDBModel.Usuario" Width="1.5" PointX="8.875" PointY="6.75" />
+        <EntityTypeShape EntityType="ERPDBModel.Endereco" Width="1.5" PointX="4.625" PointY="7.125" />
+        <AssociationConnector Association="ERPDBModel.ClienteVenda" />
+        <InheritanceConnector EntityType="ERPDBModel.Cliente" />
+        <AssociationConnector Association="ERPDBModel.EnderecoUsuario" />
+        <InheritanceConnector EntityType="ERPDBModel.Cliente" />
+        <AssociationConnector Association="ERPDBModel.UsuarioEndereco" />
+        <EntityTypeShape EntityType="ERPDBModel.ProdutoVendaItem" Width="1.5" PointX="8.875" PointY="4.625" />
+        <AssociationConnector Association="ERPDBModel.VendaProdutoVendaItem" />
+        <AssociationConnector Association="ERPDBModel.ProdutoProdutoVendaItem" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

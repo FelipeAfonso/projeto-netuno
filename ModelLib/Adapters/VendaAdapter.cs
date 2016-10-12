@@ -13,6 +13,7 @@ namespace ModelLib.Adapters {
 
         public virtual Cliente Cliente { get; set; }
         public virtual Funcionario Funcionario { get; set; }
+        public virtual ICollection<ProdutoVendaItem> ProdutoVendaItem { get; set; }
 
         public VendaAdapter(Venda v) {
             Id = v.Id;
@@ -20,6 +21,7 @@ namespace ModelLib.Adapters {
             Total = v.Total;
             Cliente = v.Cliente;
             Funcionario = v.Funcionario;
+            ProdutoVendaItem = v.ProdutoVendaItem;
         }
 
         public String TotalFormated { get { return (Total > 0) ? String.Format("{0:C}", Total) : ""; } }
@@ -34,7 +36,7 @@ namespace ModelLib.Adapters {
                     var s = "";
                     var l = ctx.ProdutoVendaItemSet.Where(o => o.Venda.Id == this.Id).ToList();
                     foreach (ProdutoVendaItem pvi in l) {
-                        s += (pvi.Produto!=null) ? pvi.Quantidade + " - " + pvi.Produto.Nome + "\n" : "Produto Removido\n";
+                        s += (pvi.Produto != null) ? pvi.Quantidade + " - " + pvi.Produto.Nome + "\n" : "Produto Removido\n";
                     }
                     s = s.Remove(s.Length - 1);
                     return s;

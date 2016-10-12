@@ -1,4 +1,5 @@
 ﻿using ModelLib;
+using ModelLib.Adapters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,9 +44,10 @@ namespace View.UserControls {
 
         private void ButtonDeletar_Click(object sender, System.Windows.RoutedEventArgs e) {
             var context = new ERPDBModelContainer();
-            foreach (Usuario usuario in DataGridUsuarios.SelectedItems) {
+            foreach (UsuarioAdapter usuario in DataGridUsuarios.SelectedItems) {
                 var u = context.UsuarioSet.Single(o => o.Id == usuario.Id);
                 context.UsuarioSet.Remove(u);
+                Controller.Log("Deletou o Usuario: " + u.Nome);
             }
             context.SaveChanges();
             Update(sender, e);
@@ -63,9 +65,9 @@ namespace View.UserControls {
 
         private void Update(object sender, RoutedEventArgs e) {
             var context = new ERPDBModelContainer();
-            var l = new List<Usuario>();
-            foreach(Usuario u in context.UsuarioSet.OfType<Funcionario>().ToList()){
-                if(!(u is Administrador)){ l.Add(u);}
+            var l = new List<UsuarioAdapter>();
+            foreach (Usuario u in context.UsuarioSet.OfType<Funcionario>().ToList()) {
+                if (!(u is Administrador)) { l.Add(new UsuarioAdapter(u)); }
             }
             DataGridUsuarios.ItemsSource = (l.Count > 0) ? l : null;
         }

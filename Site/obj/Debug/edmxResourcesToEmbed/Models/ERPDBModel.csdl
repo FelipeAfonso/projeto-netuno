@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ERPDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ERPDBModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProdutoSet" EntityType="ERPDBModel.Produto" />
+    <EntitySet Name="CategoriaSet" EntityType="ERPDBModel.Categoria" />
+    <AssociationSet Name="ProdutoCategoria" Association="ERPDBModel.ProdutoCategoria">
+      <End Role="Produto" EntitySet="ProdutoSet" />
+      <End Role="Categoria" EntitySet="CategoriaSet" />
+    </AssociationSet>
+    <EntitySet Name="VendaSet" EntityType="ERPDBModel.Venda" />
+    <EntitySet Name="UsuarioSet" EntityType="ERPDBModel.Usuario" />
+    <EntitySet Name="EnderecoSet" EntityType="ERPDBModel.Endereco" />
+    <AssociationSet Name="ClienteVenda" Association="ERPDBModel.ClienteVenda">
+      <End Role="Cliente" EntitySet="UsuarioSet" />
+      <End Role="Venda" EntitySet="VendaSet" />
+    </AssociationSet>
+    <AssociationSet Name="UsuarioEndereco" Association="ERPDBModel.UsuarioEndereco">
+      <End Role="Usuario" EntitySet="UsuarioSet" />
+      <End Role="Endereco" EntitySet="EnderecoSet" />
+    </AssociationSet>
+    <EntitySet Name="ProdutoVendaItemSet" EntityType="ERPDBModel.ProdutoVendaItem" />
+    <AssociationSet Name="VendaProdutoVendaItem" Association="ERPDBModel.VendaProdutoVendaItem">
+      <End Role="Venda" EntitySet="VendaSet" />
+      <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProdutoProdutoVendaItem" Association="ERPDBModel.ProdutoProdutoVendaItem">
+      <End Role="Produto" EntitySet="ProdutoSet" />
+      <End Role="ProdutoVendaItem" EntitySet="ProdutoVendaItemSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="PrecoCusto" Type="Double" Nullable="false" />
+    <Property Name="PrecoVista" Type="Double" Nullable="false" />
+    <Property Name="PrecoPrazo" Type="Double" Nullable="true" />
+    <Property Name="Quantidade" Type="Double" Nullable="true" />
+    <Property Name="DisponivelLojaVirtual" Type="Boolean" Nullable="true" />
+    <Property Name="Descricao" Type="String" Nullable="true" />
+    <Property Name="UnidadeMedida" Type="String" Nullable="true" />
+    <NavigationProperty Name="Categoria" Relationship="ERPDBModel.ProdutoCategoria" FromRole="Produto" ToRole="Categoria" />
+    <Property Name="Imagem" Type="String" Nullable="true" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProdutoVendaItem" Relationship="ERPDBModel.ProdutoProdutoVendaItem" FromRole="Produto" ToRole="ProdutoVendaItem" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Produto" Relationship="ERPDBModel.ProdutoCategoria" FromRole="Categoria" ToRole="Produto" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="ProdutoCategoria">
+    <End Type="ERPDBModel.Produto" Role="Produto" Multiplicity="*" />
+    <End Type="ERPDBModel.Categoria" Role="Categoria" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="SubCategoria" BaseType="ERPDBModel.Categoria">
+    <Property Name="SubId" Type="Int32" Nullable="false" />
+    <Property Name="SubNome" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Venda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Cliente" Relationship="ERPDBModel.ClienteVenda" FromRole="Venda" ToRole="Cliente" />
+    <Property Name="Data" Type="DateTime" Nullable="false" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ProdutoVendaItem" Relationship="ERPDBModel.VendaProdutoVendaItem" FromRole="Venda" ToRole="ProdutoVendaItem" />
+  </EntityType>
+  <EntityType Name="Cliente" BaseType="ERPDBModel.Usuario">
+    <NavigationProperty Name="Venda" Relationship="ERPDBModel.ClienteVenda" FromRole="Cliente" ToRole="Venda" />
+  </EntityType>
+  <EntityType Name="Usuario" Abstract="true">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Endereco" Relationship="ERPDBModel.UsuarioEndereco" FromRole="Usuario" ToRole="Endereco" />
+    <Property Name="Cpf" Type="String" Nullable="true" />
+    <Property Name="Email" Type="String" Nullable="true" />
+    <Property Name="Nascimento" Type="DateTime" Nullable="true" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="Rg" Type="String" Nullable="true" />
+    <Property Name="Senha" Type="String" Nullable="true" />
+    <Property Name="Sexo" Type="String" Nullable="true" />
+    <Property Name="Telefone" Type="String" Nullable="true" />
+    <Property Name="Celular" Type="String" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Endereco">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Usuario" Relationship="ERPDBModel.UsuarioEndereco" FromRole="Endereco" ToRole="Usuario" />
+    <Property Name="Numero" Type="Int32" Nullable="true" />
+    <Property Name="Bairro" Type="String" Nullable="true" />
+    <Property Name="Cidade" Type="String" Nullable="true" />
+    <Property Name="Estado" Type="String" Nullable="true" />
+    <Property Name="Logradouro" Type="String" Nullable="true" />
+    <Property Name="CEP" Type="String" Nullable="true" />
+  </EntityType>
+  <Association Name="ClienteVenda">
+    <End Type="ERPDBModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+    <End Type="ERPDBModel.Venda" Role="Venda" Multiplicity="*" />
+  </Association>
+  <Association Name="UsuarioEndereco">
+    <End Type="ERPDBModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="ERPDBModel.Endereco" Role="Endereco" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="ProdutoVendaItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Quantidade" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Venda" Relationship="ERPDBModel.VendaProdutoVendaItem" FromRole="ProdutoVendaItem" ToRole="Venda" />
+    <NavigationProperty Name="Produto" Relationship="ERPDBModel.ProdutoProdutoVendaItem" FromRole="ProdutoVendaItem" ToRole="Produto" />
+  </EntityType>
+  <Association Name="VendaProdutoVendaItem">
+    <End Type="ERPDBModel.Venda" Role="Venda" Multiplicity="1" />
+    <End Type="ERPDBModel.ProdutoVendaItem" Role="ProdutoVendaItem" Multiplicity="*" />
+  </Association>
+  <Association Name="ProdutoProdutoVendaItem">
+    <End Type="ERPDBModel.Produto" Role="Produto" Multiplicity="0..1" />
+    <End Type="ERPDBModel.ProdutoVendaItem" Role="ProdutoVendaItem" Multiplicity="*" />
+  </Association>
+</Schema>

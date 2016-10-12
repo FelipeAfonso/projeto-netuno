@@ -27,8 +27,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Id}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Código"/>
                 <DataGridTextColumn Binding="{Binding Nome}" ClipboardContentBinding="{x:Null}" Header="Nome"/>
-                <DataGridTextColumn Binding="{Binding getEndereco}" ClipboardContentBinding="{x:Null}" Header="Endereço" CanUserSort="False"/>
-                <DataGridTextColumn Binding="{Binding getCidade}" ClipboardContentBinding="{x:Null}" Header="Cidade" CanUserSort="False"/>
+                <DataGridTextColumn Binding="{Binding EnderecoFormated}" ClipboardContentBinding="{x:Null}" Header="Endereço" CanUserSort="False"/>
                 <DataGridTextColumn Binding="{Binding Telefone}" ClipboardContentBinding="{x:Null}" Header="Telefone"/>
                 <DataGridTextColumn Binding="{Binding Celular}" ClipboardContentBinding="{x:Null}" Header="Celular"/>
                 <DataGridTextColumn Binding="{Binding CNPJ}" ClipboardContentBinding="{x:Null}" Header="CNPJ"/>
